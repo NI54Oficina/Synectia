@@ -1613,7 +1613,7 @@ ol.breadcrumb-nav {
 	font-family: 'Roboto-regular';
 	font-size: 36px;
 	font-weight: 400;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	color: #666;
 	margin: 0 0 10px;
 }
