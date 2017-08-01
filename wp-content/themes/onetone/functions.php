@@ -15,7 +15,7 @@ load_template( trailingslashit( get_template_directory() ) . 'admin/customizer.p
 /**
  * Theme Functions
  **/
- 
+
 load_template( trailingslashit( get_template_directory() ) . 'includes/theme-functions.php' );
 
 global $onetone_options_saved, $onetone_old_version, $onetone_option_name, $onetone_default_options,$onetone_model_v;
@@ -25,20 +25,20 @@ $onetone_model_v       = false;
 $onetone_option_name   = onetone_option_name();
 
 if ( $theme_options = get_option($onetone_option_name) ) {
-	
+
  $onetone_options_saved = true;
 if( (isset($theme_options['section_content_0']) &&  $theme_options['section_content_0'] != '') &&
 	(isset($theme_options['section_content_1']) && $theme_options['section_content_0'] != '') &&
 	(isset($theme_options['section_content_2']) && $theme_options['section_content_0'] != '') ){
 	$onetone_old_version = true;
-	
+
 }
 if( isset($theme_options['section_content_model_0']) ||
 	isset($theme_options['section_content_model_1']) ||
 	isset($theme_options['section_content_model_2']) ||
 	isset($theme_options['section_content_model_3']) ){
 	$onetone_model_v = true;
-	
+
 }
 
 // Version <= 2.0.5
@@ -62,7 +62,7 @@ if(!class_exists("Mobile_Detect")){
 /**
  * Theme setup
  **/
- 
+
 load_template( trailingslashit( get_template_directory() ) . 'includes/theme-setup.php' );
 
 /**
@@ -78,7 +78,17 @@ load_template( trailingslashit( get_template_directory() ) . 'includes/theme-wid
 /**
  * Meta box
  **/
- 
+
 load_template( trailingslashit( get_template_directory() ) . 'includes/metabox-options.php' );
 
 
+// customize
+
+function theme_add_query() {
+  wp_enqueue_script( 'jquery-min-js', site_url() . '/jquery.min.js');
+
+    wp_enqueue_script( 'script-js', site_url() . '/script.js');
+
+}
+
+add_action( 'wp_enqueue_scripts', 'theme_add_query' );

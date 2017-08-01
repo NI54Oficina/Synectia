@@ -6,8 +6,13 @@
 
 ?>
 <!--Footer-->
-		<footer>
+		<footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <style media="screen">
+      footer{
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+
         .footer-content-area{
           background-color: #004851;
           padding: 20px 30px;;
@@ -16,31 +21,48 @@
         .footer-content-area img{
           width: 60%;
         }
+
+        footer h4{
+          font-family: 'Roboto-black';
+          color:white;
+          font-size: 15px;
+        }
+
+        footer .inter-footer p{
+          color:#008E8E;
+          margin-bottom: 10px;
+        }
+
+        footer .inter-footer p span{
+          color:#008E8E;
+          font-family: 'Roboto-black';
+        }
+
       </style>
 
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer-content-area">
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-          <img src="<?php echo site_url(); ?>/wp-content/themes/shapely/images/logo-blanco.png" alt="">
+          <img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/logo-blanco.png" alt="">
 
-          <p><b>Cirugía en equipo</b><br> para miembro superior</p>
+          <p style="font-family: 'Roboto-light'; color:#008E8E;"><b>Cirugía en equipo</b><br> para miembro superior</p>
         </div>
 
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-          <h4 style="color:white; font-weight:bold">CONTACTO</h4>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 inter-footer">
+          <h4 >CONTACTO</h4>
           <p>Av. Libertador 4992 PB 1 CABA</p>
           <p>(+5411) 4772 4391 / 0857</p>
           <p style="color:white; font-weight:bold">synectiacirugia@gmail.com</p>
         </div>
 
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-          <h4 style="color:white; font-weight:bold" >TURNOS</h4>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 inter-footer">
+          <h4 class="" >TURNOS</h4>
           <p><span>Horarios: </span> Miércoles y Viernes 16hs</p>
           <p><span>Cobertura: </span> Particular, OSDE y otros</p>
           <p >prepagos por integro</p>
         </div>
 
-        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-            <img src="<?php echo site_url(); ?>/wp-content/themes/shapely/images/logo-img.png" alt="">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+            <img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/logo-img.png" alt="">
         </div>
       </div>
 

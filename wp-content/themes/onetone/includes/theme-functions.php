@@ -1,7 +1,7 @@
 <?php
 
-/*	
-*	get background 
+/*
+*	get background
 *	---------------------------------------------------------------------
 */
 function onetone_get_background($args){
@@ -11,10 +11,10 @@ function onetone_get_background($args){
 	$args['repeat']     = isset( $args['repeat'] )? esc_attr($args['repeat']) : '';
 	$args['position']   = isset( $args['position'] )? esc_attr($args['position']) : '';
 	$args['attachment'] = isset( $args['attachment'] )? esc_attr($args['attachment']) : '';
-	
+
 	$background .=  "background:url(".esc_url( $args['image'] ). ")  ".$args['repeat']." ".$args['position']." ".$args['attachment'].";";
 	}
-	
+
 	if(isset($args['color']) && $args['color'] !=""){
 	$background .= "background-color:".esc_attr($args['color']).";";
 	}
@@ -23,7 +23,7 @@ function onetone_get_background($args){
 
 }
 
-/*	
+/*
 *	send email
 *	---------------------------------------------------------------------
 */
@@ -73,7 +73,7 @@ function onetone_contact(){
 		$emailSent = true;
 		}
 		echo json_encode(array("msg"=>__("Your message has been successfully sent!","onetone"),"error"=>0));
-		
+
 	}
 	else
 	{
@@ -81,41 +81,41 @@ function onetone_contact(){
 	}
 	die() ;
 	}
-	
+
 
 add_action('wp_ajax_onetone_contact', 'onetone_contact');
 add_action('wp_ajax_nopriv_onetone_contact', 'onetone_contact');
 
 // get breadcrumbs
  function onetone_get_breadcrumb( $options = array()){
-	 
+
    global $post,$wp_query ;
    $postid = isset($post->ID)?$post->ID:"";
-	
+
    $show_breadcrumb = "";
-   if ( 'page' == get_option( 'show_on_front' ) && ( '' != get_option( 'page_for_posts' ) ) && $wp_query->get_queried_object_id() == get_option( 'page_for_posts' ) ) { 
+   if ( 'page' == get_option( 'show_on_front' ) && ( '' != get_option( 'page_for_posts' ) ) && $wp_query->get_queried_object_id() == get_option( 'page_for_posts' ) ) {
     $postid = $wp_query->get_queried_object_id();
    }
-  
+
    if(isset($postid) && is_numeric($postid)){
          $show_breadcrumb = get_post_meta( $postid, '_onetone_show_breadcrumb', true );
 	}
 	if($show_breadcrumb == 'yes' || $show_breadcrumb==""){
 
-         onetone_breadcrumb_trail( $options);           
+         onetone_breadcrumb_trail( $options);
 	}
-	   
+
 	}
-	
-	
+
+
 /*
 *  page navigation
 *
 */
 function onetone_native_pagenavi($echo,$wp_query){
-	
+
     if(!$wp_query){global $wp_query;}
-    global $wp_rewrite;      
+    global $wp_rewrite;
     $wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
     $pagination = array(
     'base' => @add_query_arg('paged','%#%'),
@@ -126,32 +126,32 @@ function onetone_native_pagenavi($echo,$wp_query){
 	 'next_text'    => '<i class="fa fa-angle-double-right"></i>',
 	'type'         => 'list',
     );
- 
+
     if( $wp_rewrite->using_permalinks() )
         $pagination['base'] = user_trailingslashit( trailingslashit( remove_query_arg('s',get_pagenum_link(1) ) ) . 'page/%#%/', 'paged');
- 
+
     if( !empty($wp_query->query_vars['s']) )
         $pagination['add_args'] = array('s'=>get_query_var('s'));
     if($echo == "echo"){
-        echo '<div class="page_navi post-list-pagination text-center">'.paginate_links($pagination).'</div>'; 
+        echo '<div class="page_navi post-list-pagination text-center">'.paginate_links($pagination).'</div>';
 	}else
 	{
-	
+
 	    return '<div class="page_navi post-list-pagination text-center">'.paginate_links($pagination).'</div>';
 	}
 }
-   
+
 // Custom comments list
-   
+
    function onetone_comment($comment, $args, $depth) {
-	   
-   $GLOBALS['comment'] = $comment; 
-   
+
+   $GLOBALS['comment'] = $comment;
+
    ?>
-   
+
    <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ;?>">
      <div id="comment-<?php comment_ID(); ?>">
-     
+
      <div class="comment media-comment media">
         <div class="media-avatar media-left">
            <?php echo get_avatar($comment,'52','' ); ?>
@@ -164,7 +164,7 @@ function onetone_native_pagenavi($echo,$wp_query){
                     <?php edit_comment_link(__('(Edit)','onetone'),'  ','') ;?>
                     <?php comment_reply_link(array_merge( $args, array('reply_text' => '<i class="fa fa-reply"></i> '. __('Reply','onetone'), 'depth' => $depth, 'max_depth' => $args['max_depth']))) ;?>
                 </h4>
-                
+
                 <?php if ($comment->comment_approved == '0') : ?>
 <em><?php _e('Your comment is awaiting moderation.','onetone') ;?></em>
 <br />
@@ -177,27 +177,27 @@ function onetone_native_pagenavi($echo,$wp_query){
 </div>
 <?php
         }
-		
-	
+
+
 	function onetone_get_default_slider(){
-	
+
 	$sanitize_title = "home";
 	$section_menu   = onetone_option( 'menu_title_0' );
 	$section_slug   = onetone_option( 'menu_slug_0' );
-	
+
 	if( $section_menu  != "" ){
-		
+
 		$sanitize_title = sanitize_title($section_menu );
-		
+
 		if( trim($section_slug) !="" ){
-			
-		   $sanitize_title = sanitize_title($section_slug); 
-		   
+
+		   $sanitize_title = sanitize_title($section_slug);
+
 		 }
- }	
-	 
-	$return = '<section id="'.$sanitize_title.'" class="section homepage-slider onetone-'.$sanitize_title.'"><div id="onetone-owl-slider" class="owl-carousel">';
-	
+ }
+
+	$return = '<section id="'.$sanitize_title.'" class="section homepage-slider onetone-'.$sanitize_title.'"><div class="title-slider"> <b>Cirugía en equipo </b> para miembro superior</div><div id="onetone-owl-slider" class="owl-carousel"> ';
+
 	 for($i=1;$i<=10;$i++){
 		 $active     = '';
 		 $text       = onetone_option('onetone_slide_text_'.$i);
@@ -205,31 +205,31 @@ function onetone_native_pagenavi($echo,$wp_query){
 		 $btn_txt    = onetone_option('onetone_slide_btn_txt_'.$i);
 		 $btn_link   = onetone_option('onetone_slide_btn_link_'.$i);
 		 $btn_target = onetone_option('onetone_slide_btn_target_'.$i);
-		 
+
 		 $btn_str    = '';
-		 
+
 		 if( $btn_txt != '' ){
-			 
+
 			 $btn_str    = '<br/><a class="btn" target="'.esc_attr($btn_target).'" href="'.esc_url($btn_link).'">'.do_shortcode($btn_txt).'</a>';
-			 
+
 			 }
-		
+
 		 if( trim($image) != "" ){
 			  $return .= '<div class="item"><img src="'.esc_url($image).'" alt="Slide image '.$i.'"><div class="inner"><div class="caption"><div class="caption-inner">'. do_shortcode($text) .$btn_str.'</div></div></div></div>';
-	       }  
+	       }
 
 	}
-	
+
 		$return .= '</div></section>';
 
         return $return;
-		
+
    }
 
 /**
 * onetone admin panel menu
 */
- 
+
    add_action( 'optionsframework_page_title_after','onetone_options_page_title' );
 
 function onetone_options_page_title() { ?>
@@ -241,7 +241,7 @@ function onetone_options_page_title() { ?>
                   <li><a href="<?php echo esc_url( 'https://www.mageewp.com/knowledges/' ); ?>" target="_blank"><?php _e( 'Knowledge', 'onetone' ); ?></a></li>
                   <li><a href="<?php echo esc_url( 'https://www.mageewp.com/forums/onetone/' ); ?>" target="_blank"><?php _e( 'Support Forums', 'onetone' ); ?></a></li>
                   </ul>
-      			
+
 <?php
 }
 
@@ -254,13 +254,13 @@ if ( ! function_exists( '_wp_render_title_tag' ) ) {
 	add_action( 'wp_head', 'onetone_slug_render_title' );
 }
 
- 
+
 /**
 * back to top
 */
- 
+
 function onetone_back_to_top(){
-	
+
 	$back_to_top_btn = onetone_option("back_to_top_btn");
 	if( $back_to_top_btn != "hide" ){
     echo '<a href="javascript:;">
@@ -271,7 +271,7 @@ function onetone_back_to_top(){
         </a>';
 	}
  }
-        
+
   add_action( 'wp_footer', 'onetone_back_to_top' );
 
 // get social icon
@@ -280,34 +280,34 @@ function onetone_get_social( $position, $class = 'top-bar-sns',$placement='top',
 	global $social_icons;
    $return = '';
    $rel    = '';
-   
-   $social_links_nofollow  = onetone_option( 'social_links_nofollow','no' ); 
-   $social_new_window = onetone_option( 'social_new_window','yes' );  
+
+   $social_links_nofollow  = onetone_option( 'social_links_nofollow','no' );
+   $social_new_window = onetone_option( 'social_new_window','yes' );
    if( $social_new_window == 'no')
    $target = '_self';
-   
+
    if( $social_links_nofollow == 'yes' )
    $rel    = 'nofollow';
-   
+
    if(is_array($social_icons) && !empty($social_icons)):
    $return .= '<ul class="'.esc_attr($class).'">';
    $i = 1;
    foreach($social_icons as $sns_list_item){
-	 
-		 $icon = onetone_option( $position.'_social_icon_'.$i,'' );  
+
+		 $icon = onetone_option( $position.'_social_icon_'.$i,'' );
 		 $title = onetone_option( $position.'_social_title_'.$i,'' );
-		 $link = onetone_option( $position.'_social_link_'.$i,'' );  
+		 $link = onetone_option( $position.'_social_link_'.$i,'' );
 	if(  $icon !="" ){
 	 $return .= '<li><a target="'.esc_attr($target).'" rel="'.$rel.'" href="'.esc_url($link).'" data-placement="'.esc_attr($placement).'" data-toggle="tooltip" title="'.esc_attr( $title).'"><i class="fa fa-'.esc_attr( $icon).'"></i></a></li>';
-	} 
+	}
 	$i++;
-	} 
+	}
 	$return .= '</ul>';
 	endif;
 	return $return ;
-	
+
 	}
-	
+
 // get top bar content
 
  function onetone_get_topbar_content( $type =''){
@@ -319,7 +319,7 @@ function onetone_get_social( $position, $class = 'top-bar-sns',$placement='top',
 		   echo '</div>';
 		 break;
 		 case "sns":
-		   $tooltip_position = onetone_option('top_social_tooltip_position','bottom'); 
+		   $tooltip_position = onetone_option('top_social_tooltip_position','bottom');
 		   echo onetone_get_social('header','top-bar-sns',$tooltip_position);
 		 break;
 		 case "menu":
@@ -328,17 +328,17 @@ function onetone_get_social( $position, $class = 'top-bar-sns',$placement='top',
 		   echo '</nav>';
 		 break;
 		 case "none":
-		
+
 		 break;
 		 }
 	 }
-	 
+
 /**
  * Convert Hex Code to RGB
  * @param  string $hex Color Hex Code
  * @return array       RGB values
  */
- 
+
 function onetone_hex2rgb( $hex ) {
 		if ( strpos( $hex,'rgb' ) !== FALSE ) {
 
@@ -354,8 +354,8 @@ function onetone_hex2rgb( $hex ) {
 		} else {
 
 			$hex = str_replace( '#', '', $hex );
-			
-			
+
+
 			if( strlen( $hex ) == 3 ) {
 				$r = hexdec( substr( $hex, 0, 1 ) . substr( $hex, 0, 1 ) );
 				$g = hexdec( substr( $hex, 1, 1 ) . substr( $hex, 1, 1 ) );
@@ -370,18 +370,18 @@ function onetone_hex2rgb( $hex ) {
 
 		return $rgb; // returns an array with the rgb values
 	}
-	 
+
  // get related posts
  function onetone_get_related_posts($post_id, $number_posts = -1,$post_type = 'post',$taxonomies='category') {
 	//$query = new WP_Query();
-	
+
 	$categories = array();
 
 	$terms = wp_get_object_terms( $post_id,  $taxonomies );
 	  if ( ! empty( $terms ) ) {
 		  if ( ! is_wp_error( $terms ) ) {
 				  foreach( $terms as $term ) {
-					  $categories[] = $term->term_id; 
+					  $categories[] = $term->term_id;
 				  }
 		  }
 	  }
@@ -395,7 +395,7 @@ function onetone_hex2rgb( $hex ) {
             'terms'    => $categories,
         ),
     ),);
-	
+
 	if($number_posts == 0) {
 		$query = new WP_Query();
 		return $query;
@@ -411,7 +411,7 @@ function onetone_hex2rgb( $hex ) {
 	));
 
 	$query = new WP_Query($args);
-    wp_reset_postdata(); 
+    wp_reset_postdata();
   	return $query;
 }
 
@@ -420,9 +420,9 @@ if ( ! function_exists( 'onetone_paging_nav' ) ) :
  * Display navigation to next/previous set of posts when applicable.
  */
 function onetone_paging_nav($echo='echo',$wp_query='') {
-	
+
     if(!$wp_query){global $wp_query;}
-    global $wp_rewrite;      
+    global $wp_rewrite;
     $wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
 
 	$pagination = array(
@@ -442,25 +442,25 @@ function onetone_paging_nav($echo='echo',$wp_query='') {
 	'before_page_number' => '',
 	'after_page_number'  => ''
     );
- 
+
     if( $wp_rewrite->using_permalinks() )
         $pagination['base'] = user_trailingslashit( trailingslashit( remove_query_arg('s',get_pagenum_link(1) ) ) . 'page/%#%/', 'paged');
- 
+
     if( !empty($wp_query->query_vars['s']) )
         $pagination['add_args'] = array('s'=>get_query_var('s'));
-		
+
 	if( $wp_query->max_num_pages > 1 ){
     if($echo == "echo"){
        echo '<nav class="post-list-pagination" role="navigation">
                                     <div class="post-pagination-decoration text-center">
-                                    '.paginate_links($pagination).'</div></nav>'; 
+                                    '.paginate_links($pagination).'</div></nav>';
 	}else
 	{
-	
+
 	return '<nav class="post-list-pagination" role="navigation">
                                     <div class="post-pagination-decoration text-center">'.paginate_links($pagination).'</div></nav>';
 	}
-	
+
 	}
 }
 endif;
@@ -468,7 +468,7 @@ endif;
 /**
  * Display navigation to next/previous post when applicable.
  */
- 
+
 if ( ! function_exists( 'onetone_post_nav' ) ) :
 
 function onetone_post_nav() {
@@ -487,8 +487,8 @@ function onetone_post_nav() {
 											next_post_link(     '<li class="pull-right">%link</li>', '%title' );
 										?>
                                         </ul>
-                                    </nav>  
-                                    
+                                    </nav>
+
 	<!-- .navigation -->
 	<?php
 }
@@ -496,7 +496,7 @@ endif;
 
  // get post content css class
  function onetone_get_content_class( $sidebar = '' ){
-	 
+
 	 if( $sidebar == 'left' )
 	 return 'left-aside';
 	 if( $sidebar == 'right' )
@@ -505,9 +505,9 @@ endif;
 	 return 'both-aside';
 	  if( $sidebar == 'none' )
 	 return 'no-aside';
-	
+
 	 return 'no-aside';
-	 
+
 	 }
 
 // remove woocommerce page title
@@ -519,10 +519,10 @@ endif;
 
 // fix shortcode
 
- function onetone_fix_shortcodes($content){   
+ function onetone_fix_shortcodes($content){
 			$replace_tags_from_to = array (
-				'<p>[' => '[', 
-				']</p>' => ']', 
+				'<p>[' => '[',
+				']</p>' => ']',
 				']<br />' => ']',
 				']<br>' => ']',
 				']\r\n' => ']',
@@ -538,7 +538,7 @@ endif;
 	  $content = onetone_fix_shortcodes($content);
 	  return $content;
 	}
-	
+
 add_filter( 'the_content', 'onetone_the_content_filter' );
 
 // cover content length
@@ -554,7 +554,7 @@ function onetone_cover_content($count,$content){
    /**
  * Returns an array of system fonts
  */
- 
+
 function onetone_options_typography_get_os_fonts() {
     // OS Font Defaults
     $os_faces = array(
@@ -571,18 +571,18 @@ function onetone_options_typography_get_os_fonts() {
 	    );
 	    return $os_faces;
 	}
-	
+
 /*
 *  get typography
 *
 */
  function onetone_get_typography( $option= array(),$name= array()){
-	 
-	 
+
+
 	 $return = "";
 	 if( $option && is_array($option) ):
 		 if(isset($name) && !empty($name)){
-		  
+
 		    if( in_array('face',$name) && isset($option['face'])){
 			$return .= 'font-family:'.$option['face'].';' ;
 			}
@@ -592,9 +592,9 @@ function onetone_options_typography_get_os_fonts() {
 			$return .= 'font-weight:'.$option['style'].';' ;
 			if( in_array('color',$name) && isset($option['color']))
 			$return .= 'color:'.$option['color'].';' ;
-			
+
         }else{
-		 
+
 		 if(isset($option['face'])){
 		 $return .= 'font-family:'.$option['face'].';' ;
 		 }
@@ -604,14 +604,14 @@ function onetone_options_typography_get_os_fonts() {
 		 $return .= 'font-weight:'.$option['style'].';' ;
 		 if(isset($option['color']))
 		 $return .= 'color:'.$option['color'].';' ;
-			
+
 		 }
 	endif;
 	return $return ;
-	 
-	 } 
+
+	 }
  function onetone_of_recognized_font_styles() {
-	 
+
 	$default = array(
 	'normal' => 'normal',
 	'italic' =>  'italic',
@@ -633,40 +633,40 @@ function onetone_options_typography_get_os_fonts() {
 add_filter( 'of_recognized_font_styles', 'onetone_of_recognized_font_styles' );
 //###################################
 
-	
+
  function onetone_tracking_code(){
    $tracking_code = onetone_option('tracking_code');
    echo $tracking_code;
- } 
+ }
 
-add_action('wp_footer', 'onetone_tracking_code'); 
+add_action('wp_footer', 'onetone_tracking_code');
 
  // Space before </head>
-	
+
  function onetone_space_before_head(){
-	 
+
    $space_before_head = onetone_option('space_before_head');
    echo $space_before_head;
-   
- } 
 
-add_action('wp_head', 'onetone_space_before_head'); 
+ }
+
+add_action('wp_head', 'onetone_space_before_head');
 
 
  // Space before </body>
-	
+
  function onetone_space_before_body(){
-	 
+
    $space_before_body = onetone_option('space_before_body');
    echo $space_before_body;
-   
- } 
 
-add_action('wp_footer', 'onetone_space_before_body'); 
+ }
+
+add_action('wp_footer', 'onetone_space_before_body');
 
 add_action('init', 'onetone_html_tags_code', 10);
 function onetone_html_tags_code() {
-	
+
     global $allowedposttags;
 
     $allowedposttags["javascript"] = array("src" => array(),"type" => array());
@@ -678,9 +678,9 @@ function onetone_html_tags_code() {
 // get summary
 
  function onetone_get_summary(){
-	 
+
 	 $excerpt_or_content = onetone_option('archive_content','excerpt');
-	
+
 	 if( $excerpt_or_content == 'content' ){
 	   $output = get_the_content();
 	 }
@@ -689,14 +689,14 @@ function onetone_html_tags_code() {
 	 }
 	   return  $output;
 	 }
-	 
+
 // change excerpt length
 function onetone_excerpt_length( $length ) {
-	
+
 	$excerpt_length = onetone_option('excerpt_length','55');
 	$excerpt_length = absint($excerpt_length);
 	return absint($excerpt_length);
-	
+
 }
 add_filter( 'excerpt_length', 'onetone_excerpt_length', 999 );
 
@@ -706,28 +706,28 @@ if ( ! function_exists( 'onetone_posted_on' ) ) :
  * Prints HTML with meta information for the current post-date/time and author.
  */
 function onetone_posted_on() {
-	
+
 	$return = '';
 	$display_post_meta = onetone_option('display_post_meta','yes');
-		
+
 	if( $display_post_meta == 'yes' ){
-		
+
 	  $display_meta_author     = onetone_option('display_meta_author','yes');
 	  $display_meta_date       = onetone_option('display_meta_date','yes');
 	  $display_meta_categories = onetone_option('display_meta_categories','yes');
 	  $display_meta_comments   = onetone_option('display_meta_comments','yes');
 	  $display_meta_readmore   = onetone_option('display_meta_readmore','yes');
 	  $display_meta_tags       = onetone_option('display_meta_tags','yes');
-	
-		
+
+
 	   $return .=  '<ul class="entry-meta">';
 	  if( $display_meta_date == 'yes' )
 		$return .=  '<li class="entry-date"><i class="fa fa-calendar"></i>'. get_the_date(  ).'</li>';
 	  if( $display_meta_author == 'yes' )
 		$return .=  '<li class="entry-author"><i class="fa fa-user"></i>'.get_the_author_link().'</li>';
-	  if( $display_meta_categories == 'yes' )		
+	  if( $display_meta_categories == 'yes' )
 		$return .=  '<li class="entry-catagory"><i class="fa fa-file-o"></i>'.get_the_category_list(', ').'</li>';
-	  if( $display_meta_comments == 'yes' )	
+	  if( $display_meta_comments == 'yes' )
 		$return .=  '<li class="entry-comments pull-right">'.onetone_get_comments_popup_link('', __( '<i class="fa fa-comment"></i> 1 ', 'onetone'), __( '<i class="fa fa-comment"></i> % ', 'onetone'), 'read-comments', '').'</li>';
         $return .=  '</ul>';
 	}
@@ -741,29 +741,29 @@ endif;
  * Modifies WordPress's built-in comments_popup_link() function to return a string instead of echo comment results
  */
 function onetone_get_comments_popup_link( $zero = false, $one = false, $more = false, $css_class = '', $none = false ) {
-	
+
     global $wpcommentspopupfile, $wpcommentsjavascript;
- 
+
     $id = get_the_ID();
- 
+
     if ( false === $zero ) $zero = __( 'No Comments', 'onetone');
     if ( false === $one ) $one = __( '1 Comment', 'onetone');
     if ( false === $more ) $more = __( '% Comments', 'onetone');
     if ( false === $none ) $none = __( 'Comments Off', 'onetone');
- 
+
     $number = get_comments_number( $id );
     $str = '';
- 
+
     if ( 0 == $number && !comments_open() && !pings_open() ) {
         $str = '<span' . ((!empty($css_class)) ? ' class="' . esc_attr( $css_class ) . '"' : '') . '>' . $none . '</span>';
         return $str;
     }
- 
+
     if ( post_password_required() ) {
-     
+
         return '';
     }
-	
+
     $str = '<a href="';
     if ( $wpcommentsjavascript ) {
         if ( empty( $wpcommentspopupfile ) )
@@ -779,18 +779,18 @@ function onetone_get_comments_popup_link( $zero = false, $one = false, $more = f
             $str .= get_comments_link();
         $str .= '"';
     }
- 
+
     if ( !empty( $css_class ) ) {
         $str .= ' class="'.$css_class.'" ';
     }
     $title = the_title_attribute( array('echo' => 0 ) );
- 
+
     $str .= apply_filters( 'comments_popup_link_attributes', '' );
- 
+
     $str .= ' title="' . esc_attr( sprintf( __('Comment on %s', 'onetone'), $title ) ) . '">';
     $str .= onetone_get_comments_number_str( $zero, $one, $more );
     $str .= '</a>';
-     
+
     return $str;
 }
 
@@ -798,24 +798,24 @@ function onetone_get_comments_popup_link( $zero = false, $one = false, $more = f
  * Modifies WordPress's built-in comments_number() function to return string instead of echo
  */
 function onetone_get_comments_number_str( $zero = false, $one = false, $more = false, $deprecated = '' ) {
-	
+
     if ( !empty( $deprecated ) )
         _deprecated_argument( __FUNCTION__, '1.3' );
- 
+
     $number = get_comments_number();
- 
+
     if ( $number > 1 )
         $output = str_replace('%', number_format_i18n($number), ( false === $more ) ? __('% Comments', 'onetone') : $more);
     elseif ( $number == 0 )
         $output = ( false === $zero ) ? __('No Comments', 'onetone') : $zero;
     else // must be one
         $output = ( false === $one ) ? __('1 Comment', 'onetone') : $one;
- 
+
     return apply_filters('comments_number', $output, $number);
 }
 
 function onetone_array_sort($array,$keys,$type='asc'){
-	
+
 	  if(!isset($array) || !is_array($array) || empty($array)){
 	  return '';
 	  }
@@ -832,8 +832,8 @@ function onetone_array_sort($array,$keys,$type='asc'){
 	  $val[$keys] = str_replace(':','',$val[$keys]);
 	  $keysvalue[] =$val[$keys];
 	  }
-	  asort($keysvalue); 
-	  reset($keysvalue); 
+	  asort($keysvalue);
+	  reset($keysvalue);
 	  foreach($keysvalue as $key=>$vals) {
 	  $keysort[] = $key;
 	  }
@@ -857,9 +857,9 @@ function onetone_array_sort($array,$keys,$type='asc'){
  * @param  string $title
  * @return string
  */
- 
+
 function onetone_custom_shop_archive_title( $title ) {
-	
+
     if ( function_exists('is_shop') && function_exists('woocommerce_page_title') &&  is_shop() ) {
         return str_replace( __( 'Products', 'onetone' ), woocommerce_page_title(false), $title );
     }
@@ -879,7 +879,7 @@ if( isset($_GET['page']) && $_GET['page'] =='onetone-options' )
 add_action('admin_footer', 'onetone_admin_footer_function');
 
 function onetone_admin_footer_function() {
-	
+
 	echo '<div class="onetone-admin-footer" style="height: 60px; display:none;background: rgba(0,0,0,0.5); position:fixed;bottom:0px;padding:15px 0;z-index:99;cursor: pointer;width: 100%;"><span style=" margin-left:180px; font-size:16px;color:#fff;">'.__('To save any changes on onetone options, click on the <strong  style="color:orange;">'.__('Save Options', 'onetone' ).'</strong> button on the right side.', 'onetone' ).'</span><button class="button-primary" id="onetone-save-options" style=" float:right;margin-right:50px;">'.__('Save Options', 'onetone' ).'</button></div>
 	<div class="options-saved"><i class="fa fa-check"></i>'.__('Options Updated', 'onetone' ).'</div>
 	<div class="options-saving"><i class="fa fa-spinner fa-spin"></i>'.__('Options Saving', 'onetone' ).'</div>	';
@@ -892,7 +892,7 @@ function onetone_tinymce_init() {
 add_filter('init', 'onetone_tinymce_init');
 
 function onetone_tinymce_plugin($init) {
-	
+
     $init['keyup_event'] = get_template_directory_uri() . '/js/keyup_event.js';
     return $init;
 }
@@ -916,7 +916,7 @@ function onetone_allowedposttags_filter( $allowedposttags ) {
 					'scrolling' => true,
 					'marginwidth' => true,
 					'marginheight' => true,
-					
+
   );
 	  return $allowedposttags;
 
@@ -926,7 +926,7 @@ function onetone_allowedposttags_filter( $allowedposttags ) {
 // onetone options backup
 */
 function onetone_options_backup(){
-	
+
 	$options        = array();
 	$keys           = array();
 	$option_name    = optionsframework_option_name();
@@ -934,10 +934,10 @@ function onetone_options_backup(){
     $keys           = get_option('onetone_options_backup');
 	$keys[]         = $key;
 	update_option('onetone_options_backup',$keys,'','no');
-	
+
 	$options        = get_option( $option_name );
 	add_option( 'onetone_options_backup_'.$key,$options,'','no' );
-	
+
 	$list_item = '<tr id="tr-'.$key.'">
     <td style="padding-left:20px;"> '.__('Backup', 'onetone').' '.date('Y-m-d H:i:s',$key).'</td>
     <td><a class="button" id="onetone-restore-btn" data-key="'.$key.'" href="#"><i class="fa fa-refresh"></i> '.__('Restore', 'onetone').'</a></td>
@@ -947,32 +947,32 @@ function onetone_options_backup(){
 	}
  add_action('wp_ajax_onetone_options_backup', 'onetone_options_backup');
  add_action('wp_ajax_nopriv_onetone_options_backup', 'onetone_options_backup');
- 
+
 /**
 // delete onetone options backup
 */
  function onetone_options_backup_delete(){
-	 
+
 	if( isset($_POST['key'])){
 		$key  = $_POST['key'];
 		delete_option( 'onetone_options_backup_'.$key );
 		$keys = get_option('onetone_options_backup');
-   	    
+
 		foreach ($keys as $k=>$v)
 		{
-			
+
 		   if ($v == $key){
 		     unset($keys[$k]);
 		   }
 		}
 	    update_option('onetone_options_backup',$keys,'','no');
-	
+
 		}
 	}
-	
+
  add_action('wp_ajax_onetone_options_backup_delete', 'onetone_options_backup_delete');
  add_action('wp_ajax_nopriv_onetone_options_backup_delete', 'onetone_options_backup_delete');
- 
+
  /**
 // restore onetone options backup
 */
@@ -984,102 +984,102 @@ function onetone_options_backup(){
 	    update_option( $option_name, $options );
 		_e('Restore successfully.','onetone' ) ;
 		exit(0);
-	
+
 		}
-	
+
 	}
  add_action('wp_ajax_onetone_options_backup_restore', 'onetone_options_backup_restore');
- add_action('wp_ajax_nopriv_onetone_options_backup_restore', 'onetone_options_backup_restore'); 
- 
+ add_action('wp_ajax_nopriv_onetone_options_backup_restore', 'onetone_options_backup_restore');
+
   /**
 // save options
 */
  function onetone_save_options(){
-	 
+
 	 global $onetone_options_saved,$onetone_default_options,$onetone_home_sections;
-	 
+
 	 $nonce = $_REQUEST['_wpnonce'];
-	 
+
 	if ( ! wp_verify_nonce( $nonce, 'optionsframework-options' ) ) {
-	
-		 die( 'Security check' ); 
-	
+
+		 die( 'Security check' );
+
 	} else {
-		
+
          $option_name = optionsframework_option_name();
 		 $options     = get_option( $option_name ) ;
-		 
+
 		 if( !$options ):
-		 
+
 	        $options  = $onetone_default_options;
-            update_option( $option_name, $options );  
-		 
+            update_option( $option_name, $options );
+
 		 endif;
-		 
+
 		 //update font color options
-		  for($i=0;$i<$section_num;$i++){ 
-		  
+		  for($i=0;$i<$section_num;$i++){
+
 				if(isset($options['section_color_'.$i]) && $i !== 0):
 				   if( $options['section_content_model_'.$i]== '0' && $options['section_color_'.$i] !== ''){
 						   $options['section_content_typography_'.$i]['color'] = $options['section_color_'.$i];
 				   }
-					
+
 				endif;
-				
+
 				if(!isset($options['section_subtitle_typography_'.$i]) && isset($onetone_default_options['section_subtitle_typography_'.$i])):
-					 
+
 					$options['section_subtitle_typography_'.$i] = $onetone_default_options['section_subtitle_typography_'.$i];
-					
+
 				endif;
 			 }
-		 
+
 		 if( isset($_POST[$option_name]) && !empty($_POST[$option_name]) ):
-		 
+
 		   foreach( $_POST[$option_name] as $k => $v ){
-			   
+
 			       if( is_array($v) ){
-					   
+
 					   foreach( $v as $k1=>$v1){
-						   
+
 						   $options[$k][$k1] = stripslashes($v1);
-						   
+
 						   }
-				   
+
 				   }else{
 				     $options[$k] = stripslashes($v);
 				   }
-			   
-			   
+
+
 			   }
-			   
-			 update_option( $option_name, $options );  
-		 
+
+			 update_option( $option_name, $options );
+
 		 endif;
-		 
+
 	}
 	exit(0);
 	}
-	
+
  add_action('wp_ajax_onetone_save_options', 'onetone_save_options');
  add_action('wp_ajax_nopriv_onetone_save_options', 'onetone_save_options');
- 
+
  /**
  * A unique identifier is defined to store the options in the database and reference them from the theme.
  */
   if( !function_exists('onetone_option_name') ):
   function onetone_option_name() {
-  
+
 	  $themename = get_option( 'stylesheet' );
 	  $themename = preg_replace("/\W/", "_", strtolower($themename) );
-  
-	  if( is_child_theme() ){	
+
+	  if( is_child_theme() ){
 		  $themename = str_replace("_child","",$themename ) ;
 		  }
 	  $themename_lan = $themename;
-	  
+
 	  if( defined('ICL_LANGUAGE_CODE') && ICL_LANGUAGE_CODE != 'en' )
 	    $themename_lan = $themename.'_'.ICL_LANGUAGE_CODE;
-	  
+
 	  if(function_exists('pll_current_language')){
 	    $default_lan = pll_default_language('slug');
 	    $current_lan = pll_current_language('slug');
@@ -1090,13 +1090,13 @@ function onetone_options_backup(){
   }
   endif;
 
- 
+
  function onetone_tiny_mce_before_init( $init ) {
-    $init['setup'] = 'function( ed ) { ed.onKeyUp.add( function( ed, e ) { 
+    $init['setup'] = 'function( ed ) { ed.onKeyUp.add( function( ed, e ) {
 	  var fieldID  = e.target.getAttribute("data-id");
      jQuery("#"+fieldID).attr("data-changed","true");
 	 jQuery("#optionsframework-submit input[name=\'update\'],#onetone-save-options").removeAttr("disabled");
-																
+
  }); }';
     return $init;
 }
@@ -1127,11 +1127,11 @@ function onetone_get_default_options(){
 		}
 			$output[$option['id']] = apply_filters( 'of_sanitize_' . $option['type'], $option['std'], $option );
 	}
-	
+
 	// get default customize data
 	if( function_exists('onetone_standard_settings_data') ):
 	$customize_options = onetone_standard_settings_data( );
-	
+
 	foreach ( (array) $customize_options as $option ) {
 		if ( ! isset( $option['slug'] ) ) {
 			continue;
@@ -1147,19 +1147,19 @@ function onetone_get_default_options(){
 	$output[ $id ] = $option['default'];
 	}
 	endif;
-	
+
 	$options = $output;
-	
+
 	return 	$options;
-	
+
 }
 
 function onetone_close_notice(){
-	
+
 	update_option('_onetone_options_dismiss','1');
-	
+
 	}
-	
+
 add_action('wp_ajax_onetone_close_notice', 'onetone_close_notice');
 add_action('wp_ajax_nopriv_onetone_close_notice', 'onetone_close_notice');
 

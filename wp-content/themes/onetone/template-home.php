@@ -75,9 +75,74 @@ get_header('home');
 </div>
 
 <!-- ACA EMPIEZAN LAS SECCIONES DE HOME -->
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:#C1C1C3;">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title-box-especialidades" style=";">
+
+  <div class="header-float">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding-top:50px;">
+      <img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/logo-nombre.png" alt="">
+    </div>
+
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:0; margin:0">
+      <p class="special-bg">“Las enfermedades y el trauma del miembro superior son muy comunes. En <b>Synectia</b> te ayudamos a que dejen de afectar tu vida”</p>
+
+    </div>
+  </div>
+
+
+
+        <h2 style="font-family: 'Roboto-black'; color:#008E8E; font-size:2em;">NUESTRA ESPECIALIDAD</h2>
+        <p>SERVICIOS</p>
+
+</div>
+
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box-post-especialidades" style="">
 
 <style media="screen">
+  .box-post-especialidades{
+    margin-bottom: 0;
+    background-color:#C1C1C3;
+    padding:30px;
+  }
+   .header-float{
+     background-color: #004851;
+     width: 90%;
+     position: absolute;
+     top:-50%;
+     height:auto;
+     padding-left: 50px;
+     left: 0;
+     right: 0;
+     margin: auto;
+     z-index: 2;
+   }
+   .header-float img{
+     display: inline-block;
+     width: 200px;
+   }
+   .special-bg{
+     background-image: url(<?php echo site_url(); ?>/wp-content/themes/onetone/img/bg-colored.png);
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: 100% 100%;
+     display: inline-block;
+     padding: 50px;
+     padding-right: 120px;
+     width: 450px;
+     float: right;
+     margin:0;
+     font-family: 'Roboto-medium';
+
+   }
+
+.title-box-especialidades{
+  background-color:#E2E2E2;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  margin-top:30px;
+  margin-bottom: 0;
+}
   .especialidad-post-image{
       width: 100%;
       height: 200px;
@@ -111,9 +176,9 @@ get_header('home');
               <?php the_post_thumbnail('full'); ?>
             </div>
 
-            <div class="especialidad-post-info">
+            <div class="especialidad-post-info" hid="1">
               <p style="color:#008E8E"><b><?php the_title(); ?></b></p>
-              <p style="color:#575756"><?php echo  $post->post_content ?></p>
+              <p style="color:#575756; font-family:'Roboto-Light'; line-height:20px;"><?php echo  $post->post_content ?></p>
             </div>
 
           </div>
@@ -123,6 +188,31 @@ get_header('home');
 
 <?php } wp_reset_postdata();   ?>
 
+</div>
+
+<style media="screen">
+  .box-slogan{
+    background-image: url(<?php echo site_url(); ?>/wp-content/themes/onetone/img/Home_TeamCierre.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*border-top: 15px solid #004851;*/
+    height: 500px;
+    background-position: center;
+    margin-bottom: 30px;
+  }
+
+  .box-slogan > div{
+
+  }
+</style>
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box-slogan" class="">
+  <div class="" style="height:20px; background-color:#004851; position:absolute; top:0; width:100%; left:0;"> </div>
+  <div class="" style="height:20px; background-color:#00A4A4; position:absolute; top:0; width:30%; left:0;  border-top-right-radius:10px;  border-bottom-right-radius:10px;"></div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="padding: 10% 40px 20px 50px;">
+        <p style="font-size:2.2em; font-family:'Roboto-Light'; color:#00A4A4">TRABAJAMOS <br> EN EQUIPO PARA <br> MEJORAR TU <br> CALIDAD DE VIDA</p>
+    </div>
 </div>
 
 <!-- ACA TERMINAN LAS SECCIONES DE HOME -->

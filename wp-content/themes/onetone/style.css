@@ -19,6 +19,32 @@ OneTone Wordpress theme is released under the terms of GNU GPL.
  * Reset CSS by Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
  */
 
+
+ @font-face {
+     font-family:'Roboto-black';
+     src: url(fuentes/Roboto-Black.ttf);
+ }
+ @font-face {
+		 font-family:'Roboto-bold';
+		 src: url(fuentes/Roboto-Bold.ttf);
+ }
+ @font-face {
+		 font-family:'Roboto-light';
+		 src: url(fuentes/Roboto-Light.ttf);
+ }
+ @font-face {
+		 font-family:'Roboto-medium';
+		 src: url(fuentes/Roboto-Medium.ttf);
+ }
+ @font-face {
+		 font-family:'Roboto-regular';
+		 src: url(fuentes/Roboto-Regular.ttf);
+ }
+ @font-face {
+		 font-family:'Roboto-thin';
+		 src: url(fuentes/Roboto-Thin.ttf);
+ }
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
 	border: 0;
 	font-family: inherit;
@@ -46,6 +72,7 @@ div{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing:    border-box;
 	box-sizing:         border-box;
+	font-family:'Roboto-regular';
 }
 
 audio,
@@ -67,7 +94,7 @@ input,
 select,
 textarea {
 	color: #555;
-	font-family: 'selfFont', 'Open Sans', sans-serif;
+	font-family:'Roboto-regular';
 	font-size: 14px;
 	line-height: 1.8;
 	outline: none;
@@ -186,7 +213,7 @@ tt,
 var,
 samp,
 pre {
-	font-family: monospace, serif;
+	font-family:'Roboto-regular';
 	font-size: 14px;
 	-webkit-hyphens: none;
 	-moz-hyphens:    none;
@@ -256,7 +283,7 @@ blockquote b {
 blockquote {
 	border: 0;
 	position: relative;
-	font-family: Georgia, serif;
+	font-family:'Roboto-regular';
 }
 
 blockquote p {
@@ -1583,7 +1610,7 @@ ol.breadcrumb-nav {
 
 .entry-title,
 .entry-title a{
-	font-family: 'Yanone Kaffeesatz',sans-serif;
+	font-family: 'Roboto-regular';
 	font-size: 36px;
 	font-weight: 400;
 	text-transform: uppercase;
@@ -1658,7 +1685,7 @@ ol.breadcrumb-nav {
 }
 
 .post-attributes h3 {
-	font-family: 'Yanone Kaffeesatz',sans-serif;
+	font-family: 'Roboto-regular';
 	font-size: 24px;
 	font-weight: 400;
 	text-transform: uppercase;
@@ -2893,7 +2920,7 @@ section.video-section .home-container {
 }
 
 .format-quote .entry-content blockquote {
-    font-family: serif;
+    font-family:'Roboto-regular';
     font-style: italic;
     border: 0;
     padding: 20px 60px 0 60px;
@@ -2931,7 +2958,7 @@ section.video-section .home-container {
 	text-align: center;
 	font-size: 1.2em;
 	font-weight: bold;
-	font-family: serif;
+	font-family:'Roboto-regular';
 }
 
 .format-link .entry-content p {
