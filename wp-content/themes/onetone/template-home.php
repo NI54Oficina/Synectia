@@ -99,66 +99,66 @@ get_header('home');
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box-post-especialidades" style="">
 
 <style media="screen">
-  .box-post-especialidades{
+    .box-post-especialidades{
+      margin-bottom: 0;
+      background-color:#C1C1C3;
+      padding:30px;
+    }
+     .header-float{
+       background-color: #004851;
+       width: 90%;
+       position: absolute;
+       top:-50%;
+       height:auto;
+       padding-left: 50px;
+       left: 0;
+       right: 0;
+       margin: auto;
+       z-index: 2;
+     }
+     .header-float img{
+       display: inline-block;
+       width: 200px;
+     }
+     .special-bg{
+       background-image: url(<?php echo site_url(); ?>/wp-content/themes/onetone/img/bg-colored.png);
+       background-repeat: no-repeat;
+       background-position: center;
+       background-size: 100% 100%;
+       display: inline-block;
+       padding: 50px;
+       padding-right: 120px;
+       width: 450px;
+       float: right;
+       margin:0;
+       font-family: 'Roboto-medium';
+
+     }
+
+  .title-box-especialidades{
+    background-color:#E2E2E2;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    margin-top:30px;
     margin-bottom: 0;
-    background-color:#C1C1C3;
-    padding:30px;
   }
-   .header-float{
-     background-color: #004851;
-     width: 90%;
-     position: absolute;
-     top:-50%;
-     height:auto;
-     padding-left: 50px;
-     left: 0;
-     right: 0;
-     margin: auto;
-     z-index: 2;
-   }
-   .header-float img{
-     display: inline-block;
-     width: 200px;
-   }
-   .special-bg{
-     background-image: url(<?php echo site_url(); ?>/wp-content/themes/onetone/img/bg-colored.png);
-     background-repeat: no-repeat;
-     background-position: center;
-     background-size: 100% 100%;
-     display: inline-block;
-     padding: 50px;
-     padding-right: 120px;
-     width: 450px;
-     float: right;
-     margin:0;
-     font-family: 'Roboto-medium';
+    .especialidad-post-image{
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+    }
 
-   }
+    .especialidad-post-image img{
+        width: 100%;
+        height: auto;
+        position: relative;
 
-.title-box-especialidades{
-  background-color:#E2E2E2;
-  text-align: center;
-  padding-top: 100px;
-  padding-bottom: 50px;
-  margin-top:30px;
-  margin-bottom: 0;
-}
-  .especialidad-post-image{
-      width: 100%;
-      height: 200px;
-      overflow: hidden;
-  }
+    }
 
-  .especialidad-post-image img{
-      width: 100%;
-      height: auto;
-      position: relative;
-
-  }
-
-  .especialidad-post-info{
-    padding: 10px 20px;
-  }
+    .especialidad-post-info{
+      padding: 10px 20px;
+    }
 
 </style>
 

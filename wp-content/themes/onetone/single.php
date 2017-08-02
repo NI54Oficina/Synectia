@@ -75,7 +75,12 @@ $aside          = 'both-aside';
                                 <div class="entry-main">
                                     <div class="entry-header">
                                         <h1 class="entry-title" style="color:#008E8E; font-family: 'Roboto-bold'; margin-bottom:0 "><?php the_title();?></h1>
+
+                                        <?php   $category_detail=get_the_category();//$post->ID
+                                          $cd=$category_detail[0];
+                                          if($cd->slug == 'nosotros'){ ?>
                                         <p class="entry-title" style="color:#008E8E; font-family: 'Roboto-light'; ">Formación y experiencia</p>
+                                        <?php } ?>
                                         <!-- <ul class="entry-meta">
                                             <li class="entry-date"><i class="fa fa-calendar"></i><a href="<?php echo get_month_link(get_the_time('Y'), get_the_time('m'));?>"><?php echo get_the_date("M d, Y");?></a></li>
                                             <li class="entry-author"><i class="fa fa-user"></i><?php echo get_the_author_link();?></li>
@@ -92,12 +97,12 @@ $aside          = 'both-aside';
 				?>
                                     </div>
 
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 volver-nosotros" style="">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 volver-nosotros container-buttons" style="">
 
                                       <?php
                                       $category_detail=get_the_category();//$post->ID
                                       $cd=$category_detail[0];
-                                        switch($cd->slug == 'nosotros'){
+                                        switch($cd->slug){
                                           case 'nosotros':?>
                                           <a style="" href="<?php echo site_url(); ?>/nosotros">VOLVER</a>
                                         <?php  break;?>
@@ -112,24 +117,7 @@ $aside          = 'both-aside';
                                     </div>
 
                                     <style media="screen">
-                                      .volver-nosotros{
-                                        text-align:center
-                                      }
 
-                                      .volver-nosotros a{
-                                        padding:5px 70px;
-                                        background-color:#FF5B35;
-                                        color:white;
-                                        border: 1px solid transparent;
-                                      }
-
-                                      .volver-nosotros a:hover{
-
-                                        background-color:white;
-                                        color:#FF5B35;
-                                        border-color:#FF5B35;
-                                        transition: all .8s;
-                                      }
 
                                     </style>
 
