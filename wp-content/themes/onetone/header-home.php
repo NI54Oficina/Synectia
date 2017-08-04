@@ -89,7 +89,7 @@
                         <?php if( $logo ):?>
 
                             <a href="<?php echo esc_url(home_url('/')); ?>">
-                            <img class="site-logo normal_logo" alt="<?php bloginfo('name'); ?>" src="<?php echo esc_url($logo); ?>" />
+                            <img class="site-logo normal_logo" alt="<?php bloginfo('name'); ?>" src="<?php echo site_url(); ?>/wp-content/uploads/2017/07/logo-03.png" />
                             </a>
                              <?php
 
@@ -170,7 +170,7 @@
 
             <?php if( (!$detect->isTablet() && !$detect->isMobile() && $enable_sticky_header == 'yes') || ( $detect->isTablet() && $enable_sticky_header_tablets == 'yes' ) || ( $detect->isMobile() && !$detect->isTablet() && $enable_sticky_header_mobiles == 'yes' )  ):?>
 
-                <div class="fxd-header">
+                <div class="fxd-header" style="background-color:white !important">
                     <div class="<?php echo $header_container; ?>">
                         <div class="logo-box">
                         <?php if( $sticky_logo ):?>
