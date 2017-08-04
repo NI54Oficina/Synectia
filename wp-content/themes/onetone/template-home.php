@@ -211,7 +211,7 @@ get_header('home');
   <div class="" style="height:20px; background-color:#00A4A4; position:absolute; top:0; width:30%; left:0;  border-top-right-radius:10px;  border-bottom-right-radius:10px;"></div>
 
     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="padding: 10% 40px 20px 50px;">
-        <p style="font-size:2.2em; font-family:'Roboto-Light'; color:#00A4A4">TRABAJAMOS <br> EN EQUIPO PARA <br> MEJORAR TU <br> CALIDAD DE VIDA</p>
+        <p style="font-size:2.2em; font-family:'Roboto-Light'; color:#00A4A4">Trabajamos <br> en equipo para<br>mejorar tu<br> calidad de vida  </p>
     </div>
 </div>
 

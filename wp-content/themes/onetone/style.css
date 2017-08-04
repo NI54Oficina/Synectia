@@ -3488,6 +3488,14 @@ margin-bottom: 0;
   margin-bottom: 5px;
 }
 
+.especialidad-post-info p:first-child{
+  font-size: 22px;
+}
+
+.especialidad-post-info p:last-child{
+  font-size: 16px;
+}
+
 .title-home-banner{
   padding-top: 50px;
 }

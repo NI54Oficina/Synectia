@@ -13,7 +13,7 @@ get_header();
 
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 header-nosotros" >
-    <p>NOSOTROS</p>
+    <p style="font-size:20px;">NOSOTROS</p>
     <p >Analizamos en forma conjunta cada caso. Sumamos <br>aptitud y experiencia junto a tecnología y procedimientos <br>de vanguardia para conseguir el mejor tratamiento.</p>
 
 </div>
@@ -37,7 +37,8 @@ get_header();
       }
 
       .header-nosotros p:last-child{
-        font-size: 2em;
+        font-size: 33px;
+        line-height: 46px;
       }
 
       .container-medicos{
@@ -60,6 +61,7 @@ get_header();
       .informacion-dr P{
         margin-bottom: 0px;
         color:#575756;
+        font-size: 12px;
         font-family: 'Roboto-light';
       }
 
@@ -178,6 +180,11 @@ get_header();
 
 
 <style media="screen">
+
+.importancia-equipo{
+  padding-left: 50px;
+  padding-right: 50px;
+}
   .importancia-equipo h3{
     color:#FF5B35;
     font-family: 'Roboto-bold'
@@ -239,18 +246,18 @@ nuestras habilidades. El resultado: un servicio diferente, adaptado a cada caso.
     position: absolute;
     bottom:20%;
     color: white;
-    font-size: 1.7em;
+    font-size: 28px;
     left: 0;
     right: 0;
     margin:auto;
-    line-height: 25px;
+    line-height: 36px;
     font-family: 'Roboto-thin';
   }
 
 </style>
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 banner-inferior">
-    <p>Cirugia  en equipo: <br><b>Un servicio diferente. Caso por caso.</b></p>
+    <p>Cirugía  en equipo: <br><b>Un servicio diferente. Caso por caso.</b></p>
 </div>
 
 
