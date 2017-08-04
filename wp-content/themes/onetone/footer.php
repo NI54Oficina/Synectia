@@ -41,7 +41,7 @@
       </style>
 
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer-content-area">
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
           <img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/logo-blanco.png" alt="">
 
           <p style="font-family: 'Roboto-light'; color:#008E8E;"><b>Cirugía en equipo</b><br> para miembro superior</p>
@@ -54,14 +54,14 @@
           <p style="color:white; font-weight:bold">synectiacirugia@gmail.com</p>
         </div>
 
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 inter-footer">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-10 inter-footer">
           <h4 class="" >TURNOS</h4>
           <p><span>Horarios: </span> Miércoles y Viernes 16hs</p>
           <p><span>Cobertura: </span> Particular, OSDE y otros</p>
           <p >prepagos por integro</p>
         </div>
 
-        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 logo-color-sin">
             <img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/logo-img.png" alt="">
         </div>
       </div>

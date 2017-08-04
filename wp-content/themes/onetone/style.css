@@ -3487,3 +3487,71 @@ margin-bottom: 0;
 .especialidad-post-info p{
   margin-bottom: 5px;
 }
+
+.title-home-banner{
+  padding-top: 50px;
+}
+
+
+@media (max-width: 768px) {
+
+  .title-slider{
+    font-size: 1.5em !important
+  }
+
+  .title-box-especialidades{
+    padding-top: 20px!important
+  }
+
+  .header-float{
+    padding-left: 0 !important;
+    position: relative !important;
+    width: 100% !important;
+  }
+
+  .title-home-banner{
+    padding-top: 0;
+  }
+
+  .bg-mobile-non-float{
+    background-color: #004851;
+  }
+
+  .special-bg{
+    width: 100% !important;
+  }
+
+  .especialidad-post-image{
+    height: auto !important;
+  }
+
+  .logo-color-sin{
+    padding: 20px 0 0 0;
+  }
+
+  .logo-color-sin img{
+    width: 100% !important;
+  }
+
+  .container-medicos > div, .slogan-investigacion, .container-post-novedades .float-novedades, .especialidad-post-info{
+    height: auto !important;
+  }
+
+  .informacion-dr h2{
+    font-size: 15px !important;
+  }
+
+  .banner-inferior p
+  {
+    width: 90%;
+  }
+
+  .container-button-postular a, .container-buttons a{
+    padding: 5px 20px !important;
+  }
+
+  .header-investigacion p, .header-contacto div{
+    width: auto !important;
+  }
+
+ }

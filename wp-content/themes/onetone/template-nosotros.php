@@ -54,7 +54,7 @@ get_header();
       .informacion-dr h2{
         color:#008E8E;
         font-family: 'Roboto-bold';
-        font-size: 1.7em;
+        font-size: 18px;
       }
 
       .informacion-dr P{
@@ -84,7 +84,7 @@ get_header();
 
          $posts=get_posts( array('numberposts' => -1, "post_type"=>"post", 'category'=>$category_id, 'order' => 'ASC' ) );
           $int=0;
-         foreach($posts as $post){ 
+         foreach($posts as $post){
 
 
            if($int % 2 != 0){?>
@@ -94,9 +94,46 @@ get_header();
                <div class="imagen-dr" >
                  <?php the_post_thumbnail('full'); ?>
                </div>
+               <style media="screen">
+               .social-link{text-align: center;
+                 background-color: #004851;
+                 border-radius: 100%;
+                 width: 30px;
+                 height: 30px;
+                 position: relative;
+                 float:right;
+                 margin-left: 10px;
+               }
 
+               .social-link i{
+                 color:#d5d5d6;
+                 font-size: 15px;
+                 margin-top: 24%;
+               }
+
+               .social-link img{
+                 color:#d5d5d6;
+                 width:16px;
+                 margin-top: 25%;
+               }
+
+               </style>
                  <div class="informacion-dr">
-                   <h2><a href="<?php echo $post->guid ?>"> <?php the_title(); ?></a> </h2>
+                   <h2><a href="<?php echo $post->guid ?>"> <?php the_title(); ?></a>
+                     <a href="<?php echo get_field('linkedin', $post->ID)?>">
+                   <div class="" style="float:right; margin-top:-10px;">
+                     <div class="social-link" style="display:inline">
+                       <i class="fa fa-linkedin" aria-hidden="true"></i>
+                     </div>
+                     </a>
+                     <a href="<?php echo get_field('link-medicos', $post->ID)?>">
+                     <div class="social-link" style="display:inline;">
+                        <img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/red-medicos.svg" alt="">
+                     </div>
+                   </div>
+                   </a>
+
+                   </h2>
                    <?php echo get_field('informacion_doctor', $post->ID)?>
                  </div>
 
@@ -109,7 +146,22 @@ get_header();
 
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 container-medicos" hid="2">
               <div class="informacion-dr" >
-                <h2><a href="<?php echo $post->guid ?>"> <?php the_title(); ?></a> </h2>
+                <h2><a href="<?php echo $post->guid ?>"> <?php the_title(); ?></a>
+                  <a href="<?php echo get_field('linkedin', $post->ID)?>">
+                <div class="" style="float:right;  margin-top:-10px;">
+                  <div class="social-link" style="display:inline">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  </div>
+                  </a>
+                  <a href="<?php echo get_field('link-medicos', $post->ID)?>">
+                  <div class="social-link" style="display:inline">
+                     <img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/red-medicos.svg" alt="">
+                  </div>
+                </div>
+                </a>
+
+                </h2>
+
                 <?php echo get_field('informacion_doctor', $post->ID)?>
               </div>
 
