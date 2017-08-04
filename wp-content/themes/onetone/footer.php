@@ -111,20 +111,20 @@
               <a href="#"><div class="fb-link"> <i class="fa fa-facebook" aria-hidden="true"></i>  </div></a>
 
               <style media="screen">
-                .fb-link{text-align: center;
-                  background-color: #004851;
-                  border-radius: 100%;
-                  width: 30px;
-                  height: 30px;
-                  position: relative;
-                  float:right;
-                }
+              .fb-link{text-align: center;
+                background-color: #004851;
+                border-radius: 100%;
+                width: 30px;
+                height: 30px;
+                position: relative;
+                float:right;
+              }
 
-                .fb-link i{
-                  color:white;
-                  font-size: 1.5em;
-                  margin-top: 24%;
-                }
+              .fb-link i{
+                color:white;
+                font-size: 1.5em;
+                margin-top: 24%;
+              }
 
               </style>
 
