@@ -89,7 +89,7 @@
                         <?php if( $logo ):?>
 
                             <a href="<?php echo esc_url(home_url('/')); ?>">
-                            <img class="site-logo normal_logo" alt="<?php bloginfo('name'); ?>" src="<?php echo site_url(); ?>/wp-content/uploads/2017/07/logo-03.png" />
+                            <img class="site-logo normal_logo" alt="<?php bloginfo('name'); ?>" src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/logo.png" />
                             </a>
                              <?php
 
@@ -99,7 +99,7 @@
 					$pixels ="px";
 					endif; ?>
                     <a href="<?php echo esc_url(home_url('/')); ?>">
-					<img src="<?php echo $logo_retina; ?>" alt="<?php bloginfo('name'); ?>" style="width:<?php echo onetone_option('retina_logo_width').$pixels; ?>;max-height:<?php echo onetone_option('retina_logo_height').$pixels; ?>; height: auto !important" class="site-logo retina_logo" />
+					<img src="<?php echo $logo_retina; ?>" alt="<?php bloginfo('name'); ?>" style="width:<?php echo onetone_option('retina_logo_width').$pixels; ?>;max-height:<?php echo onetone_option('retina_logo_height').$pixels; ?>;" class="site-logo retina_logo" />
 					 </a>
                      <?php endif;?>
                             <?php endif;?>
@@ -182,7 +182,7 @@
 					if( is_numeric(onetone_option('sticky_logo_width_for_retina_logo')) && is_numeric(onetone_option('sticky_logo_height_for_retina_logo')) ):
 					$pixels ="px";
 					endif; ?>
-					<a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo $sticky_logo_retina; ?>" alt="<?php bloginfo('name'); ?>" style="width:<?php echo onetone_option('sticky_logo_width_for_retina_logo').$pixels; ?>;max-height:<?php echo onetone_option('sticky_logo_height_for_retina_logo').$pixels; ?>; height: auto !important" class="site-logo retina_logo" /></a>
+					<a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo $sticky_logo_retina; ?>" alt="<?php bloginfo('name'); ?>" style="width:<?php echo onetone_option('sticky_logo_width_for_retina_logo').$pixels; ?>;max-height:<?php echo onetone_option('sticky_logo_height_for_retina_logo').$pixels; ?>; " class="site-logo retina_logo" /></a>
 					<?php endif; ?>
 
                            <?php endif;?>

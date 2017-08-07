@@ -26,11 +26,13 @@
           font-family: 'Roboto-black';
           color:white;
           font-size: 15px;
+          line-height: 24px;
         }
 
         footer .inter-footer p{
           color:#008E8E;
-          margin-bottom:0;
+          margin-bottom:5px;
+          line-height: 25px;
         }
 
         footer .inter-footer p span{
