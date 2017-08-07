@@ -2516,6 +2516,7 @@ section.video-section .home-container {
 
 #onetone-owl-slider {
     position: relative;
+    max-height: 600px;
 }
 
 #onetone-owl-slider.owl-theme .owl-controls {
@@ -3500,6 +3501,33 @@ margin-bottom: 0;
   padding-top: 50px;
 }
 
+.fb-link{text-align: center;
+  background-color: #004851;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  float:right;
+}
+
+.fb-link i{
+  color:white;
+  font-size: 1.5em;
+  margin-top: 24%;
+}
+
+
+  .nosotros-left{
+    padding-right: 50px;
+    padding-left: 0;
+  }
+
+  .nosotros-right{
+    padding-left: 50px;
+    padding-right: 0;
+  }
+
+
 
 @media (max-width: 768px) {
 
@@ -3561,5 +3589,17 @@ margin-bottom: 0;
   .header-investigacion p, .header-contacto div{
     width: auto !important;
   }
+  .fb-link{
+    float: none;
+    margin: auto;
+  }
 
+
+  .nosotros-right, .nosotros-left{
+    padding:0;
+  }
+
+  .logo-color-sin{
+    padding-top: 15%;
+  }
  }

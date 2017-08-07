@@ -94,9 +94,9 @@ get_header();
 </div>
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container-buttons sacar-turno">
-  <h3>Turnos Online</h3>
-  <p>Conseguí un turno de la manera mas sencilla</p>
-  <a href="#">CONSEGUIR TURNO</a>
+  <h3>Turnos</h3>
+  <p> (+5411) 4772 4391 / 0857 </p>
+  <!-- <a href="#">CONSEGUIR TURNO</a> -->
 
 </div>
 

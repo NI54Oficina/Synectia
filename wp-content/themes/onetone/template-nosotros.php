@@ -13,8 +13,8 @@ get_header();
 
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 header-nosotros" >
-    <p style="font-size:20px;">NOSOTROS</p>
-    <p >Analizamos en forma conjunta cada caso. Sumamos <br>aptitud y experiencia junto a tecnología y procedimientos <br>de vanguardia para conseguir el mejor tratamiento.</p>
+    <p style="font-size:20px; letter-spacing:3px;">NOSOTROS</p>
+    <p  >Analizamos en forma conjunta cada caso. Sumamos <br>aptitud y experiencia junto a tecnología y procedimientos <br>de vanguardia para conseguir el mejor tratamiento.</p>
 
 </div>
     <style media="screen">
@@ -22,7 +22,7 @@ get_header();
       .header-nosotros{
         padding: 10% 50px 0px 50px;
         background-image:url(<?php echo site_url(); ?>/wp-content/themes/onetone/img/Nosotros_Banner.jpg);
-        background-position: center;
+        background-position: center bottom;
         background-repeat: no-repeat;
         background-size: cover;
         height: 100vh;
@@ -39,6 +39,7 @@ get_header();
       .header-nosotros p:last-child{
         font-size: 33px;
         line-height: 46px;
+        letter-spacing: 1px;
       }
 
       .container-medicos{
@@ -46,19 +47,20 @@ get_header();
       }
 
       .container-medicos > div{
-        height: 220px;
+        height: 200px;
       }
       .informacion-dr{
         background-color: #D5D5D6;
-        padding: 20px;
+        padding: 30px;
       }
       .informacion-dr h2{
         color:#008E8E;
         font-family: 'Roboto-bold';
         font-size: 18px;
+        margin-top:0
       }
 
-      .informacion-dr P{
+        .informacion-dr p{
         margin-bottom: 0px;
         color:#575756;
         font-size: 12px;
@@ -94,7 +96,7 @@ get_header();
              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 container-medicos" hid="2">
 
                <div class="imagen-dr" >
-                 <?php the_post_thumbnail('full'); ?>
+                <a href="<?php echo $post->guid ?>"><?php the_post_thumbnail('full'); ?></a>
                </div>
                <style media="screen">
                .social-link{text-align: center;
@@ -168,7 +170,7 @@ get_header();
               </div>
 
               <div class="imagen-dr" >
-                <?php the_post_thumbnail('full'); ?>
+                <a href="<?php echo $post->guid ?>"> <?php the_post_thumbnail('full'); ?></a>
               </div>
           </div>
 
@@ -194,7 +196,7 @@ get_header();
     font-family: 'Roboto-light';
     color:#575756;
     padding-top: 20px;
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: 25px;
   }
   .importancia-equipo .float-orange{
@@ -204,7 +206,7 @@ get_header();
 
 </style>
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 importancia-equipo">
-  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nosotros-left">
 
     <div class="" style="padding-bottom:20px;">
       <h3>¿Qué hacemos?</h3>
@@ -218,9 +220,9 @@ que afecte a cualquier área o segmento del miembro superior, ya sea en
 etapa aguda, crónica o secuelas.</p>
   </div>
 
-  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nosotros-right">
     <div class="" style="padding-bottom:20px;">
-      <h3>¿La importancia del equipo</h3>
+      <h3>La importancia del equipo</h3>
       <div class="float-orange"></div>
     </div>
 
@@ -233,6 +235,7 @@ nuestras habilidades. El resultado: un servicio diferente, adaptado a cada caso.
 </div>
 
 <style >
+
   .banner-inferior{
     background-image: url(<?php echo site_url(); ?>/wp-content/themes/onetone/img/Nosotros_TeamCierre.jpg);
     height: 450px;

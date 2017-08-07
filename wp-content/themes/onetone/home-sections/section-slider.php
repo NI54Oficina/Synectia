@@ -9,13 +9,14 @@ echo onetone_get_default_slider();
    position: absolute;
    left: 0;
    right: 0;
-   padding-top: 30%;
+   padding-top: 23%;
    height: auto;
    margin:auto;
    color: white;
    z-index: 2;
    text-align: center;
    font-size: 2.5em;
+   max-width: 700px;
 
  }
  </style>

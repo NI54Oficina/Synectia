@@ -137,7 +137,7 @@ get_header();
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:black; margin-bottom:0; height:200px;">
   <div class="float-servicios" style=" z-index:3">
-    <p>Servicios</p>
+    <p>SERVICIOS</p>
     <p>Las afecciones del miembro superior son muy frecuentes y pueden alterar <br>tus capacidades. Nosotros lo sabemos y te podemos ayudar a resolverlo. <br>Lo hacemos en forma integral y lo hacemos juntos.</p>
   </div>
 </div>
@@ -191,19 +191,23 @@ get_header();
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 informacion-manos">
       <h2>Excelencia y calidad <br><span>para el diagnóstico y tratamiento</span></h2>
 
+
+
       <p>Para lograr el diagnóstico correcto, la patología
         del miembro superior requiere de un alto grado
         de especialización. Su tratamiento quirúrgico
         necesita de profesionales con habilidad y
         delicadeza suficientes para resolver tareas de
         alta complejidad.
+        </p><p>
         Aquellas personas que necesitan un alto nivel de
         rendimiento en su miembro superior y buscan
         una atención cuidadosa y personalizada,
-        encontrarán en Synectia el mejor aliado. Entre
+        encontrarán en <b>Synectia</b>  el mejor aliado. Entre
         otras herramientas innovadoras, realizamos
         artroscopías en pequeñas articulaciones y
         diferentes técnicas mínimamente invasivas.
+        </p><p>
         En el caso específico de la mano, manejamos la
         complejidad de este tipo de cirugías
         programando el tratamiento de sus diferentes

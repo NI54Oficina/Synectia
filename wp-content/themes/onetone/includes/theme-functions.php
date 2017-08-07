@@ -263,12 +263,12 @@ function onetone_back_to_top(){
 
 	$back_to_top_btn = onetone_option("back_to_top_btn");
 	if( $back_to_top_btn != "hide" ){
-    echo '<a href="javascript:;">
-        	<div id="back-to-top">
-        		<span class="fa fa-arrow-up"></span>
-            	<span>'.__("TOP","onetone").'</span>
-        	</div>
-        </a>';
+    // echo '<a href="javascript:;">
+    //     	<div id="back-to-top">
+    //     		<span class="fa fa-arrow-up"></span>
+    //         	<span>'.__("TOP","onetone").'</span>
+    //     	</div>
+    //     </a>';
 	}
  }
 

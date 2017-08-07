@@ -35,7 +35,7 @@ get_header();
     font-size: 2.2em;
     color:#004851;
     font-family: 'Roboto-light';
-
+    line-height: 40px;
 
   }
 
@@ -96,7 +96,7 @@ get_header();
     font-family: 'Roboto-light';
   }
 
-  .barra-investigacion{
+  .barra-investigacion, .categorias-mobile{
     background-color: #004851;
     padding: 0 50px;
     margin-bottom: 0;
@@ -104,17 +104,17 @@ get_header();
 
   }
 
-  .barra-investigacion > div{
+  .barra-investigacion > div, .categorias-mobile{
     margin-bottom: 0;
   }
 
-  .barra-investigacion p{
+  .barra-investigacion p, .categorias-mobile p{
     margin: 0;
     display: inline-block;
       font-family: 'Roboto-black';
   }
 
-  .barra-investigacion p:first-child{
+  .barra-investigacion p:first-child, .categorias-mobile p:first-child{
     background-color:#FF5B35;
     padding:10px 15px ;
     margin-right: 10px;
@@ -126,11 +126,11 @@ get_header();
 </div>
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 slogan-investigacion">
-  <p>DOCENCIA E INVESTIGACION</p>
-  <p>Aquellos que compartan nuestra pasión, <br> pueden acceder a tres tipos de programas educativos</p>
+  <p style="margin-bottom:0;">DOCENCIA E INVESTIGACION</p>
+  <p style="line-height:48px;">Aquellos que compartan nuestra pasión, <br> pueden acceder a tres tipos de programas educativos</p>
 </div>
 
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 barra-investigacion">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 barra-investigacion hidden-xs">
   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
       <p>1</p>   <p> FELLOWSHIP </p>
   </div>
@@ -149,9 +149,12 @@ get_header();
         $category_id = get_cat_ID('Docencia e Investigacion');
         // $category_id= $categories[0]->cat_ID;
 
-        $posts=get_posts( array('numberposts' => -1, "post_type"=>"post", 'category'=>$category_id ) );
-
+        $posts=get_posts( array('numberposts' => 3, "post_type"=>"post", 'category'=>$category_id ) );
+        $id=1;
         foreach($posts as $post){  ?>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-lg hidden-sm hidden-md categorias-mobile" style="margin-bottom:20px;">
+              <p><?php echo $id; ?></p>   <p> ROTACIÓN </p>
+          </div>
 
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" >
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:white; padding:0;">
@@ -175,7 +178,7 @@ get_header();
           </div>
 
 
-  <?php } wp_reset_postdata();   ?>
+  <?php $id++;} wp_reset_postdata();   ?>
 
 </div>
 

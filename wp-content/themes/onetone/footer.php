@@ -27,6 +27,8 @@
           color:white;
           font-size: 15px;
           line-height: 24px;
+          margin-top: 15px;
+          letter-spacing: 3px;
         }
 
         footer .inter-footer p{
@@ -38,6 +40,10 @@
         footer .inter-footer p span{
           color:#008E8E;
           font-family: 'Roboto-black';
+        }
+
+        .footer-content-area > div{
+          margin-bottom: 0;
         }
 
       </style>
@@ -93,7 +99,7 @@
             <?php if( $display_copyright_bar == 'yes' ):?>
 
 			<div class="footer-info-area" role="contentinfo">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container" style="margin-bottom:0">
 
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 site-info pull-left" style="font-size:16px; padding-left:25px;">
 
@@ -112,23 +118,6 @@
 						  ?>
               <a href="#"><div class="fb-link"> <i class="fa fa-facebook" aria-hidden="true"></i>  </div></a>
 
-              <style media="screen">
-              .fb-link{text-align: center;
-                background-color: #004851;
-                border-radius: 100%;
-                width: 30px;
-                height: 30px;
-                position: relative;
-                float:right;
-              }
-
-              .fb-link i{
-                color:white;
-                font-size: 1.5em;
-                margin-top: 24%;
-              }
-
-              </style>
 
 					</div>
                      <!-- <div class="site-social pull-right">

@@ -78,11 +78,11 @@ get_header('home');
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title-box-especialidades" style=";">
 
   <div class="header-float">
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 title-home-banner" style="">
+    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 title-home-banner" style="text-align:left">
       <img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/logo-nombre.png" alt="">
     </div>
 
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 bg-mobile-non-float" style="padding:0; margin:0">
+    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 bg-mobile-non-float" style="padding:0; margin:0">
       <p class="special-bg">“Las enfermedades y el trauma del miembro superior son muy comunes. En <b>Synectia</b> te ayudamos a que dejen de afectar tu vida”</p>
 
     </div>
@@ -127,12 +127,14 @@ get_header('home');
        background-size: 100% 100%;
        display: inline-block;
        padding: 50px;
-       padding-right: 120px;
-       width: 450px;
+       padding-right: 200px;
+       width: 600px;
        float: right;
        margin:0;
+       text-align: left;
        font-family: 'Roboto-medium';
-
+       line-height: 20px;
+       font-size: 1.1em;
      }
 
   .title-box-especialidades{
@@ -210,8 +212,8 @@ get_header('home');
   <div class="" style="height:20px; background-color:#004851; position:absolute; top:0; width:100%; left:0;"> </div>
   <div class="" style="height:20px; background-color:#00A4A4; position:absolute; top:0; width:30%; left:0;  border-top-right-radius:10px;  border-bottom-right-radius:10px;"></div>
 
-    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="padding: 10% 40px 20px 50px;">
-        <p style="font-size:2.2em; font-family:'Roboto-Light'; color:#00A4A4">Trabajamos <br> en equipo para<br>mejorar tu<br> calidad de vida  </p>
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="padding: 16% 10px 20px 70px;">
+        <p style="font-size:2.2em; font-family:'Roboto-Light'; color:#00A4A4; line-height:40px">Trabajamos <br> en equipo para<br>mejorar tu<br> calidad de vida  </p>
     </div>
 </div>
 
