@@ -96,7 +96,7 @@ get_header();
              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 container-medicos" hid="2">
 
                <div class="imagen-dr" >
-                <a href="<?php echo $post->guid ?>"><?php the_post_thumbnail('full'); ?></a>
+                <a href="<?php echo get_permalink($post->ID) ?>"><?php the_post_thumbnail('full'); ?></a>
                </div>
                <style media="screen">
                .social-link{text-align: center;
@@ -123,7 +123,7 @@ get_header();
 
                </style>
                  <div class="informacion-dr">
-                   <h2><a href="<?php echo $post->guid ?>"> <?php the_title(); ?></a>
+                   <h2><a href="<?php echo get_permalink($post->ID); ?>"> <?php the_title(); ?></a>
                      <a href="<?php echo get_field('linkedin', $post->ID)?>">
                    <div class="" style="float:right; margin-top:-10px;">
                      <div class="social-link" style="display:inline">
@@ -150,7 +150,7 @@ get_header();
 
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 container-medicos" hid="2">
               <div class="informacion-dr" >
-                <h2><a href="<?php echo get_permalink($post->ID)?>"> <?php the_title(); ?></a>
+                <h2><a href="<?php echo get_permalink($post->ID);?>"> <?php the_title(); ?></a>
                   <a href="<?php echo get_field('linkedin', $post->ID)?>">
                 <div class="" style="float:right;  margin-top:-10px;">
                   <div class="social-link" style="display:inline">

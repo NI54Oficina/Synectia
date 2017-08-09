@@ -939,6 +939,7 @@ header .site-nav li ul {
 	.site-nav > ul > li {
 		float: left;
 		position: relative;
+    padding-top: 20px;
 	}
 
 	.site-nav > ul > li + li {

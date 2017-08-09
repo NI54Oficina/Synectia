@@ -83,7 +83,7 @@
                 </div>
                  <?php endif;?>
 
-                <div class="main-header <?php echo $header_background_parallax; ?>">
+                <div class="main-header <?php echo $header_background_parallax; ?>" >
                     <div class="<?php echo $header_container; ?>">
                         <div class="logo-box">
                         <?php if( $logo ):?>
