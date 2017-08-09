@@ -34,7 +34,7 @@
         footer .inter-footer p{
           color:#008E8E;
           margin-bottom:5px;
-          line-height: 25px;
+          line-height: 20px;
         }
 
         footer .inter-footer p span{
@@ -52,7 +52,7 @@
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
           <img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/logo-blanco.png" alt="">
 
-          <p style="font-family: 'Roboto-light'; color:#008E8E; font-size:18px"><span style="font-family: 'Roboto-bold';  color:#008E8E; font-size:18px">Cirugía en equipo</span><br> para miembro superior</p>
+          <p style="font-family: 'Roboto-light'; color:#008E8E; font-size:18px; line-height: 24px"><span style="font-family: 'Roboto-bold';  color:#008E8E; font-size:18px">Cirugía en equipo</span><br> para miembro superior</p>
         </div>
 
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 inter-footer">

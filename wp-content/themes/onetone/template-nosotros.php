@@ -150,7 +150,7 @@ get_header();
 
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 container-medicos" hid="2">
               <div class="informacion-dr" >
-                <h2><a href="<?php echo $post->guid ?>"> <?php the_title(); ?></a>
+                <h2><a href="<?php echo get_permalink($post->ID)?>"> <?php the_title(); ?></a>
                   <a href="<?php echo get_field('linkedin', $post->ID)?>">
                 <div class="" style="float:right;  margin-top:-10px;">
                   <div class="social-link" style="display:inline">
@@ -170,7 +170,7 @@ get_header();
               </div>
 
               <div class="imagen-dr" >
-                <a href="<?php echo $post->guid ?>"> <?php the_post_thumbnail('full'); ?></a>
+                <a href="<?php echo get_permalink($post->ID)?>"> <?php the_post_thumbnail('full'); ?></a>
               </div>
           </div>
 
@@ -260,7 +260,7 @@ nuestras habilidades. El resultado: un servicio diferente, adaptado a cada caso.
 </style>
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 banner-inferior">
-    <p>Cirugía  en equipo: <br><b>Un servicio diferente. Caso por caso.</b></p>
+    <p>Cirugía  en equipo: <br><span style="font-family:'Roboto-bold';">Un servicio diferente. Caso por caso.</span></p>
 </div>
 
 

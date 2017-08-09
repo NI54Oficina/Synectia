@@ -14,7 +14,8 @@ get_header();
 <style media="screen">
   .left-contacto{
     background-color:#008E8E;
-    padding: 50px;
+    padding:  8% 12%;
+    font-size: 1.1em;
   }
 
   .left-contacto p{
@@ -51,6 +52,7 @@ get_header();
 
     .left-contacto, .right-contacto{
       margin-bottom: 0;
+      min-height: 450px;
     }
 
     .header-contacto p:first-child{
@@ -77,7 +79,7 @@ get_header();
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 header-contacto">
   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-    <p>CONTACTO</p>
+    <p style="letter-spacing:3px; font-size:20px;">CONTACTO</p>
     <p>Contanos en qué <br> podemos ayudarte </p>
   </div>
 </div>
@@ -85,7 +87,7 @@ get_header();
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 left-contacto" hid="1">
   <p>Av. Libertador 4992 PB 1 CABA <br>(+5411) 4772 4391 / 0857</p>
   <p><span>Horarios: </span> Miércoles y Viernes 16hs</p>
-  <p><span>Cobertura: </span> Particular, OSDE y otros prepagos por reintegro.</p>
+  <p><span>Cobertura: </span> Particular, OSDE y otros <br>  prepagos por reintegro.</p>
   <p><span>Mail: </span> synectiacirugia@gmail.com</p>
 </div>
 

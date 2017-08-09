@@ -65,7 +65,7 @@ get_header();
         $posts=get_posts( array('numberposts' => 6, "post_type"=>"post", 'category'=>$category_id ) );
 
         foreach($posts as $post){  ?>
-          <a href="<?php echo $post->guid ?>"> 
+          <a href="<?php echo get_permalink($post->ID) ?>"> 
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" >
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:white; padding:0;">
               <div class="especialidad-post-image">
