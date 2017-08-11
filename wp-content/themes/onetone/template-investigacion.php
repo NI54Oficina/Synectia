@@ -50,16 +50,13 @@ get_header();
     margin-bottom: 0;
   }
 
-  .slogan-investigacion p:first-child{
+  /*.slogan-investigacion p:first-child{
     font-family: 'Roboto-black';
     font-size: 15px;
     color:#004851;
-  }
+  }*/
 
-  .container-post-investigacion{
-    background-color: #D5D5D6;
-    padding: 50px;
-  }
+
 
   .container-button-postular{
       text-align: center;
@@ -133,9 +130,9 @@ get_header();
   <p>En Synectia ayudamos a nuevos profesionales a formarse en nuestra especialidad.</p>
 </div>
 
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 slogan-investigacion">
-  <p style="margin-bottom:0; font-size:20px; line-height:2px;">DOCENCIA E INVESTIGACION</p>
-  <p style="line-height:48px;">Aquellos que compartan nuestra pasión, <br> pueden acceder a tres tipos de programas educativos</p>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 slogan-investigacion header-bloque-verde">
+  <p class="titulo-pagina">DOCENCIA E INVESTIGACION</p>
+  <p class="intro-pagina">Aquellos que compartan nuestra pasión, <br> pueden acceder a tres tipos de programas educativos</p>
 </div>
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 barra-investigacion hidden-xs">

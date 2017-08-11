@@ -21,6 +21,10 @@ get_header();
     margin-bottom: 0;
   }
 
+  .body-servicios{
+    margin-bottom: 0;
+  }
+
 
 
     .float-servicios p:first-child{
@@ -49,13 +53,13 @@ get_header();
     }
 
     .secciones-mano{
-      height: 250px;
+      /*height: 250px;*/
       /*border: 1px solid #008E8E;*/
     }
 
     .contenedor-mano-descripcion{
       background-color: rgba(255,255,255,.2);
-      padding: 0px 20px 0px 50px;
+      padding: 0px 20px 0px 70px;
       max-width: 400px;
       float:right;
       position: relative;
@@ -64,8 +68,10 @@ get_header();
     .contenedor-mano-descripcion p.title-mano{
       color:#D5D5D6 ;
       font-family:'Roboto-black';
-      margin-left: 20px;
-      margin-top: 10px;
+      /*margin-left: 20px;*/
+      margin-top: 25px;
+      letter-spacing: 2px;
+      font-size: 19px;
     }
 
     .contenedor-mano-descripcion p{
@@ -78,7 +84,8 @@ get_header();
 
     .contenedor-mano-descripcion p span{
      color:#008E8E;
-     font-family:'Roboto-black'
+     font-family:'Roboto-black';
+     font-size: 18px;
      }
 
     .circle-mano{
@@ -90,8 +97,8 @@ get_header();
       position: absolute;
       left: 0;
       top:0;
-      margin-left: 25px;
-      margin-top: 25px;
+      margin-left: 10px;
+      margin-top: 15px;
     }
 
 
@@ -113,9 +120,9 @@ get_header();
 </div>
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:black; margin-bottom:0; height:200px;">
-  <div class="float-servicios" style=" z-index:3">
-    <p>SERVICIOS</p>
-    <p>Las afecciones del miembro superior son muy frecuentes y pueden alterar <br>tus capacidades. Nosotros lo sabemos y te podemos ayudar a resolverlo. <br>Lo hacemos en forma integral y lo hacemos juntos.</p>
+  <div class="float-servicios header-bloque-verde" style=" z-index:3">
+    <p class="titulo-pagina">SERVICIOS</p>
+    <p class="intro-pagina">Las afecciones del miembro superior son muy frecuentes y pueden alterar <br>tus capacidades. Nosotros lo sabemos y te podemos ayudar a resolverlo. <br>Lo hacemos en forma integral y lo hacemos juntos.</p>
   </div>
 </div>
 
@@ -198,14 +205,9 @@ get_header();
 
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 secciones-mano secciones-mano-float" style="">
       <div class="contenedor-mano-descripcion" style="float:left" >
-        <div class="circle-mano" ></div> <p <p class="title-mano">HOMBRO</p>
-          <p><span>Procedimientos</span><br>Artroscopía, reconstrucciones ligamentarias,
-            transferencias tendinosas, reemplazos
-            protésicos, tratamiento del manguito rotador
-            y la luxación recidivante.</p>
-          <p><span>Patologias frecuentes</span><br>Fractura de clavícula, fractura de húmero,
-            luxación de hombro, fracturas de escápula,
-            lesiones del plexo braquial.</p>
+        <div class="circle-mano" ></div> <p <p class="title-mano">MANO</p>
+          <p><span>Procedimientos</span><br>Tenorrafias, neurorrafias, artroplastias, artrodesis.</p>
+          <p><span>Patologias frecuentes</span><br>Síndrome del tunel del carpo, enfermedad de dupuytren, artrosis, tenosinovitis digital (dedo en  gatillo o resorte), rizartrosis, tumores.   </p>
       </div>
     </div>
   </div>

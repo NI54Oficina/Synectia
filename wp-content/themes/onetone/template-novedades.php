@@ -12,10 +12,7 @@ get_header();
 ?>
 
 <style media="screen">
-  .container-post-novedades{
-    background-color: #D5D5D6;
-    padding:10% 50px 50px 50px;
-  }
+
 
   .header-novedades{
     height: 300px;
@@ -42,20 +39,20 @@ get_header();
     padding-top: 30px;
   }
 
-  .container-post-novedades .float-novedades p:first-child{
+  /*.container-post-novedades .float-novedades p:first-child{
     font-family: 'Roboto-black';
     font-size: 15px;
     color:#004851;
-  }
+  }*/
 </style>
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 header-novedades">
 
 </div>
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container-post-novedades">
-  <div class="float-novedades">
-      <p>NOVEDADES</p>
-      <p>Te acercamos las últimas noticias referentes <br> a nuestra especialidad</p>
+  <div class="float-novedades header-bloque-verde">
+      <p class="titulo-pagina">NOVEDADES</p>
+      <p class="intro-pagina">Te acercamos las últimas noticias referentes <br> a nuestra especialidad</p>
   </div>
 
   <?php
@@ -65,7 +62,7 @@ get_header();
         $posts=get_posts( array('numberposts' => 6, "post_type"=>"post", 'category'=>$category_id ) );
 
         foreach($posts as $post){  ?>
-          <a href="<?php echo get_permalink($post->ID) ?>"> 
+          <a href="<?php echo get_permalink($post->ID) ?>">
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" >
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:white; padding:0;">
               <div class="especialidad-post-image">
