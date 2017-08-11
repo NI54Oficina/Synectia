@@ -19,29 +19,6 @@ get_header();
 </div>
     <style media="screen">
 
-      .header-nosotros{
-        padding: 10% 50px 0px 50px;
-        background-image:url(<?php echo site_url(); ?>/wp-content/themes/onetone/img/Nosotros_Banner.jpg);
-        background-position: center bottom;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100vh;
-        margin-bottom: 0;
-        text-align: center;
-      }
-
-      .header-nosotros p{
-        color:white;
-        font-family: 'Roboto-medium';
-        margin-bottom: 0px;
-      }
-
-      .header-nosotros p:last-child{
-        font-size: 33px;
-        line-height: 46px;
-        letter-spacing: 1px;
-      }
-
       .container-medicos{
         padding: 0;
       }
@@ -81,7 +58,7 @@ get_header();
 
 
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left:50px; padding-right:50px;">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container-cajas-medicos" style="">
        <?php
         $category_id = get_cat_ID('Nosotros');
 
@@ -183,10 +160,7 @@ get_header();
 
 <style media="screen">
 
-.importancia-equipo{
-  padding-left: 50px;
-  padding-right: 50px;
-}
+
   .importancia-equipo h3{
     color:#FF5B35;
     font-family: 'Roboto-bold'

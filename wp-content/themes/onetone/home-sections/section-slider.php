@@ -9,7 +9,7 @@ echo onetone_get_default_slider();
    position: absolute;
    left: 0;
    right: 0;
-   padding-top: 23%;
+   top:43%;
    height: auto;
    margin:auto;
    color: white;

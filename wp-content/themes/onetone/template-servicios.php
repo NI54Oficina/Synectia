@@ -21,33 +21,7 @@ get_header();
     margin-bottom: 0;
   }
 
-  .body-servicios{
-    background-color: black;
-    background-image: url(<?php echo site_url(); ?>/wp-content/themes/onetone/img/Servicios_Main.jpg);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    padding-top: 10%;
-    padding-bottom: 10%;
-    margin-bottom: 0;
-  }
 
-
-    .float-servicios{
-      position: absolute;
-      width: 90%;
-      left: 0;
-      right: 0;
-      margin:auto;
-      height: 200px;
-      background-color: #008E8E;
-      top:-100px;
-      text-align: center;
-      color:white;
-      font-size: 1.4em;
-      font-family: 'Roboto-medium';
-      padding-top: 30px;
-    }
 
     .float-servicios p:first-child{
       font-family: 'Roboto-black';
@@ -57,6 +31,7 @@ get_header();
     .informacion-manos{
       padding: 20px 20%;
       color:white;
+      line-height: 24px;
     }
 
     .informacion-manos h2{
@@ -219,7 +194,7 @@ get_header();
 
     </div>
 
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 secciones-mano" style="position:absolute; bottom:0; right:0">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 secciones-mano secciones-mano-float" style="">
       <div class="contenedor-mano-descripcion" style="float:left" >
         <div class="circle-mano" ></div> <p <p class="title-mano">HOMBRO</p>
           <p><span>Procedimientos</span><br>Artroscopía, reconstrucciones ligamentarias,

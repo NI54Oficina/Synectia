@@ -156,18 +156,18 @@ get_header();
               <p><?php echo $id; ?></p>   <p> ROTACIÓN </p>
           </div>
 
-          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" >
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" hid="2">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:white; padding:0;">
               <div class="especialidad-post-image">
                 <?php the_post_thumbnail('full'); ?>
               </div>
 
-              <div class="especialidad-post-info" hid="1">
+              <div class="especialidad-post-info" >
                 <p style="color:#008E8E"><b><?php the_title(); ?></b></p>
-                <p style="color:#575756; font-family:'Roboto-Light'; line-height:20px;">
+                <div style="color:#575756; font-family:'Roboto-Light'; line-height:20px; padding:0; font-size:14px"  hid="1">
                   <?php echo $post->post_content ?>
 
-                </p>
+                </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container-button-postular">
                   <a href="/<?php echo get_field('link_postulacion', $post->ID) ?>">POSTULARME</a>
                 </div>

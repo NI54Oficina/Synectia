@@ -36,7 +36,7 @@ $aside          = 'both-aside';
 <style media="screen">
 
   .float-green-inner-post{
-    height: 250px;
+    height: 30%;
     position: absolute;
     top:0;
     left:0;
@@ -46,10 +46,11 @@ $aside          = 'both-aside';
 
   .entry-content, .entry-content p{
     color: #575756;
+    margin-bottom: 10%;
   }
 
   .post-inner, .page-inner {
-    padding: 50px 80px;
+    padding: 0px 50px 80px 50px;
   }
 
 </style>

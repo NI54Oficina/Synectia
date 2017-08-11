@@ -58,6 +58,7 @@ get_header();
     .header-contacto p:first-child{
       color:#004851;
       font-family: 'Roboto-black';
+      margin-bottom: 10px;
     }
 
     .header-contacto div{
@@ -73,7 +74,7 @@ get_header();
       color:#004851;
       font-family: 'Roboto-light';
       font-size: 2.3em;
-      line-height: 35px;
+      line-height: 40px;
     }
 </style>
 
