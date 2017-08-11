@@ -114,6 +114,14 @@ get_header();
       font-family: 'Roboto-black';
   }
 
+  .docencia-post-text p   {
+    color:#575756;
+    font-family:'Roboto-Light';
+    line-height:20px;
+     padding:0;
+    font-size:14px
+  }
+
   .barra-investigacion p:first-child, .categorias-mobile p:first-child{
     background-color:#FF5B35;
     padding:10px 15px ;
@@ -126,7 +134,7 @@ get_header();
 </div>
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 slogan-investigacion">
-  <p style="margin-bottom:0;">DOCENCIA E INVESTIGACION</p>
+  <p style="margin-bottom:0; font-size:20px; line-height:2px;">DOCENCIA E INVESTIGACION</p>
   <p style="line-height:48px;">Aquellos que compartan nuestra pasión, <br> pueden acceder a tres tipos de programas educativos</p>
 </div>
 
@@ -164,7 +172,7 @@ get_header();
 
               <div class="especialidad-post-info" >
                 <p style="color:#008E8E"><b><?php the_title(); ?></b></p>
-                <div style="color:#575756; font-family:'Roboto-Light'; line-height:20px; padding:0; font-size:14px"  hid="1">
+                <div class="docencia-post-text" style=""  hid="1">
                   <?php echo $post->post_content ?>
 
                 </div>

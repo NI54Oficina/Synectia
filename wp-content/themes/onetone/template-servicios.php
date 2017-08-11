@@ -25,8 +25,10 @@ get_header();
 
     .float-servicios p:first-child{
       font-family: 'Roboto-black';
-      font-size: 15px;
+      font-size: 20px;
       color:#004851;
+      letter-spacing: 2px;
+      margin-bottom: 0;
     }
     .informacion-manos{
       padding: 20px 20%;
