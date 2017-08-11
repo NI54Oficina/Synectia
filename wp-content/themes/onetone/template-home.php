@@ -178,9 +178,9 @@ get_header('home');
               <?php the_post_thumbnail('full'); ?>
             </div>
 
-            <div class="especialidad-post-info" hid="1">
-              <p style="color:#008E8E"><b><?php the_title(); ?></b></p>
-              <p style="color:#575756; font-family:'Roboto-Light'; line-height:20px;"><?php echo  $post->post_content ?></p>
+            <div class="especialidad-post-info" hid="3">
+              <p style="color:#008E8E; line-height:20px;" hid="1"><b><?php the_title(); ?></b></p>
+              <div style="color:#575756; font-family:'Roboto-Light'; line-height:20px;" hid="2"><?php echo  $post->post_content ?></div>
             </div>
 
           </div>

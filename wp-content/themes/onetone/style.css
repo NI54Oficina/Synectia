@@ -3493,6 +3493,7 @@ margin-bottom: 0;
 
 .especialidad-post-info p:first-child{
   font-size: 22px;
+  line-height: 28px;
 }
 
 .especialidad-post-info p:last-child{
@@ -3707,6 +3708,10 @@ margin-bottom: 0;
         margin-bottom: 10% !important;
       }
 
+
+      .especialidad-post-image{
+        height: auto;
+      }
 
 
  }
