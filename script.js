@@ -11,6 +11,7 @@ $(document).ready( function(){
   //
   // copy_size();
   // get_post();close_modal();
+  get_post();
 });
 
 
@@ -606,26 +607,50 @@ function get_post(){
     // index_post_slider=0;
 
 
-    $('.modal-gallery').empty();
-    console.log("asdasd");
+    $(".get-post").fadeOut("400", function(){});
 
-  	 id_post=$(this).attr('id-post');
+    postCategory=$(this).attr('cat');
+  // $(".load-post").fadeIn();
+  	console.log("click clicka");
+  	console.log(urlBase);
 
-  	$.post( urlBase+'/ajax/',{id:id_post},function(data){
+     $.post(urlBase+"/ajax/",{offset:postOffset,category:postCategory},function(data){
 
-    $('.modal-gallery').append(data);
-
-    $('.modal-gallery').fadeIn();
-
-      slider_get_post();
+   		$(".get-post").fadeIn();
 
 
-  });
+   	data=data.replace(/\r?\n|\r/g,"").replace(/\t/g,'');
+
+   	data= $(data.trim());
+   	console.log(data);
+
+    //  $blocks.append( data );
+    //  SameHeight();
+    //    $blocks.masonry( 'appended', data );
+   // 	setTimeout(function(){$blocks.masonry();},500);
+   // 	setTimeout(function(){$blocks.masonry();},1000);
+   // 	setTimeout(function(){$blocks.masonry();},2000);
+   // 	setTimeout(function(){$blocks.masonry();},5000);
+   // 	setTimeout(function(){$blocks.masonry();},10000);
+
+   		if(data.length==0){
+   			$(".get-post").fadeOut();
+   		}
+   	});
+
+
+
+   	postOffset+=10;
 
 });
 
 
 }
+
+
+var postOffset=10;
+var postCategory=0;
+
 
 function NotaCarousel(){
 	if($(".trio-cuna-cajon").length>0){

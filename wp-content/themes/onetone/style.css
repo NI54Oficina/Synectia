@@ -3411,7 +3411,11 @@ section.home-section-1 .home-section-content {
   text-align:center
 }
 
-.container-buttons a{
+.container-buttons .get-post{
+  display: inline-flex;
+}
+
+.container-buttons a, .container-buttons .get-post{
   padding:5px 70px;
   background-color:#FF5B35;
   color:white;
@@ -3419,11 +3423,12 @@ section.home-section-1 .home-section-content {
   letter-spacing: 1px;
 }
 
-.container-buttons a:hover{
+.container-buttons a:hover, .container-buttons .get-post:hover{
   background-color:white;
   color:#FF5B35 !important;
   border-color:#FF5B35;
   transition: all .8s;
+  cursor: pointer;
 }
 
 .box-post-especialidades{

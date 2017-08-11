@@ -94,8 +94,10 @@ get_header();
 </div>
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container-buttons" style="padding:50px;">
-  <a href="">VER TODAS LAS NOVEDADES</a>
+  <p class="get-post" cat="<?php echo $category_id; ?>" >VER TODAS LAS NOVEDADES</p>
 </div>
-
+<script>
+  urlBase=' <?php echo site_url();   ?>';
+</script>
 
 <?php get_footer();?>
