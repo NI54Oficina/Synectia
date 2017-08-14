@@ -13,7 +13,7 @@ get_header();
 
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 header-nosotros" >
-    <p style="font-size:20px; letter-spacing:3px;">NOSOTROS</p>
+    <p style="font-size:20px; letter-spacing:3px;margin-top: 10%">NOSOTROS</p>
     <p  >Analizamos en forma conjunta cada caso. Sumamos <br>aptitud y experiencia junto a tecnología y procedimientos <br>de vanguardia para conseguir el mejor tratamiento.</p>
 
 </div>
@@ -73,7 +73,8 @@ get_header();
              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 container-medicos" hid="2">
 
                <div class="imagen-dr" >
-                <a href="<?php echo get_permalink($post->ID) ?>"><?php the_post_thumbnail('full'); ?></a>
+                <a href="<?php echo get_permalink($post->ID) ?>"><?php the_post_thumbnail('full'); ?>
+                  <div class="float-cover-white"></div></a>
                </div>
                <style media="screen">
                .social-link{text-align: center;
@@ -110,6 +111,7 @@ get_header();
                      <a href="<?php echo get_field('link-medicos', $post->ID)?>">
                      <div class="social-link" style="display:inline;">
                         <img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/red-medicos.svg" alt="">
+
                      </div>
                    </div>
                    </a>
@@ -137,6 +139,7 @@ get_header();
                   <a href="<?php echo get_field('link-medicos', $post->ID)?>">
                   <div class="social-link" style="display:inline">
                      <img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/red-medicos.svg" alt="">
+
                   </div>
                 </div>
                 </a>
@@ -147,7 +150,9 @@ get_header();
               </div>
 
               <div class="imagen-dr" >
-                <a href="<?php echo get_permalink($post->ID)?>"> <?php the_post_thumbnail('full'); ?></a>
+                <a href="<?php echo get_permalink($post->ID)?>"> <?php the_post_thumbnail('full'); ?>
+                <div class="float-cover-white"></div></a>
+
               </div>
           </div>
 
@@ -160,6 +165,23 @@ get_header();
 
 <style media="screen">
 
+/*.float-cover-white{
+ height: 100%;
+ width: 100%;
+ position: absolute;
+ color: white;
+ opacity: 1;
+}*/
+
+  .imagen-dr a:hover .float-cover-white{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    opacity: .3;
+    top: 0;
+    transition: all 1s;
+  }
 
   .importancia-equipo h3{
     color:#FF5B35;

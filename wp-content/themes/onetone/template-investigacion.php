@@ -111,7 +111,7 @@ get_header();
       font-family: 'Roboto-black';
   }
 
-  .docencia-post-text p   {
+  .docencia-post-text p, .docencia-post-text   {
     color:#575756;
     font-family:'Roboto-Light';
     line-height:20px;
@@ -168,7 +168,7 @@ get_header();
               </div>
 
               <div class="especialidad-post-info" >
-                <p style="color:#008E8E"><b><?php the_title(); ?></b></p>
+                <p style="color:#008E8E; font-size:12px; font-family:'Roboto-bold';"><?php the_title(); ?></p>
                 <div class="docencia-post-text" style=""  hid="1">
                   <?php echo $post->post_content ?>
 

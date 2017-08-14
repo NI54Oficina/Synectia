@@ -120,22 +120,6 @@ get_header('home');
        display: inline-block;
        width: 200px;
      }
-     .special-bg{
-       background-image: url(<?php echo site_url(); ?>/wp-content/themes/onetone/img/bg-colored.png);
-       background-repeat: no-repeat;
-       background-position: center;
-       background-size: 100% 100%;
-       display: inline-block;
-       padding: 50px;
-       padding-right: 200px;
-       width: 600px;
-       float: right;
-       margin:0;
-       text-align: left;
-       font-family: 'Roboto-medium';
-       line-height: 20px;
-       font-size: 1.1em;
-     }
 
   .title-box-especialidades{
     background-color:#E2E2E2;

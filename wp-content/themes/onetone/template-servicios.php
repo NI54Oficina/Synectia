@@ -52,6 +52,10 @@ get_header();
       font-size: 25px;
     }
 
+    .informacion-manos p{
+      font-size: 18px;
+    }
+
     .secciones-mano{
       /*height: 250px;*/
       /*border: 1px solid #008E8E;*/
@@ -210,12 +214,17 @@ get_header();
           <p><span>Patologias frecuentes</span><br>Síndrome del tunel del carpo, enfermedad de dupuytren, artrosis, tenosinovitis digital (dedo en  gatillo o resorte), rizartrosis, tumores.   </p>
       </div>
     </div>
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background:transparent; height:200px;">
+
+    </div>
+
+
+
   </div>
 
 
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background:black; height:200px;">
 
-  </div>
 </div>
 
 <?php get_footer();?>
