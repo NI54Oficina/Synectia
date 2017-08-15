@@ -160,6 +160,13 @@ get_header('home');
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:white; padding:0;">
             <div class="especialidad-post-image">
               <?php the_post_thumbnail('full'); ?>
+              <?php
+              if (class_exists('MultiPostThumbnails')) :
+
+              MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'secondary-image');
+
+              endif;
+               ?>
             </div>
 
             <div class="especialidad-post-info" hid="3">

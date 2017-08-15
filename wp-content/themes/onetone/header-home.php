@@ -144,13 +144,13 @@
 									  $section_menu = onetone_option( 'menu_title_'.$section_part );
 									  $section_slug = onetone_option( 'menu_slug_'.$section_part );
 									  $section_slug = $section_slug==''? 'section-'.($section_part+1):$section_slug;
-									  if( $section_menu != '' ){
-										   $onepage_menu    .= '<li class="onetone-menuitem"><a id="onetone-'.$section_slug.'" href="#'.strtolower($section_slug).'" >
-										 <span>'.$section_menu.'</span></a></li>';
-
-										   $onepage_side_menu .= '<li class="onetone-menuitem"><a href="#'.strtolower($section_slug).'" ><span>'.$section_menu.'</span></a></li>';
-
-									  }
+									  // if( $section_menu != '' ){
+										//    $onepage_menu    .= '<li class="onetone-menuitem"><a id="onetone-'.$section_slug.'" href="#'.strtolower($section_slug).'" >
+										//  <span>'.$section_menu.'</span></a></li>';
+										//
+										//    $onepage_side_menu .= '<li class="onetone-menuitem"><a href="#'.strtolower($section_slug).'" ><span>'.$section_menu.'</span></a></li>';
+										//
+									  // }
 
 								  }
 								  $i++;

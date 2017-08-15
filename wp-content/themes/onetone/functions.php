@@ -92,3 +92,14 @@ function theme_add_query() {
 }
 
 add_action( 'wp_enqueue_scripts', 'theme_add_query' );
+
+
+if (class_exists('MultiPostThumbnails')) {
+
+new MultiPostThumbnails(array(
+'label' => 'Secondary Image',
+'id' => 'secondary-image',
+'post_type' => 'post'
+ ) );
+
+ }

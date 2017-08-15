@@ -2517,7 +2517,7 @@ section.video-section .home-container {
 
 #onetone-owl-slider {
     position: relative;
-    max-height: 670px;
+    max-height: 836px;
 }
 
 #onetone-owl-slider.owl-theme .owl-controls {
@@ -3655,6 +3655,43 @@ margin-bottom: 0;
   padding: 16% 10px 20px 70px;
 }
 
+.especialidad-post-image{
+  overflow: hidden;
+}
+
+.especialidad-post-image img:nth-child(2){
+  display: none;
+}
+
+.especialidad-post-image:hover img:nth-child(2){
+  display: block;
+  animation-name: FadeIn;
+    animation-duration: 2s;
+    animation-fill-mode:forwards;
+}
+
+
+.especialidad-post-image:hover img:first-child{
+  display: none;
+  animation-name: FadeOut;
+    animation-duration: 2s;
+  animation-fill-mode:forwards;
+}
+
+
+@-webkit-keyframes FadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+@keyframes FadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@keyframes FadeOut {
+    from { opacity: 1; }
+      to { opacity: 0; }
+}
 
 @media (max-width: 768px) {
 
