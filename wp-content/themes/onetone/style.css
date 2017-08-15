@@ -3807,11 +3807,23 @@ margin-bottom: 0;
       position: absolute;
       margin: auto;
       bottom: 0;
+      left: 0;
     }
 
     .float-green-inner-post {
       height: 150px !important;
     }
 
+    .box-slogan{
+      background-position: 70% !important;
+    }
 
+    .owl-nav{
+      display: none !important;
+    }
+
+    #onetone-owl-slider {
+    position: relative;
+    max-height: 225px;
+    }
  }

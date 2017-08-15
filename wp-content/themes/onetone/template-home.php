@@ -102,7 +102,7 @@ get_header('home');
     .box-post-especialidades{
       margin-bottom: 0;
       background-color:#C1C1C3;
-      padding:30px;
+      padding:20px;
     }
      .header-float{
        background-color: #004851;

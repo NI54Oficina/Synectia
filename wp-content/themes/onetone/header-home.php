@@ -99,7 +99,7 @@
 					$pixels ="px";
 					endif; ?>
                     <a href="<?php echo esc_url(home_url('/')); ?>">
-					<img src="<?php echo $logo_retina; ?>" alt="<?php bloginfo('name'); ?>" style="width:<?php echo onetone_option('retina_logo_width').$pixels; ?>;max-height:<?php echo onetone_option('retina_logo_height').$pixels; ?>;" class="site-logo retina_logo" />
+					<img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/logo.png" alt="<?php bloginfo('name'); ?>" style="width:<?php echo onetone_option('retina_logo_width').$pixels; ?>;max-height:<?php echo onetone_option('retina_logo_height').$pixels; ?>;" class="site-logo retina_logo" />
 					 </a>
                      <?php endif;?>
                             <?php endif;?>
