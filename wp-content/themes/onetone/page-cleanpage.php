@@ -24,6 +24,7 @@
 		"category" => $category
     ) );
 
+
     if ( $myposts ) {
         foreach ( $myposts as $post ) :
             setup_postdata( $post ); ?>
@@ -39,7 +40,7 @@
                   <p style="color:#008E8E"><b><?php the_title(); ?></b></p>
                   <p style="color:#575756; font-family:'Roboto-Light'; line-height:20px;">
                     <?php $content = get_post_field( 'post_content', $post->ID );
-                    
+
                       $content_parts = get_extended( $content );
 
                       echo $content_parts['main']."..."; ?>

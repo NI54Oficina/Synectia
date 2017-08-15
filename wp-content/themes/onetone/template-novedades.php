@@ -57,6 +57,7 @@ get_header();
 
   <?php
         $category_id = get_cat_ID('Novedades');
+
         // $category_id= $categories[0]->cat_ID;
 
         $posts=get_posts( array('numberposts' => 6, "post_type"=>"post", 'category'=>$category_id ) );
@@ -94,7 +95,7 @@ get_header();
 </div>
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container-buttons" style="padding:50px;">
-  <p class="get-post" cat="<?php echo $category_id; ?>" >VER TODAS LAS NOVEDADES</p>
+  <p class="get-post" cat="<?php   $category_id = get_cat_ID('Novedades'); echo $category_id; ?>" >VER TODAS LAS NOVEDADES</p>
 </div>
 <script>
   urlBase=' <?php echo site_url();   ?>';

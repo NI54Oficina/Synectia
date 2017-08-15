@@ -50,7 +50,7 @@ $aside          = 'both-aside';
   }
 
   .post-inner, .page-inner {
-    padding: 0px 50px 80px 50px;
+    padding: 0px 20px 80px 20px;
   }
 
 </style>

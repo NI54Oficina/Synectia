@@ -163,7 +163,7 @@ get_header('home');
             </div>
 
             <div class="especialidad-post-info" hid="3">
-              <p style="color:#008E8E; line-height:20px;" hid="1"><b><?php the_title(); ?></b></p>
+              <p style="color:#008E8E; line-height:28px;font-family:'Roboto-bold'" hid="1"><?php the_title(); ?></p>
               <div style="color:#575756; font-family:'Roboto-Light'; line-height:20px;" hid="2"><?php echo  $post->post_content ?></div>
             </div>
 
@@ -196,8 +196,24 @@ get_header('home');
   <div class="" style="height:20px; background-color:#004851; position:absolute; top:0; width:100%; left:0;"> </div>
   <div class="" style="height:20px; background-color:#00A4A4; position:absolute; top:0; width:30%; left:0;  border-top-right-radius:10px;  border-bottom-right-radius:10px;"></div>
 
-    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="padding: 16% 10px 20px 70px;">
+
+
+    <div class="cover-white-transparent">
+      <style>
+        .cover-white-transparent{
+          position: absolute;
+          top:0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background: linear-gradient(to top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+        }
+      </style>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-banner-footer-home" style="">
         <p style="font-size:2.2em; font-family:'Roboto-Light'; color:#00A4A4; line-height:40px">Trabajamos <br> en equipo para<br>mejorar tu<br> calidad de vida  </p>
+
     </div>
 </div>
 

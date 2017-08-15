@@ -1531,8 +1531,8 @@ ol.breadcrumb-nav {
 .col-aside-right {
 	position: relative;
 	min-height: 1px;
-	padding-right: 15px;
-	padding-left: 15px;
+	/*padding-right: 15px;
+	padding-left: 15px;*/
 }
 
 @media (min-width: 992px) {
@@ -3416,7 +3416,7 @@ section.home-section-1 .home-section-content {
 }
 
 .container-buttons a, .container-buttons .get-post{
-  padding:5px 70px;
+  padding:10px 70px;
   background-color:#FF5B35;
   color:white;
   border: 1px solid transparent;
@@ -3651,6 +3651,9 @@ margin-bottom: 0;
   color:#004851;
 }
 
+.text-banner-footer-home{
+  padding: 16% 10px 20px 70px;
+}
 
 
 @media (max-width: 768px) {
@@ -3735,6 +3738,7 @@ margin-bottom: 0;
 
     .float-servicios{
       height: auto;
+      padding: 20px;
     }
 
     .secciones-mano-float{
@@ -3749,13 +3753,13 @@ margin-bottom: 0;
     }
 
     .header-nosotros p:last-child{
-      font-size:20px;
-      line-height: 40px;
+      font-size:18px;
+      line-height: 28px;
     }
 
     .importancia-equipo , .container-cajas-medicos{
-      padding-left: 45px;
-      padding-right: 45px;
+      padding-left: 35px;
+      padding-right: 35px;
     }
 
     .entry-content{
@@ -3779,11 +3783,11 @@ margin-bottom: 0;
 
 
     .container-post-novedades{
-      padding: 10% 35px 50px 35px;
+      padding: 10% 20px 50px 20px;
     }
 
     .container-post-investigacion{
-      padding: 30px;
+      padding: 20px;
     }
 
     img.site-logo{
@@ -3798,5 +3802,16 @@ margin-bottom: 0;
     .title-home-banner{
       display: none;
     }
+
+    .text-banner-footer-home{
+      position: absolute;
+      margin: auto;
+      bottom: 0;
+    }
+
+    .float-green-inner-post {
+      height: 150px !important;
+    }
+
 
  }

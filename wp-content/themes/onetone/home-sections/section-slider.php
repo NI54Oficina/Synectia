@@ -19,6 +19,10 @@ echo onetone_get_default_slider();
    max-width: 700px;
 
  }
+
+ .title-slider span{
+   font-family: 'Roboto-bold';
+ }
  </style>
 
 <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 header-after-slider">

@@ -142,7 +142,7 @@ get_header();
             transferencias tendinosas, reemplazos
             protésicos, tratamiento del manguito rotador
             y la luxación recidivante.</p>
-          <p><span>Patologias frecuentes</span><br>Fractura de clavícula, fractura de húmero,
+          <p><span>Patologías frecuentes</span><br>Fractura de clavícula, fractura de húmero,
             luxación de hombro, fracturas de escápula,
             lesiones del plexo braquial.</p>
       </div>
@@ -155,7 +155,7 @@ get_header();
             transferencias tendinosas, reemplazos
             protésicos, tratamiento del manguito rotador
             y la luxación recidivante.</p>
-          <p><span>Patologias frecuentes</span><br>Fractura de clavícula, fractura de húmero,
+          <p><span>Patologías frecuentes</span><br>Fractura de clavícula, fractura de húmero,
             luxación de hombro, fracturas de escápula,
             lesiones del plexo braquial.</p>
       </div>
@@ -168,7 +168,7 @@ get_header();
             transferencias tendinosas, reemplazos
             protésicos, tratamiento del manguito rotador
             y la luxación recidivante.</p>
-          <p><span>Patologias frecuentes</span><br>Fractura de clavícula, fractura de húmero,
+          <p><span>Patologías frecuentes</span><br>Fractura de clavícula, fractura de húmero,
             luxación de hombro, fracturas de escápula,
             lesiones del plexo braquial.</p>
       </div>
@@ -211,7 +211,7 @@ get_header();
       <div class="contenedor-mano-descripcion" style="float:left" >
         <div class="circle-mano" ></div> <p <p class="title-mano">MANO</p>
           <p><span>Procedimientos</span><br>Tenorrafias, neurorrafias, artroplastias, artrodesis.</p>
-          <p><span>Patologias frecuentes</span><br>Síndrome del tunel del carpo, enfermedad de dupuytren, artrosis, tenosinovitis digital (dedo en  gatillo o resorte), rizartrosis, tumores.   </p>
+          <p><span>Patologías frecuentes</span><br>Síndrome del tunel del carpo, enfermedad de dupuytren, artrosis, tenosinovitis digital (dedo en  gatillo o resorte), rizartrosis, tumores.   </p>
       </div>
     </div>
 
