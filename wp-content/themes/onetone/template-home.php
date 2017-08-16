@@ -90,7 +90,7 @@ get_header('home');
 
 
 
-        <h2 style="font-family: 'Roboto-black'; color:#008E8E; font-size:2em;">NUESTRA ESPECIALIDAD</h2>
+        <h2 class="nuestra-especialidad-home" style="">NUESTRA ESPECIALIDAD</h2>
         <p>SERVICIOS</p>
 
 </div>
@@ -156,9 +156,9 @@ get_header('home');
 
       foreach($posts as $post){  ?>
 
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" >
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"  >
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:white; padding:0;">
-            <div class="especialidad-post-image">
+            <div class="especialidad-post-image" style="position:relative">
               <?php the_post_thumbnail('full'); ?>
               <?php
               if (class_exists('MultiPostThumbnails')) :
@@ -167,10 +167,15 @@ get_header('home');
 
               endif;
                ?>
+
+               <div class="hidden-xs container-circulos-hover">
+                  <div class="circulo-hover"></div>
+                  <div class="circulo-hover"></div>
+               </div>
             </div>
 
             <div class="especialidad-post-info" hid="3">
-              <p style="color:#008E8E; line-height:28px;font-family:'Roboto-bold'" hid="1"><?php the_title(); ?></p>
+              <p style="color:#008E8E; line-height:28px;font-family:'Roboto-bold'"><?php the_title(); ?></p>
               <div style="color:#575756; font-family:'Roboto-Light'; line-height:20px;" hid="2"><?php echo  $post->post_content ?></div>
             </div>
 
@@ -178,6 +183,29 @@ get_header('home');
 
         </div>
 
+<style media="screen">
+
+.container-circulos-hover{
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: auto;
+}
+  .circulo-hover{
+      height: 12px;
+      margin: auto 4px;
+      width: 12px;
+      background-color:#008e8e;
+      border-radius: 100%;
+      display: inline-flex;
+  }
+
+  .circulo-hover:nth-child(2){
+opacity: .54;
+  }
+</style>
 
 <?php } wp_reset_postdata();   ?>
 
@@ -213,14 +241,13 @@ get_header('home');
           left: 0;
           height: 100%;
           width: 100%;
-          background: linear-gradient(to top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+          background: linear-gradient(to top, rgba(255,255,255,1) 15%,rgba(255,255,255,0) 100%)
         }
       </style>
     </div>
 
     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-banner-footer-home" style="">
         <p style="font-size:2.2em; font-family:'Roboto-Light'; color:#00A4A4; line-height:40px">Trabajamos <br> en equipo para<br>mejorar tu<br> calidad de vida  </p>
-
     </div>
 </div>
 

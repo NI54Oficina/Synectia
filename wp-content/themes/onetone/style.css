@@ -750,7 +750,8 @@ ul.top-bar-sns {
 
 img.site-logo {
 	float: left;
-	height: 70px;
+	height: 100px;
+  margin: 0 !important;
 }
 
 .name-box {
@@ -2632,7 +2633,7 @@ section.video-section .home-container {
 }
 
 #onetone-owl-slider .owl-prev {
-    left: 10px;
+    left: 30px;
 }
 
 #onetone-owl-slider .owl-prev:before,
@@ -2651,7 +2652,7 @@ section.video-section .home-container {
 }
 
 #onetone-owl-slider .owl-next {
-    right:10px;
+    right:30px;
 }
 
 #onetone-owl-slider .owl-next:before {
@@ -3285,6 +3286,7 @@ border:none;
     .footer-info-area .site-social {
         float: none!important;
         text-align: center;
+        line-height: 21px; font-size: 15px; padding-left: 0px; padding-right: 0px;
     }
     .footer-info-area .site-social ul {
         margin: 0 auto;
@@ -3453,6 +3455,8 @@ section.home-section-1 .home-section-content {
    width: 200px;
  }
  .special-bg{
+   font-size: 17px;
+   line-height: 22px;
    background-image: url(img/bg-colored.png);
    background-repeat: no-repeat;
    background-position: center;
@@ -3541,11 +3545,11 @@ margin-bottom: 0;
 }
 
 .body-servicios{
-  background-color: black;
+  /*background-color: black;*/
   background-image: url(img/Servicios_Main.jpg);
   background-position: top;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   padding-top: 10%;
   padding-bottom: 10%;
   margin-bottom: 0;
@@ -3616,6 +3620,7 @@ margin-bottom: 0;
   line-height: 34px;
   color:white;
   font-family: 'Roboto-medium';
+  margin-bottom: 0;
 }
 
 .container-post-novedades{
@@ -3646,8 +3651,8 @@ margin-bottom: 0;
   margin:0;
   text-align: left;
   font-family: 'Roboto-medium';
-  line-height: 20px;
-  font-size: 1.1em;
+  line-height: 22px;
+  font-size: 17px;
   color:#004851;
 }
 
@@ -3655,23 +3660,32 @@ margin-bottom: 0;
   padding: 16% 10px 20px 70px;
 }
 
-.especialidad-post-image{
+.box-post-especialidades .especialidad-post-image{
   overflow: hidden;
 }
 
-.especialidad-post-image img:nth-child(2){
+.box-post-especialidades .especialidad-post-image img:nth-child(2){
   display: none;
 }
 
-.especialidad-post-image:hover img:nth-child(2){
+.box-post-especialidades .especialidad-post-image:hover img:nth-child(2){
   display: block;
   animation-name: FadeIn;
     animation-duration: 2s;
     animation-fill-mode:forwards;
 }
 
+.especialidad-post-image:hover .circulo-hover:first-child{
+  opacity: .54;
+    transition: all 2s;
+}
 
-.especialidad-post-image:hover img:first-child{
+.especialidad-post-image:hover .circulo-hover:nth-child(2){
+  opacity: 1;
+  transition: all 2s;
+}
+
+.box-post-especialidades .especialidad-post-image:hover img:first-child{
   display: none;
   animation-name: FadeOut;
     animation-duration: 2s;
@@ -3693,10 +3707,58 @@ margin-bottom: 0;
       to { opacity: 0; }
 }
 
+.nuestra-especialidad-home{
+  font-family: 'Roboto-black';
+  color:#008E8E;
+  font-size:2em;
+}
+
+
+.social-link{text-align: center;
+  background-color: #004851;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  float:right;
+  margin-left: 10px;
+}
+
+
+.social-link:hover{
+  background-color: #FF5B35;
+  transition: all .7s;
+}
+
+.social-link i{
+  color:#d5d5d6;
+  font-size: 15px;
+  margin-top: 24%;
+}
+
+.social-link img{
+  color:#d5d5d6;
+  width:16px;
+  margin-top: 25%;
+}
+
+
 @media (max-width: 768px) {
 
+
+
+
+  .text-banner-footer-home p{
+    margin-bottom: 0;
+  }
+
+  .nuestra-especialidad-home{
+    padding-top: 10%;
+  }
+
   .title-slider{
-    font-size: 1.5em !important
+    font-size: 1.5em !important;
+    line-height: 28px !important;
   }
 
   .title-box-especialidades{
@@ -3770,7 +3832,13 @@ margin-bottom: 0;
   .body-servicios{
     background-image: none;
     background-color: black;
+    padding: 200px 0 50px 0;
+
   }
+
+  .informacion-manos {
+    padding: 20px 30px !important;
+}
 
 
     .float-servicios{
@@ -3784,9 +3852,12 @@ margin-bottom: 0;
 
 
     .header-nosotros{
-      padding-bottom: 60px;
-
+      padding-bottom: 100px;
+      padding-left: 30px;
+      padding-right: 30px;
       height: auto;
+      font-size: 16px;
+      line-height:21px;
     }
 
     .header-nosotros p:last-child{
@@ -3814,7 +3885,7 @@ margin-bottom: 0;
     }
 
     .header-bloque-verde .intro-pagina{
-      font-size: 18px;
+      font-size: 16px;
       line-height: 20px;
     }
 
@@ -3829,11 +3900,14 @@ margin-bottom: 0;
 
     img.site-logo{
       height: 50px;
+      margin: 10px 10px 10px 0 !important;
+
     }
 
     .special-bg{
       background-image: url(img/bg-colored-mobile.jpg);
       padding: 50px 80px 50px 40px;
+      font-size: 15px;
     }
 
     .title-home-banner{

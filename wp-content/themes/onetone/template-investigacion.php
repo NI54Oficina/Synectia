@@ -168,7 +168,7 @@ get_header();
               </div>
 
               <div class="especialidad-post-info" >
-                <p style="color:#008E8E; font-size:12px; font-family:'Roboto-bold';"><?php the_title(); ?></p>
+                <p style="color:#008E8E; font-size:12px; font-family:'Roboto-bold'; text-transform:uppercase"><?php the_title(); ?></p>
                 <div class="docencia-post-text" style=""  hid="1">
                   <?php echo $post->post_content ?>
 

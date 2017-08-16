@@ -29,7 +29,7 @@ get_header();
     left: 0;
     right: 0;
     margin:auto;
-    height: 200px;
+    /*height: 200px;*/
     background-color: #008E8E;
     top: -20%;
     text-align: center;
@@ -37,6 +37,7 @@ get_header();
     font-size: 1.4em;
     font-family: 'Roboto-medium';
     padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   /*.container-post-novedades .float-novedades p:first-child{

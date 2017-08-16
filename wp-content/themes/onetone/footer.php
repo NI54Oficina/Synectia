@@ -101,7 +101,7 @@
 			<div class="footer-info-area" role="contentinfo">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container" style="margin-bottom:0">
 
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 site-info pull-left" style="font-size:16px; padding-left:25px;">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 site-info pull-left" style="">
 
 
 
