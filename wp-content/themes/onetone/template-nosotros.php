@@ -98,8 +98,8 @@ get_header();
                    </h2>
                    <?php echo get_field('informacion_doctor', $post->ID)?>
 
-                   <a class="hidden-lh hidden-md hidden-sm" href="<?php echo get_field('linkedin', $post->ID)?>">
-                 <div class="hidden-lh hidden-md hidden-sm" style="">
+                   <a class="hidden-lg hidden-md hidden-sm" href="<?php echo get_field('linkedin', $post->ID)?>">
+                 <div class="hidden-lg hidden-md hidden-sm" style="">
                    <div class="social-link" style="display:inline">
                      <i class="fa fa-linkedin" aria-hidden="true"></i>
                    </div>
@@ -143,8 +143,8 @@ get_header();
                 <?php echo get_field('informacion_doctor', $post->ID)?>
 
 
-                <a class="hidden-lh hidden-md hidden-sm" href="<?php echo get_field('linkedin', $post->ID)?>">
-                    <div class="hidden-lh hidden-md hidden-sm" style="">
+                <a class="hidden-lg hidden-md hidden-sm" href="<?php echo get_field('linkedin', $post->ID)?>">
+                    <div class="hidden-lg hidden-md hidden-sm" style="">
                       <div class="social-link" style="display:inline">
                         <i class="fa fa-linkedin" aria-hidden="true"></i>
                       </div>

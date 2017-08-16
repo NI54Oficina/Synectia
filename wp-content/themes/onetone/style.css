@@ -3724,6 +3724,32 @@ margin-bottom: 0;
   margin-left: 10px;
 }
 
+.header-investigacion{
+  height: 500px;
+  /*height: 300px;*/
+  background-image: url(img/Docenciaeinvestigacion_banner.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 0;
+  padding-left: 5%;
+}
+
+.header-investigacion p{
+  width: 400px;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  margin: auto;
+  height: 200px;
+  font-size: 2.2em;
+  color:#004851;
+  font-family: 'Roboto-light';
+  line-height: 40px;
+
+}
+
+
 
 .social-link:hover{
   background-color: #FF5B35;
@@ -3736,6 +3762,10 @@ margin-bottom: 0;
   margin-top: 24%;
 }
 
+.secciones-mano{
+  height: 450px;
+}
+
 .social-link img{
   color:#d5d5d6;
   width:16px;
@@ -3743,10 +3773,40 @@ margin-bottom: 0;
 }
 
 
+.header-contacto{
+  background-image: url(img/Contacto_Banner.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  margin-bottom: 0;
+}
+
+.header-contacto div{
+  position: absolute;
+  bottom: 0;
+  top:0;
+  margin: auto;
+  height: 200px;
+  padding-left: 5%;
+}
+
+
+.footer-info-area .site-info, .footer-info-area .site-social{
+  font-size: 16px;
+}
+
 @media (max-width: 768px) {
 
+  .footer-info-area .site-info, .footer-info-area .site-social{
+    font-size: 15px;
+  }
 
-
+  .social-link{
+    float: left;
+    margin-left: 0;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
 
   .text-banner-footer-home p{
     margin-bottom: 0;
@@ -3797,6 +3857,7 @@ margin-bottom: 0;
 
   .container-medicos > div, .slogan-investigacion, .container-post-novedades .float-novedades, .especialidad-post-info{
     height: auto !important;
+    padding-bottom: 60px;
   }
 
   .informacion-dr h2{
@@ -3844,6 +3905,7 @@ margin-bottom: 0;
     .float-servicios{
       height: auto;
       padding: 20px;
+      width: 100%;
     }
 
     .secciones-mano-float{
@@ -3937,4 +3999,73 @@ margin-bottom: 0;
     position: relative;
     max-height: 225px;
     }
+
+    .formacion-experiencia{
+      line-height: 42px;
+      margin-top: 10px;
+    }
+
+    .secciones-mano{
+      height: auto;
+    }
+
+    .left-contacto{
+      height: auto !important;
+      min-height: 0 !important;
+    }
+
+    .header-contacto{
+      background-image: url(img/Contacto_Banner.jpg);
+      background-size:100% auto;
+      background-position: top;
+      height: 300px;
+      margin-bottom: 0;
+      background-repeat: no-repeat;
+    }
+
+    .header-contacto div{
+      position: absolute;
+      bottom: 0;
+      top:auto;
+      margin: auto;
+      height: auto;
+      padding-left: 5%;
+    }
+
+    .header-contacto p:last-child{
+      margin-bottom: 10px;
+    }
+
+    .header-servicios {
+    height: 249px !important;
+    background-position: top !important;
+    background-size: 100% auto !important;
+  }
+
+
+  .consultas-investigacion p{
+    font-size: 15px !important  ;
+  }
+
+  .header-investigacion {
+    height: 350px;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    margin-bottom: 0;
+    padding-left: 5%;
+  }
+
+  .header-investigacion p {
+
+   top: auto;
+  bottom: 10px;
+  margin: auto;
+  height: auto;
+}
+
+.slogan-investigacion{
+  padding-bottom: 30px !important;
+}
+
  }

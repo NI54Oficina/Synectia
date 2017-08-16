@@ -14,30 +14,6 @@ get_header();
 
 <style media="screen">
 
-  .header-investigacion{
-    height: 500px;
-    /*height: 300px;*/
-    background-image: url(<?php echo site_url(); ?>/wp-content/themes/onetone/img/Docenciaeinvestigacion_banner.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-bottom: 0;
-    padding-left: 5%;
-  }
-
-  .header-investigacion p{
-    width: 400px;
-    position: absolute;
-    top:0;
-    bottom: 0;
-    margin: auto;
-    height: 200px;
-    font-size: 2.2em;
-    color:#004851;
-    font-family: 'Roboto-light';
-    line-height: 40px;
-
-  }
 
   .slogan-investigacion{
     height: 200px;

@@ -33,13 +33,7 @@ get_header();
     font-family: 'Roboto-black';
   }
 
-    .header-contacto{
-      background-image: url(<?php echo site_url(); ?>/wp-content/themes/onetone/img/Contacto_Banner.jpg);
-      background-size: cover;
-      background-position: center;
-      height: 500px;
-      margin-bottom: 0;
-    }
+
 
     .right-contacto{
       padding: 0;
@@ -61,14 +55,7 @@ get_header();
       margin-bottom: 10px;
     }
 
-    .header-contacto div{
-      position: absolute;
-      bottom: 0;
-      top:0;
-      margin: auto;
-      height: 200px;
-      padding-left: 5%;
-    }
+
 
     .header-contacto p:last-child{
       color:#004851;

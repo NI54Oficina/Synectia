@@ -80,7 +80,7 @@ $aside          = 'both-aside';
                                         <?php   $category_detail=get_the_category();//$post->ID
                                           $cd=$category_detail[0];
                                           if($cd->slug == 'nosotros'){ ?>
-                                        <p class="entry-title" style="color:#008E8E; font-family: 'Roboto-light';">Formación y experiencia</p>
+                                        <p class="entry-title formacion-experiencia" style="color:#008E8E; font-family: 'Roboto-light';">Formación y experiencia</p>
                                         <?php } ?>
                                         <!-- <ul class="entry-meta">
                                             <li class="entry-date"><i class="fa fa-calendar"></i><a href="<?php echo get_month_link(get_the_time('Y'), get_the_time('m'));?>"><?php echo get_the_date("M d, Y");?></a></li>

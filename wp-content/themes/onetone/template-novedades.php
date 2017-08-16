@@ -72,7 +72,7 @@ get_header();
               </div>
 
               <div class="especialidad-post-info" hid="1">
-                <p style="color:#008E8E"><b><?php the_title(); ?></b></p>
+                <p style="color:#008E8E; line-height:28px; font-family:'Roboto-bold';"><?php the_title(); ?></p>
                 <p style="color:#575756; font-family:'Roboto-Light'; line-height:20px;">
                   <?php $content = get_post_field( 'post_content', $post->ID );
 

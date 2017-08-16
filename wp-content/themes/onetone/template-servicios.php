@@ -136,7 +136,7 @@ get_header();
 
 
   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 secciones-mano" style="height: 500px;">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 secciones-mano" style="">
       <div class="contenedor-mano-descripcion">
         <div class="circle-mano"></div> <p <p class="title-mano">HOMBRO</p>
           <p><span>Procedimientos</span><br>Artroscopía, reconstrucciones ligamentarias,
@@ -149,31 +149,36 @@ get_header();
       </div>
     </div>
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 secciones-mano" style="height: 400px;">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 secciones-mano" style="">
       <div class="contenedor-mano-descripcion">
         <div class="circle-mano"></div> <p class="title-mano">CODO</p>
-          <p><span>Procedimientos</span><br>Artroscopía, reconstrucciones ligamentarias,
-            transferencias tendinosas, reemplazos
-            protésicos, tratamiento del manguito rotador
-            y la luxación recidivante.</p>
-          <p><span>Patologías frecuentes</span><br>Fractura de clavícula, fractura de húmero,
-            luxación de hombro, fracturas de escápula,
-            lesiones del plexo braquial.</p>
+          <p><span>Procedimientos</span><br>Tratamiento de la inestabilidad,
+            osteosíntesis, artrolisis, sinovectomías, tenoplastias.</p>
+          <p><span>Patologías frecuentes</span><br>Epicondilitis (codo de tenista o golfista),
+          luxaciones, fractura de paleta humeral, cúbito y radio.</p>
       </div>
     </div>
 
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 secciones-mano">
       <div class="contenedor-mano-descripcion">
-        <div class="circle-mano-r" ></div> <p <p class="title-mano">HOMBRO</p>
-          <p><span>Procedimientos</span><br>Artroscopía, reconstrucciones ligamentarias,
-            transferencias tendinosas, reemplazos
-            protésicos, tratamiento del manguito rotador
-            y la luxación recidivante.</p>
-          <p><span>Patologías frecuentes</span><br>Fractura de clavícula, fractura de húmero,
-            luxación de hombro, fracturas de escápula,
-            lesiones del plexo braquial.</p>
+        <div class="circle-mano-r hidden-xs" ></div> <div class="circle-mano hidden-lg hidden-md hidden-sm" ></div>   <p class="title-mano">MUÑECA</p>
+          <p><span>Procedimientos</span><br>Artroscopía, osteotomías, osteosíntesis,
+          capsulodesis.</p>
+          <p><span>Patologías frecuentes</span><br>Fracturas de muñeca y de escafoides,
+          inestabilidades del carpo, lesiones de tendones y nervios, gangliones.</p>
       </div>
     </div>
+
+
+    <div class="hidden-lg hidden-md hidden-sm col-lg-12 col-md-12 col-sm-12 col-xs-12 secciones-mano">
+      <div class="contenedor-mano-descripcion">
+        <div class="circle-mano" ></div>  <p class="title-mano">MANO</p>
+        <p><span>Procedimientos</span><br>Tenorrafias, neurorrafias, artroplastias, artrodesis.</p>
+        <p><span>Patologías frecuentes</span><br>Síndrome del tunel del carpo, enfermedad de dupuytren, artrosis, tenosinovitis digital (dedo en  gatillo o resorte), rizartrosis, tumores.   </p>
+      </div>
+    </div>
+
+
   </div>
 
   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -208,7 +213,7 @@ get_header();
 
     </div>
 
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 secciones-mano secciones-mano-float" style="">
+    <div class="hidden-xs col-lg-6 col-md-6 col-sm-6 col-xs-12 secciones-mano secciones-mano-float" style="">
       <div class="contenedor-mano-descripcion" style="float:left" >
         <div class="circle-mano" ></div> <p <p class="title-mano">MANO</p>
           <p><span>Procedimientos</span><br>Tenorrafias, neurorrafias, artroplastias, artrodesis.</p>
@@ -216,7 +221,7 @@ get_header();
       </div>
     </div>
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background:transparent; height:200px;">
+    <div class="hidden-xs col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background:transparent; height:200px;">
 
     </div>
 

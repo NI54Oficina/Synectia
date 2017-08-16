@@ -159,13 +159,29 @@ get_header('home');
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"  >
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:white; padding:0;">
             <div class="especialidad-post-image" style="position:relative">
-              <?php the_post_thumbnail('full'); ?>
+              <?php //the_post_thumbnail('full'); ?>
               <?php
-              if (class_exists('MultiPostThumbnails')) :
 
-              MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'secondary-image');
+              $urlFirst=get_the_post_thumbnail_url();
 
-              endif;
+              $imageid = MultiPostThumbnails::get_post_thumbnail_id('post', 'secondary-image', $post->ID);
+              $imageurl = wp_get_attachment_image_src($imageid);
+
+
+              $imagenes= array();
+
+              array_push($imagenes,$urlFirst);
+
+              if($imageurl!=null){ array_push($imagenes,$imageurl[0]);};
+
+
+
+              echo onetone_get_slider_paramethers($imagenes);
+              // if (class_exists('MultiPostThumbnails')) :
+              //
+              // MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'secondary-image');
+              //
+              // endif;
                ?>
 
                <div class="hidden-xs container-circulos-hover">
