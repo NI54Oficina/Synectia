@@ -198,7 +198,7 @@ get_header('home');
               <div style="color:#575756; font-family:'Roboto-Light'; line-height:20px;" hid="2"><?php echo  $post->post_content ?></div>
             </div>
 
-        
+
 
           </div>
 
@@ -248,7 +248,7 @@ opacity: .54;
     background-size: cover;
     /*border-top: 15px solid #004851;*/
     height: 500px;
-    background-position: center;
+    background-position: center top;
     margin-bottom: 30px;
   }
 
