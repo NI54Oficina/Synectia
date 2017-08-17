@@ -129,7 +129,7 @@ get_header('home');
     margin-top:30px;
     margin-bottom: 0;
   }
-    .especialidad-post-image{
+    /*.especialidad-post-image{
         width: 100%;
         height: 200px;
         overflow: hidden;
@@ -140,7 +140,7 @@ get_header('home');
         height: auto;
         position: relative;
 
-    }
+    }*/
 
     .especialidad-post-info{
       padding: 10px 20px;
@@ -176,18 +176,21 @@ get_header('home');
 
 
 
-              echo onetone_get_slider_paramethers($imagenes);
+             echo onetone_get_slider_paramethers($imagenes);
+            // [owl-carousel category="Uncategorized" singleItem="true" items="1" autoPlay="true"];
               // if (class_exists('MultiPostThumbnails')) :
               //
               // MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'secondary-image');
               //
               // endif;
+
+            // echo   onetone_get_default_slider();
                ?>
 
-               <div class="hidden-xs container-circulos-hover">
+               <!-- <div class="hidden-xs container-circulos-hover">
                   <div class="circulo-hover"></div>
                   <div class="circulo-hover"></div>
-               </div>
+               </div> -->
             </div>
 
             <div class="especialidad-post-info" hid="3">
@@ -195,7 +198,12 @@ get_header('home');
               <div style="color:#575756; font-family:'Roboto-Light'; line-height:20px;" hid="2"><?php echo  $post->post_content ?></div>
             </div>
 
+        
+
           </div>
+
+
+
 
         </div>
 
@@ -227,6 +235,12 @@ opacity: .54;
 
 </div>
 
+
+<!-- <section id="home" class="section homepage-slider onetone-home"><div class="title-slider"><span>Cirugía en equipo </span> <br class="hidden-lg hidden-md hidden-sm"> para miembro superior</div><div id="onetone-owl-slider" class="owl-carousel owl-loaded owl-drag"> <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-2274px, 0px, 0px); transition: 0.25s; width: 5306px;"><div class="owl-item cloned" style="width: 758px;"><div class="item"><img src="http://localhost/synectia-web/wp-content/uploads/2017/07/Home_Banner_2.jpg" alt="Slide image 2"><div class="inner"><div class="caption"><div class="caption-inner"></div></div></div></div></div><div class="owl-item cloned" style="width: 758px;"><div class="item"><img src="http://localhost/synectia-web/wp-content/uploads/2017/07/Home_Banner_3.jpg" alt="Slide image 3"><div class="inner"><div class="caption"><div class="caption-inner"></div></div></div></div></div><div class="owl-item" style="width: 758px;"><div class="item"><img src="http://localhost/synectia-web/wp-content/uploads/2017/07/Home_Banner_1.jpg" alt="Slide image 1"><div class="inner"><div class="caption"><div class="caption-inner"></div></div></div></div></div><div class="owl-item active" style="width: 758px;"><div class="item"><img src="http://localhost/synectia-web/wp-content/uploads/2017/07/Home_Banner_2.jpg" alt="Slide image 2"><div class="inner"><div class="caption"><div class="caption-inner"></div></div></div></div></div><div class="owl-item" style="width: 758px;"><div class="item"><img src="http://localhost/synectia-web/wp-content/uploads/2017/07/Home_Banner_3.jpg" alt="Slide image 3"><div class="inner"><div class="caption"><div class="caption-inner"></div></div></div></div></div><div class="owl-item cloned" style="width: 758px;"><div class="item"><img src="http://localhost/synectia-web/wp-content/uploads/2017/07/Home_Banner_1.jpg" alt="Slide image 1"><div class="inner"><div class="caption"><div class="caption-inner"></div></div></div></div></div><div class="owl-item cloned" style="width: 758px;"><div class="item"><img src="http://localhost/synectia-web/wp-content/uploads/2017/07/Home_Banner_2.jpg" alt="Slide image 2"><div class="inner"><div class="caption"><div class="caption-inner"></div></div></div></div></div></div></div><div class="owl-nav"><div class="owl-prev">prev</div><div class="owl-next">next</div></div><div class="owl-dots"><div class="owl-dot"><span></span></div><div class="owl-dot active"><span></span></div><div class="owl-dot"><span></span></div></div></div></section> -->
+
+
+
+
 <style media="screen">
   .box-slogan{
     background-image: url(<?php echo site_url(); ?>/wp-content/themes/onetone/img/Home_TeamCierre.jpg);
@@ -257,7 +271,7 @@ opacity: .54;
           left: 0;
           height: 100%;
           width: 100%;
-          background: linear-gradient(to top, rgba(255,255,255,1) 15%,rgba(255,255,255,0) 100%)
+          /*background: linear-gradient(to top, rgba(255,255,255,1) 15%,rgba(255,255,255,0) 100%)*/
         }
       </style>
     </div>
@@ -266,6 +280,9 @@ opacity: .54;
         <p style="font-size:2.2em; font-family:'Roboto-Light'; color:#00A4A4; line-height:40px">Trabajamos <br> en equipo para<br>mejorar tu<br> calidad de vida  </p>
     </div>
 </div>
+
+
+
 
 <!-- ACA TERMINAN LAS SECCIONES DE HOME -->
 <?php get_footer();?>

@@ -53,7 +53,7 @@ get_header();
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container-post-novedades">
   <div class="float-novedades header-bloque-verde">
       <p class="titulo-pagina">NOVEDADES</p>
-      <p class="intro-pagina">Te acercamos las últimas noticias referentes <br> a nuestra especialidad</p>
+      <p class="intro-pagina">Te acercamos las últimas noticias referentes <br class="hidden-xs"> a nuestra especialidad</p>
   </div>
 
   <?php
@@ -69,6 +69,9 @@ get_header();
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:white; padding:0;">
               <div class="especialidad-post-image">
                 <?php the_post_thumbnail('full'); ?>
+                <div class="float-cover-white">
+
+                </div>
               </div>
 
               <div class="especialidad-post-info" hid="1">
@@ -92,7 +95,18 @@ get_header();
 
   <?php } wp_reset_postdata();   ?>
 
+<style>
+  .especialidad-post-image:hover .float-cover-white{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    opacity: .3;
+    top: 0;
+    transition: all 1s;
+  }
 
+</style>
 </div>
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container-buttons" style="padding:50px;">

@@ -180,22 +180,22 @@ function onetone_native_pagenavi($echo,$wp_query){
 
   function onetone_get_slider_paramethers($arrayDeImagenes){
 
-  $sanitize_title = "home";
-  $section_menu   = onetone_option( 'menu_title_0' );
-  $section_slug   = onetone_option( 'menu_slug_0' );
+    $sanitize_title = "home";
+  	$section_menu   = onetone_option( 'menu_title_0' );
+  	$section_slug   = onetone_option( 'menu_slug_0' );
 
-  if( $section_menu  != "" ){
+  	if( $section_menu  != "" ){
 
-    $sanitize_title = sanitize_title($section_menu );
+  		$sanitize_title = sanitize_title($section_menu );
 
-    if( trim($section_slug) !="" ){
+  		if( trim($section_slug) !="" ){
 
-       $sanitize_title = sanitize_title($section_slug);
+  		   $sanitize_title = sanitize_title($section_slug);
 
-     }
-  }
+  		 }
+   }
 
-  $return = '<section id="" class="section homepage-slider"><div id="onetone-owl-slider" class="owl-carousel"> ';
+  $return = '<section id="home" class="section homepage-slider"><div id="onetone-owl-slider" class="owl-carousel owl-loaded owl-drag"><div class="owl-stage-outer"><div class="owl-stage" style="">';
 
    for($i=0;$i<count($arrayDeImagenes);$i++){
      $active     = '';
@@ -207,19 +207,20 @@ function onetone_native_pagenavi($echo,$wp_query){
 
      $btn_str    = '';
 
-    if( $btn_txt != '' ){
+     if( $btn_txt != '' ){
 
-      $btn_str    = '<br/><a class="btn" target="'.esc_attr($btn_target).'" href="'.esc_url($btn_link).'">'.do_shortcode($btn_txt).'</a>';
+       $btn_str    = '<br/><a class="btn" target="'.esc_attr($btn_target).'" href="'.esc_url($btn_link).'">'.do_shortcode($btn_txt).'</a>';
 
        }
 
+
     //  if( trim($image) != "" ){
-        $return .= '<div class="item"><img src="'.$arrayDeImagenes[$i].'" alt="Slide image '.$i.'"><div class="inner"><div class="caption"><div class="caption-inner">'. do_shortcode($text) .$btn_str.'</div></div></div></div>';
+        $return .= '<div class="owl-item cloned"><div class="item"><img src="'.$arrayDeImagenes[$i].'" alt="Slide image '.$i.'"><div class="inner"><div class="caption"><div class="caption-inner">'. do_shortcode($text) .$btn_str.'</div></div></div></div></div>';
         //  }
 
   }
 
-    $return .= '</div></section>';
+    $return .= '</div></div><div class="owl-nav"><div class="owl-prev">prev</div><div class="owl-next">next</div></div><div class="owl-dots"><div class="owl-dot active"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div></div></div></section>';
 
         return $return;
 

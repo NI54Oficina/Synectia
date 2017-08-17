@@ -3404,6 +3404,10 @@ section.home-section-1 .home-section-content {
 /*customize*/
 
 
+.seccion-mano-padding{
+  padding-top: 25%;
+}
+
 .footer .footer-info-area{
 	background-color: white;
 }
@@ -3573,7 +3577,7 @@ margin-bottom: 0;
 }
 
 .secciones-mano-float{
-  position:absolute; bottom:15%; right:0
+  position:absolute; bottom:0; right:0
 }
 
 
@@ -3663,7 +3667,7 @@ margin-bottom: 0;
 .box-post-especialidades .especialidad-post-image{
   overflow: hidden;
 }
-
+/*
 .box-post-especialidades .especialidad-post-image img:nth-child(2){
   display: none;
 }
@@ -3690,8 +3694,11 @@ margin-bottom: 0;
   animation-name: FadeOut;
     animation-duration: 2s;
   animation-fill-mode:forwards;
-}
+}*/
 
+.cover-white-transparent{
+  background: linear-gradient(to top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 50%);
+}
 
 @-webkit-keyframes FadeIn {
     from { opacity: 0; }
@@ -3857,7 +3864,16 @@ margin-bottom: 0;
 
   .container-medicos > div, .slogan-investigacion, .container-post-novedades .float-novedades, .especialidad-post-info{
     height: auto !important;
-    padding-bottom: 60px;
+    /*padding-bottom: 60px;*/
+  }
+
+  .container-medicos{
+    /*margin-bottom: 0 !important;*/
+    height: auto !important;
+  }
+
+  .informacion-dr{
+    padding-bottom: 60px !important
   }
 
   .informacion-dr h2{
@@ -3879,6 +3895,7 @@ margin-bottom: 0;
   .fb-link{
     float: none;
     margin: auto;
+    margin-top: 10px;
   }
 
 
@@ -3924,7 +3941,12 @@ margin-bottom: 0;
 
     .header-nosotros p:last-child{
       font-size:18px;
-      line-height: 28px;
+      line-height: 25px;
+    }
+
+    .container-post-novedades .float-novedades{
+      padding-left: 15px !important;
+      padding-right: 15px !important;
     }
 
     .importancia-equipo , .container-cajas-medicos{
@@ -4018,9 +4040,10 @@ margin-bottom: 0;
       background-image: url(img/Contacto_Banner.jpg);
       background-size:100% auto;
       background-position: top;
-      height: 300px;
+      height: 320px;
       margin-bottom: 0;
       background-repeat: no-repeat;
+
     }
 
     .header-contacto div{
@@ -4030,6 +4053,7 @@ margin-bottom: 0;
       margin: auto;
       height: auto;
       padding-left: 5%;
+      margin-top: 15px;
     }
 
     .header-contacto p:last-child{
@@ -4047,8 +4071,12 @@ margin-bottom: 0;
     font-size: 15px !important  ;
   }
 
+  .title-box-especialidades{
+    padding-bottom: 0  !important;
+  }
+
   .header-investigacion {
-    height: 350px;
+    height: 280px;
     background-position: top;
     background-repeat: no-repeat;
     background-size: 100% auto;
@@ -4057,15 +4085,24 @@ margin-bottom: 0;
   }
 
   .header-investigacion p {
-
-   top: auto;
-  bottom: 10px;
-  margin: auto;
-  height: auto;
-}
+    font-size: 24px;
+    line-height: 32px;
+    top: auto;
+    bottom: 10px;
+    margin: auto;
+    height: auto;
+  }
 
 .slogan-investigacion{
   padding-bottom: 30px !important;
+}
+
+.cover-white-transparent{
+  background: linear-gradient(to top, rgba(255,255,255,1) 15%,rgba(255,255,255,0) 100%);
+}
+
+.seccion-mano-padding{
+  padding-top: 0;
 }
 
  }

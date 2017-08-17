@@ -149,7 +149,7 @@ get_header();
       </div>
     </div>
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 secciones-mano" style="">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 secciones-mano seccion-mano-padding" style="">
       <div class="contenedor-mano-descripcion">
         <div class="circle-mano"></div> <p class="title-mano">CODO</p>
           <p><span>Procedimientos</span><br>Tratamiento de la inestabilidad,
@@ -159,7 +159,7 @@ get_header();
       </div>
     </div>
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 secciones-mano">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 secciones-mano seccion-mano-padding">
       <div class="contenedor-mano-descripcion">
         <div class="circle-mano-r hidden-xs" ></div> <div class="circle-mano hidden-lg hidden-md hidden-sm" ></div>   <p class="title-mano">MUÑECA</p>
           <p><span>Procedimientos</span><br>Artroscopía, osteotomías, osteosíntesis,
