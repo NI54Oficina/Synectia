@@ -217,7 +217,7 @@ get_header();
 
     </div>
 
-    <div class="hidden-xs col-lg-6 col-md-6 col-sm-6 col-xs-12 secciones-mano secciones-mano-float" style="">
+    <div class="hidden-xs col-lg-6 col-md-6 col-sm-6 col-xs-12 secciones-mano secciones-mano-float" style="padding-top:20%;">
       <div class="contenedor-mano-descripcion" style="float:left" >
         <div class="circle-mano" ></div> <p <p class="title-mano">MANO</p>
           <p><span>Procedimientos</span><br>Tenorrafias, neurorrafias, artroplastias, artrodesis.</p>

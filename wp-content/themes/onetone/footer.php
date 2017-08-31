@@ -46,6 +46,21 @@
           margin-bottom: 0;
         }
 
+        .boton-turnos a{
+          border: 1px solid #FF5B35;
+          width: auto;
+          border-radius: 5px;
+          color:#FF5B35 !important;
+          padding: 3px 10px;
+          text-align: center;
+        }
+
+        .boton-turnos a:hover{
+          border: 1px solid transparent;
+          color: #004851!important;
+          background: #FF5B35;
+        }
+
       </style>
 
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer-content-area">
@@ -67,6 +82,7 @@
           <p><span>Horarios: </span> Miércoles y Viernes 16hs</p>
           <p><span>Cobertura: </span> Particular, OSDE y otros</p>
           <p >prepagos por integro</p>
+          <p class="boton-turnos"><a href="#">Turnos online</a></p>
         </div>
 
         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 logo-color-sin">

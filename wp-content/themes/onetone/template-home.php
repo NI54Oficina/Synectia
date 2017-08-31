@@ -110,9 +110,7 @@ get_header('home');
   }
 
   .box-post-especialidades p{
-    color:#E2E2E2;
-    font-size: 15px;
-    padding: 0 15%;
+     color: #6f7b7a;     font-size: 21px;     padding: 0 20%;     line-height: 32px;     margin-top: 60px;     margin-bottom: 60px;
   }
    .header-float{
      background-color: #004851;
