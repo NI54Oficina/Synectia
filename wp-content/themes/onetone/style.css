@@ -881,7 +881,7 @@ header .site-nav li ul {
 
 /*For onepage*/
 .site-nav > ul > li.current > a {
-    color: #37cadd;
+    color: #018a8a;
 }
 
 .menu-dropdown-icon {
@@ -2326,6 +2326,7 @@ display:none;
 
 .widget_nav_menu li.current-menu-item a {
     border-right: 2px solid #37cadd;
+    color:#018a8a;
 }
 
 #wp-calendar td,.widget #wp-calendar th {
@@ -3251,7 +3252,7 @@ border:none;
     .site-nav.style1 > ul > li.current > a > span,
     .site-nav.style1 > ul > li > a:hover > span {
         background-color: #37cadd;
-        color: #fff;
+        color: #018a8a;
     }
     .site-nav.style2 > ul > li > a > span {
 		padding: 8px;
@@ -3405,7 +3406,7 @@ section.home-section-1 .home-section-content {
 
 
 .seccion-mano-padding{
-  padding-top: 25%;
+  padding-top: 20%;
 }
 
 .footer .footer-info-area{
@@ -3577,7 +3578,7 @@ margin-bottom: 0;
 }
 
 .secciones-mano-float{
-  position:absolute; bottom:0; right:0
+  position:absolute; bottom:4%; right:0
 }
 
 
@@ -3800,6 +3801,11 @@ margin-bottom: 0;
 
 .footer-info-area .site-info, .footer-info-area .site-social{
   font-size: 16px;
+}
+
+
+#menu-main > li.current_page_item.current_menu_item > a  {
+    color:#018a8a;
 }
 
 @media (max-width: 768px) {
