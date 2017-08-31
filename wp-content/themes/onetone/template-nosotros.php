@@ -56,9 +56,164 @@ get_header();
 
     </style>
 
+    <div class="hidden-lg hidden-md hidden-sm col-lg-12 col-md-12 col-sm-12 col-xs-12 container-cajas-medicos" style="">
 
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container-cajas-medicos" style="">
+
+
+
+
+             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 container-medicos" hid="2" style="height: 400px;">
+
+               <div class="imagen-dr">
+                <a href="http://localhost/synectia-web/2017/08/01/dra-violeta-d-levy/"><img width="1500" height="1000" src="http://localhost/synectia-web/wp-content/uploads/2017/08/Nosotros_Datos_VIOLETA.jpg" class="attachment-full size-full wp-post-image" alt="" srcset="http://localhost/synectia-web/wp-content/uploads/2017/08/Nosotros_Datos_VIOLETA.jpg 1500w, http://localhost/synectia-web/wp-content/uploads/2017/08/Nosotros_Datos_VIOLETA-300x200.jpg 300w, http://localhost/synectia-web/wp-content/uploads/2017/08/Nosotros_Datos_VIOLETA-768x512.jpg 768w, http://localhost/synectia-web/wp-content/uploads/2017/08/Nosotros_Datos_VIOLETA-1024x683.jpg 1024w" sizes="(max-width: 1500px) 100vw, 1500px">                  <div class="float-cover-white"></div></a>
+               </div>
+               <style media="screen">
+
+               </style>
+                 <div class="informacion-dr">
+                   <h2><a href="http://localhost/synectia-web/2017/08/01/dra-violeta-d-levy/"> Dra. Violeta D. Levy</a>
+                     <a class="hidden-xs" href="google.com">
+                   </a><div class="hidden-xs" style="float:right; margin-top:-10px;"><a class="hidden-xs" href="google.com">
+                     <div class="social-link" style="display:inline">
+                       <i class="fa fa-linkedin" aria-hidden="true"></i>
+                     </div>
+                     </a>
+                     <a href="google.com">
+                     <div class="social-link" style="display:inline;">
+                        <img src="http://localhost/synectia-web/wp-content/themes/onetone/img/red-medicos.svg" alt="">
+
+                     </div>
+                   </a></div><a href="google.com">
+                   </a>
+
+                   </h2>
+                   <p><span style="color: #008e8e;">&gt;</span> Jefe de sector cirugía de mano y miembro superior del Htal. Español de Buenos Aires.</p>
+<p><span style="color: #008e8e;">&gt;</span> Vicepresidente de la Asociación Argentina de Cirugía de la Mano y Miembro Superior (AACM).</p>
+<p><strong><span style="color: #008e8e;">vdlevy@gmail.com</span></strong></p>
+
+                   <a class="hidden-lg hidden-md hidden-sm" href="google.com">
+                 </a><div class="hidden-lg hidden-md hidden-sm" style=""><a class="hidden-lg hidden-md hidden-sm" href="google.com">
+                   <div class="social-link" style="display:inline">
+                     <i class="fa fa-linkedin" aria-hidden="true"></i>
+                   </div>
+                   </a>
+                   <a href="google.com">
+                   <div class="social-link" style="display:inline">
+                      <img src="http://localhost/synectia-web/wp-content/themes/onetone/img/red-medicos.svg" alt="">
+
+                   </div>
+                 </a></div><a href="google.com">
+                 </a>
+
+                 </div>
+
+
+             </div>
+
+             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 container-medicos" hid="2" style="height: 400px;">
+                 <div class="informacion-dr">
+                   <h2><a href="http://localhost/synectia-web/2017/08/01/dr-marcelo-a-mazzola/"> Dr. Marcelo A. Mazzola</a>
+                     <a class="hidden-xs" href="google.com">
+                   </a><div class="hidden-xs" style="float:right;  margin-top:-10px;"><a class="hidden-xs" href="google.com">
+                     <div class="social-link" style="display:inline">
+                       <i class="fa fa-linkedin" aria-hidden="true"></i>
+                     </div>
+                     </a>
+                     <a href="google.com">
+                     <div class="social-link" style="display:inline">
+                        <img src="http://localhost/synectia-web/wp-content/themes/onetone/img/red-medicos.svg" alt="">
+
+                     </div>
+                   </a></div><a href="google.com">
+                   </a>
+
+                   </h2>
+
+                   <p><span style="color: #008e8e;">&gt; <span style="color: #000000;">Especialista universitario en cirugía de la mano y miembro superior</span></span></p>
+   <p><span style="color: #008e8e;">&gt; <span style="color: #000000;">Cirugía reconstructiva</span></span></p>
+   <p><span style="color: #008e8e;">&gt; <span style="color: #000000;">Microcirugía</span></span></p>
+   <p><strong><span style="color: #008e8e;">marcemazzola@gmail.com</span></strong></p>
+
+
+                   <a class="hidden-lg hidden-md hidden-sm" href="google.com">
+                       </a><div class="hidden-lg hidden-md hidden-sm" style=""><a class="hidden-lg hidden-md hidden-sm" href="google.com">
+                         <div class="social-link" style="display:inline">
+                           <i class="fa fa-linkedin" aria-hidden="true"></i>
+                         </div>
+                         </a>
+                         <a href="google.com">
+                         <div class="social-link" style="display:inline">
+                            <img src="http://localhost/synectia-web/wp-content/themes/onetone/img/red-medicos.svg" alt="">
+
+                         </div>
+                       </a></div><a href="google.com">
+                 </a>
+
+                 </div>
+
+                 <div class="imagen-dr">
+                   <a href="http://localhost/synectia-web/2017/08/01/dr-marcelo-a-mazzola/"> <img width="1500" height="1000" src="http://localhost/synectia-web/wp-content/uploads/2017/07/Nosotros_Datos_MARCELO.jpg" class="attachment-full size-full wp-post-image" alt="" srcset="http://localhost/synectia-web/wp-content/uploads/2017/07/Nosotros_Datos_MARCELO.jpg 1500w, http://localhost/synectia-web/wp-content/uploads/2017/07/Nosotros_Datos_MARCELO-300x200.jpg 300w, http://localhost/synectia-web/wp-content/uploads/2017/07/Nosotros_Datos_MARCELO-768x512.jpg 768w, http://localhost/synectia-web/wp-content/uploads/2017/07/Nosotros_Datos_MARCELO-1024x683.jpg 1024w" sizes="(max-width: 1500px) 100vw, 1500px">                <div class="float-cover-white"></div></a>
+
+                 </div>
+             </div>
+
+
+
+
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 container-medicos" hid="2" style="height: 400px;">
+              <div class="informacion-dr">
+                <h2><a href="http://localhost/synectia-web/2017/08/01/dr-martin-s-gonzalez/"> Dr. Martín S. González</a>
+                  <a class="hidden-xs" href="google.com">
+                </a><div class="hidden-xs" style="float:right;  margin-top:-10px;"><a class="hidden-xs" href="google.com">
+                  <div class="social-link" style="display:inline">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  </div>
+                  </a>
+                  <a href="google.com">
+                  <div class="social-link" style="display:inline">
+                     <img src="http://localhost/synectia-web/wp-content/themes/onetone/img/red-medicos.svg" alt="">
+
+                  </div>
+                </a></div><a href="google.com">
+                </a>
+
+                </h2>
+
+                <p><span style="color: #008e8e;">&gt;</span> Equipo de cirugía de la mano y miembro superior.</p>
+<p><span style="color: #008e8e;">&gt;</span> Cirugía reconstructiva</p>
+<p><span style="color: #008e8e;">&gt;</span> Microcirugía</p>
+<p><strong><span style="color: #008e8e;">gonzalezmartin1977@gmail.com</span></strong></p>
+
+
+                <a class="hidden-lg hidden-md hidden-sm" href="google.com">
+                    </a><div class="hidden-lg hidden-md hidden-sm" style=""><a class="hidden-lg hidden-md hidden-sm" href="google.com">
+                      <div class="social-link" style="display:inline">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      </div>
+                      </a>
+                      <a href="google.com">
+                      <div class="social-link" style="display:inline">
+                         <img src="http://localhost/synectia-web/wp-content/themes/onetone/img/red-medicos.svg" alt="">
+
+                      </div>
+                    </a></div><a href="google.com">
+              </a>
+
+              </div>
+
+              <div class="imagen-dr">
+                <a href="http://localhost/synectia-web/2017/08/01/dr-martin-s-gonzalez/"> <img width="1500" height="1202" src="http://localhost/synectia-web/wp-content/uploads/2017/08/Nosotros_Datos_MARTIN.jpg" class="attachment-full size-full wp-post-image" alt="" srcset="http://localhost/synectia-web/wp-content/uploads/2017/08/Nosotros_Datos_MARTIN.jpg 1500w, http://localhost/synectia-web/wp-content/uploads/2017/08/Nosotros_Datos_MARTIN-300x240.jpg 300w, http://localhost/synectia-web/wp-content/uploads/2017/08/Nosotros_Datos_MARTIN-768x615.jpg 768w, http://localhost/synectia-web/wp-content/uploads/2017/08/Nosotros_Datos_MARTIN-1024x821.jpg 1024w" sizes="(max-width: 1500px) 100vw, 1500px">                <div class="float-cover-white"></div></a>
+
+              </div>
+          </div>
+
+
+
+
+      </div>
+
+    <div class="hidden-xs col-lg-12 col-md-12 col-sm-12 col-xs-12 container-cajas-medicos" style="">
        <?php
         $category_id = get_cat_ID('Nosotros');
 

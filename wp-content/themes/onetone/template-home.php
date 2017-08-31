@@ -116,7 +116,7 @@ get_header('home');
      background-color: #004851;
      width: 90%;
      position: absolute;
-     top:-50%;
+     top:-70%;
      height:auto;
      padding-left: 50px;
      left: 0;

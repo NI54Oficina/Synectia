@@ -46,13 +46,12 @@
           margin-bottom: 0;
         }
 
+        .boton-turnos{
+          margin-top: 10px;
+        }
+
         .boton-turnos a{
-          border: 1px solid #FF5B35;
-          width: auto;
-          border-radius: 5px;
-          color:#FF5B35 !important;
-          padding: 3px 10px;
-          text-align: center;
+           text-transform: uppercase;border: 1px solid #FF5B35;     width: auto;     border-radius: 3px;     color: #FF5B35 !important;     padding: 5px 5px;     text-align: center;
         }
 
         .boton-turnos a:hover{
