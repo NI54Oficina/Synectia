@@ -118,6 +118,10 @@ get_header();
       margin-right: 25px;
       margin-top: 25px;
     }
+	@media only screen and (max-width : 979px) {
+	 .secciones-mano{position:initial !important;}
+	}
+
 </style>
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 header-servicios">
 
@@ -136,7 +140,7 @@ get_header();
 
 
   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 secciones-mano" style="">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 secciones-mano">
       <div class="contenedor-mano-descripcion">
         <div class="circle-mano"></div> <p <p class="title-mano">HOMBRO</p>
           <p><span>Procedimientos</span><br>Artroscopía, reconstrucciones ligamentarias,
@@ -149,7 +153,7 @@ get_header();
       </div>
     </div>
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 secciones-mano seccion-mano-padding" style="">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 secciones-mano seccion-mano-padding" style="position:relative;top:20px;left:-20px;">
       <div class="contenedor-mano-descripcion">
         <div class="circle-mano"></div> <p class="title-mano">CODO</p>
           <p><span>Procedimientos</span><br>Tratamiento de la inestabilidad,
@@ -159,7 +163,7 @@ get_header();
       </div>
     </div>
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 secciones-mano seccion-mano-padding">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 secciones-mano seccion-mano-padding" style="position:relative;top:-10px;left:-30px;">
       <div class="contenedor-mano-descripcion">
         <div class="circle-mano-r hidden-xs" ></div> <div class="circle-mano hidden-lg hidden-md hidden-sm" ></div>   <p class="title-mano">MUÑECA</p>
           <p><span>Procedimientos</span><br>Artroscopía, osteotomías, osteosíntesis,

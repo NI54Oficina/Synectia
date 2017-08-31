@@ -260,7 +260,7 @@ $(document).on('click', "a.scroll,.onetone-nav a[href^='#']",function(e){
 	}
 	});
 
-$('header .site-nav ul,ul.onetone-dots').onePageNav({filter: 'a[href^="#"]',scrollThreshold:0.3});	
+//$('header .site-nav ul,ul.onetone-dots').onePageNav({filter: 'a[href^="#"]',scrollThreshold:0.3});	
 
 // smooth scrolling  btn 
 $("div.page a[href^='#'],div.post a[href^='#'],div.home-wrapper a[href^='#'],.banner-scroll a[href^='#']").on('click', function(e){
