@@ -230,6 +230,166 @@ get_header();
   </div>
 
 
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title-box-especialidades" style=";">
+
+    <!-- <div class="header-float">
+      <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 title-home-banner" style="text-align:left">
+        <img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/logo-nombre.png" alt="">
+      </div>
+
+      <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 bg-mobile-non-float" style="padding:0; margin:0">
+        <p class="special-bg">“Las enfermedades y el trauma del miembro superior son muy comunes. En <b>Synectia</b> te ayudamos a que dejen de afectar tu vida”</p>
+
+      </div>
+    </div> -->
+
+
+
+          <h2 class="nuestra-especialidad-home" style="">NUESTRA ESPECIALIDAD</h2>
+          <p>SERVICIOS</p>
+
+  </div>
+
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box-post-especialidades" style="">
+
+  <style media="screen">
+      .box-post-especialidades{
+        margin-bottom: 0;
+        background-color:#C1C1C3;
+        padding:20px;
+      }
+       .header-float{
+         background-color: #004851;
+         width: 90%;
+         position: absolute;
+         top:-50%;
+         height:auto;
+         padding-left: 50px;
+         left: 0;
+         right: 0;
+         margin: auto;
+         z-index: 2;
+       }
+       .header-float img{
+         display: inline-block;
+         width: 200px;
+       }
+
+    .title-box-especialidades{
+      background-color:#E2E2E2;
+      text-align: center;
+      padding-top: 100px;
+      padding-bottom: 50px;
+      margin-top:30px;
+      margin-bottom: 0;
+    }
+      /*.especialidad-post-image{
+          width: 100%;
+          height: 200px;
+          overflow: hidden;
+      }
+
+      .especialidad-post-image img{
+          width: 100%;
+          height: auto;
+          position: relative;
+
+      }*/
+
+      .especialidad-post-info{
+        padding: 10px 20px;
+      }
+
+  </style>
+
+  <?php
+        $category_id = get_cat_ID('Especialidad');
+        // $category_id= $categories[0]->cat_ID;
+
+        $posts=get_posts( array('numberposts' => -1, "post_type"=>"post", 'category'=>$category_id ) );
+
+        foreach($posts as $post){  ?>
+
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"  >
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:white; padding:0;">
+              <div class="especialidad-post-image" style="position:relative">
+                <?php //the_post_thumbnail('full'); ?>
+                <?php
+
+                $urlFirst=get_the_post_thumbnail_url();
+
+                $imageid = MultiPostThumbnails::get_post_thumbnail_id('post', 'secondary-image', $post->ID);
+                $imageurl = wp_get_attachment_image_src($imageid);
+
+
+                $imagenes= array();
+
+                array_push($imagenes,$urlFirst);
+
+                if($imageurl!=null){ array_push($imagenes,$imageurl[0]);};
+
+
+
+               echo onetone_get_slider_paramethers($imagenes);
+              // [owl-carousel category="Uncategorized" singleItem="true" items="1" autoPlay="true"];
+                // if (class_exists('MultiPostThumbnails')) :
+                //
+                // MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'secondary-image');
+                //
+                // endif;
+
+              // echo   onetone_get_default_slider();
+                 ?>
+
+                 <!-- <div class="hidden-xs container-circulos-hover">
+                    <div class="circulo-hover"></div>
+                    <div class="circulo-hover"></div>
+                 </div> -->
+              </div>
+
+              <div class="especialidad-post-info" hid="3">
+                <p style="color:#008E8E; line-height:28px;font-family:'Roboto-bold'"><?php the_title(); ?></p>
+                <div style="color:#575756; font-family:'Roboto-Light'; line-height:20px;" hid="2"><?php echo  $post->post_content ?></div>
+              </div>
+
+
+
+            </div>
+
+
+
+
+          </div>
+
+  <style media="screen">
+
+  .container-circulos-hover{
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: auto;
+  }
+    .circulo-hover{
+        height: 12px;
+        margin: auto 4px;
+        width: 12px;
+        background-color:#008e8e;
+        border-radius: 100%;
+        display: inline-flex;
+    }
+
+    .circulo-hover:nth-child(2){
+  opacity: .54;
+    }
+  </style>
+
+  <?php } wp_reset_postdata();   ?>
+
+  </div>
+
 
 </div>
 

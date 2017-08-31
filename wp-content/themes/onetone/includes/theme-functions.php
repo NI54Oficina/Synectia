@@ -243,7 +243,7 @@ function onetone_native_pagenavi($echo,$wp_query){
 		 }
  }
 
-	$return = '<section id="'.$sanitize_title.'" class="section homepage-slider onetone-'.$sanitize_title.'"><div class="title-slider"><span>Cirugía en equipo </span> <br class="hidden-lg hidden-md hidden-sm"> para miembro superior</div><div id="onetone-owl-slider" class="owl-carousel"> ';
+	$return = '<section id="'.$sanitize_title.'" class="section homepage-slider onetone-'.$sanitize_title.'"><div id="onetone-owl-slider" class="owl-carousel"> ';
 
 	 for($i=1;$i<=10;$i++){
 		 $active     = '';

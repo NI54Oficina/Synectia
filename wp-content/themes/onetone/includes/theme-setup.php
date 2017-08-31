@@ -3,12 +3,12 @@
  function onetone_setup(){
 
 	global $content_width, $onetone_options,$onetone_default_options, $onetone_option_name;
-	
+
 	$lang = get_template_directory(). '/languages';
 	load_theme_textdomain('onetone', $lang);
-	add_theme_support( 'post-thumbnails' ); 
+	add_theme_support( 'post-thumbnails' );
 	$args = array();
-	$header_args = array( 
+	$header_args = array(
 	    'default-image'          => '',
 		 'default-repeat' => 'repeat',
         'default-text-color'     => '333333',
@@ -37,9 +37,9 @@
 		'custom_menu_4' => __( 'Custom Menu 4', 'onetone' ),
 		'custom_menu_5' => __( 'Custom Menu 5', 'onetone' ),
 		'custom_menu_6' => __( 'Custom Menu 6', 'onetone' ),
-											  
+
 	));
-	
+
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
@@ -51,35 +51,35 @@
 
 	add_editor_style("editor-style.css");
 	if ( ! isset( $content_width ) ) $content_width = 1120;
-	// get options 
+	// get options
 	$onetone_options = onetone_of_get_options();
 }
 
 add_action( 'after_setup_theme', 'onetone_setup' );
 
 function onetone_custom_scripts(){
-	 
-	global $page_meta,$post,$shop_style; 
+
+	global $page_meta,$post,$shop_style;
 	if($post){
 		$page_meta = get_post_meta( $post->ID ,'_onetone_post_meta');
-	}	
-	
+	}
+
 	if( isset($page_meta[0]) && $page_meta[0]!='' )
 		$page_meta = @json_decode( $page_meta[0],true );
-	
+
 	$theme_info = wp_get_theme();
 	$detect     = new Mobile_Detect;
-	
+
 	wp_enqueue_style('font-awesome',  get_template_directory_uri() .'/plugins/font-awesome/css/font-awesome.min.css', false, '4.3.0', false);
 	wp_enqueue_style('bootstrap',  get_template_directory_uri() .'/plugins/bootstrap/css/bootstrap.min.css', false, '3.3.4', false);
 	wp_enqueue_style( 'owl-carousel',  get_template_directory_uri() .'/plugins/owl-carousel/assets/owl.carousel.css', false, '2.2.0', false );
 	wp_enqueue_style('prettyPhoto',  get_template_directory_uri() .'/css/prettyPhoto.css', false, '3.1.5', false);
-	
+
 
 	if( !onetone_is_plugin_active('magee-shortcodes/Magee.php') ){
 		wp_enqueue_style('onetone-shortcodes',  get_template_directory_uri() .'/css/shortcode.css', false, $theme_info->get( 'Version' ), false);
     }
-	
+
 	wp_enqueue_style('onetone-animate',  get_template_directory_uri() .'/css/animate.css', false, '3.5.1', false);
 
 	wp_enqueue_style( 'onetone-main', get_stylesheet_uri(), array(), $theme_info->get( 'Version' ) );
@@ -87,18 +87,18 @@ function onetone_custom_scripts(){
 
 	wp_enqueue_style('onetone-ms',  get_template_directory_uri() .'/css/onetone-ms.css', false, $theme_info->get( 'Version' ), false);
 	wp_enqueue_style('onetone-home',  get_template_directory_uri() .'/css/home.css', false, $theme_info->get( 'Version' ), false);
-	
+
 	$is_rtl = false;
 	if ( is_rtl() ) {
        wp_enqueue_style('onetone-rtl',  get_template_directory_uri() .'/rtl.css', false, $theme_info->get( 'Version' ), false);
 	   $is_rtl = true;
      }
-	
+
 	$background_array   = onetone_option("page_background");
 	$background         = onetone_get_background($background_array);
 	$header_image       = get_header_image();
 	$onetone_custom_css = "";
-   
+
 	if (isset($header_image) && ! empty( $header_image )) {
 		$onetone_custom_css .= ".home-header{background:url(".$header_image. ") repeat;}\n";
 	}
@@ -106,45 +106,45 @@ function onetone_custom_scripts(){
 		$header_color        =  ' color:#' . get_header_textcolor() . ';';
 		$onetone_custom_css .=  'header .site-name,header .site-description,header .site-tagline{'.$header_color.'}';
 	}else{
-		$onetone_custom_css .=  'header .site-name,header .site-description,header .site-tagline{display:none;}';	
+		$onetone_custom_css .=  'header .site-name,header .site-description,header .site-tagline{display:none;}';
 	}
-		
+
 	$custom_css           =  onetone_option("custom_css");
 	$onetone_custom_css  .=  '.site{'.$background.'}';
-	
+
 	$links_color   = onetone_option( 'links_color','#37cadd');
-	
+
 	//scheme
-	$primary_color = esc_attr(onetone_option('primary_color',$links_color));	
-	
+	$primary_color = esc_attr(onetone_option('primary_color',$links_color));
+
 	$links_color   = onetone_option( 'links_color');
-	
+
 	if($links_color )
 		$onetone_custom_css  .=  '.entry-content a,.home-section-content a{color:'.$links_color.' ;}';
 
 	$top_menu_font_color = onetone_option( 'font_color');
-	
+
 	if($top_menu_font_color !="" && $top_menu_font_color!=null){
 		$onetone_custom_css  .=  'header .site-nav > ul > li > a {color:'.$top_menu_font_color.'}';
 	}
-		
+
 	// header
 	$sticky_header_background_color    = esc_attr(onetone_option('sticky_header_background_color',''));
-    $sticky_header_background_opacity  = esc_attr(onetone_option('sticky_header_background_opacity','1')); 
+    $sticky_header_background_opacity  = esc_attr(onetone_option('sticky_header_background_opacity','1'));
 	$header_background_color           = esc_attr(onetone_option('header_background_color'));
-    $header_background_opacity         = esc_attr(onetone_option('header_background_opacity','1')); 
-	$header_border_color               = esc_attr(onetone_option('header_border_color','')); 
-	$page_title_bar_background_color   = esc_attr(onetone_option('page_title_bar_background_color','')); 
-	$page_title_bar_borders_color      = esc_attr(onetone_option('page_title_bar_borders_color','')); 
-	$top_bar_social_icons_color        = esc_attr(onetone_option('top_bar_social_icons_color')); 
-	
+    $header_background_opacity         = esc_attr(onetone_option('header_background_opacity','1'));
+	$header_border_color               = esc_attr(onetone_option('header_border_color',''));
+	$page_title_bar_background_color   = esc_attr(onetone_option('page_title_bar_background_color',''));
+	$page_title_bar_borders_color      = esc_attr(onetone_option('page_title_bar_borders_color',''));
+	$top_bar_social_icons_color        = esc_attr(onetone_option('top_bar_social_icons_color'));
+
 	// top bar icon color
 	if($sticky_header_background_color){
 		$onetone_custom_css .= ".top-bar-sns li i{
 		color: ".$top_bar_social_icons_color.";
 		}";
 	}
-		
+
 	// sticky header background
 	if($sticky_header_background_color){
 		$rgb = onetone_hex2rgb( $sticky_header_background_color );
@@ -152,7 +152,7 @@ function onetone_custom_scripts(){
 		background-color: rgba(".$rgb[0].",".$rgb[1].",".$rgb[2].",".$sticky_header_background_opacity.");
 		}";
 	}
-		
+
 		// main header background
 	if( $header_background_color ){
 		$rgb = onetone_hex2rgb( $header_background_color );
@@ -160,7 +160,7 @@ function onetone_custom_scripts(){
 		background-color: rgba(".$rgb[0].",".$rgb[1].",".$rgb[2].",".$header_background_opacity.");
 		}";
 	}
-	
+
 	// sticky header
 	$sticky_header_opacity               =  onetone_option('sticky_header_background_opacity','1');
 	$sticky_header_menu_item_padding     =  onetone_option('sticky_header_menu_item_padding','');
@@ -170,58 +170,58 @@ function onetone_custom_scripts(){
 	$logo_right_margin                   =  onetone_option('logo_right_margin','');
 	$logo_top_margin                     =  onetone_option('logo_top_margin','');
 	$logo_bottom_margin                  =  onetone_option('logo_bottom_margin','');
-		
+
 	if( $sticky_header_background_color ){
 		$rgb = onetone_hex2rgb( $sticky_header_background_color );
 	    $onetone_custom_css .= ".fxd-header{background-color: rgba(".$rgb[0].",".$rgb[1].",".$rgb[2].",".esc_attr($sticky_header_opacity).");}\r\n";
 	}
-	
+
     if( $sticky_header_menu_item_padding )
 		$onetone_custom_css .= ".fxd-header .site-nav > ul > li > a {padding:".absint($sticky_header_menu_item_padding)."px;}\r\n";
-	  
+
 	if( $sticky_header_navigation_font_size )
 		$onetone_custom_css .= ".fxd-header .site-nav > ul > li > a {font-size:".absint($sticky_header_navigation_font_size)."px;}\r\n";
-	  
+
 	if( $sticky_header_logo_width )
 		$onetone_custom_css .= ".fxd-header img.site-logo{ width:".absint($sticky_header_logo_width)."px;}\r\n";
-	
+
 	if( $logo_left_margin )
 		$onetone_custom_css .= "img.site-logo{ margin-left:".absint($logo_left_margin)."px;}\r\n";
-	  
+
 	if( $logo_right_margin )
 		$onetone_custom_css .= "img.site-logo{ margin-right:".absint($logo_right_margin)."px;}\r\n";
-	  
+
 	if( $logo_top_margin )
 		$onetone_custom_css .= "img.site-logo{ margin-top:".absint($logo_top_margin)."px;}\r\n";
-	  
+
 	if( $logo_bottom_margin )
 		$onetone_custom_css .= "img.site-logo{ margin-bottom:".absint($logo_bottom_margin)."px;}\r\n";
-	
+
 	// top bar
 	$display_top_bar             = onetone_option('display_top_bar','yes');
 	$top_bar_background_color    = onetone_option('top_bar_background_color','');
 	$top_bar_info_color          = onetone_option('top_bar_info_color','');
 	$top_bar_menu_color          = onetone_option('top_bar_menu_color','');
-	
+
 	if( $top_bar_background_color )
 		$onetone_custom_css .= ".top-bar{background-color:".$top_bar_background_color.";}";
-	
+
 	if( $display_top_bar == 'yes' )
 		$onetone_custom_css .= ".top-bar{display:block;}";
-	
+
 	if( $top_bar_info_color  )
 		$onetone_custom_css .= ".top-bar-info{color:".$top_bar_info_color.";}";
-	
+
 	if( $top_bar_menu_color  )
 		$onetone_custom_css .= ".top-bar ul li a{color:".$top_bar_menu_color.";}";
-	
+
 	// Header background
     $header_background_image     = onetone_option('header_background_image','');
 	$header_background_full      = onetone_option('header_background_full','');
 	$header_background_repeat    = onetone_option('header_background_repeat','');
 	$header_background_parallax  = onetone_option('header_background_parallax','');
 	$header_background           = '';
-	
+
 	if( $header_background_image ){
 		$header_background  .= "header .main-header{\r\n";
 	    $header_background  .= "background-image: url(".esc_url($header_background_image).");\r\n";
@@ -231,96 +231,96 @@ function onetone_custom_scripts(){
 									-moz-background-size: cover;
 									-o-background-size: cover;
 									background-size: cover;\r\n";
-									
-		if( $header_background_parallax  == 'no' )		
+
+		if( $header_background_parallax  == 'no' )
 			 $header_background  .=  "background-repeat:".$header_background_repeat.";";
-		   
+
 		if( $header_background_parallax  == 'yes' )
 			 $header_background  .= "background-attachment: fixed;
 								   background-position:top center;
 								   background-repeat: no-repeat;";
-			$header_background  .= "}\r\n";	
+			$header_background  .= "}\r\n";
 	}
-	
+
 	$onetone_custom_css .= $header_background;
-	
+
 	// Header  Padding
 	$header_top_padding     = onetone_option('header_top_padding','');
 	$header_bottom_padding  = onetone_option('header_bottom_padding','');
-	
+
 	if( $header_top_padding )
 		$onetone_custom_css .= ".site-nav > ul > li > a{padding-top:".$header_top_padding."}";
-	
+
 	if( $header_bottom_padding )
 		$onetone_custom_css .= ".site-nav > ul > li > a{padding-bottom:".$header_bottom_padding."}";
-	
+
 	$content_background_color          = esc_attr(onetone_option('content_background_color',''));
 	$sidebar_background_color          = esc_attr(onetone_option('sidebar_background_color',''));
 	$footer_background_color           = esc_attr(onetone_option('footer_background_color',''));
 	$copyright_background_color        = esc_attr(onetone_option('copyright_background_color',''));
-		
+
 	// content backgroud color
-		
+
 	if( $content_background_color )
 		$onetone_custom_css  .= ".col-main {background-color:".$content_background_color.";}";
-	 
+
 	if( $sidebar_background_color )
 		$onetone_custom_css  .= ".col-aside-left,.col-aside-right {background-color:".$sidebar_background_color.";}";
-	
+
 	//footer background
 	if( $footer_background_color )
 		$onetone_custom_css  .= "footer .footer-widget-area{background-color:".$footer_background_color.";}";
-	 
+
 	if( $copyright_background_color )
 		$onetone_custom_css  .= "footer .footer-info-area{background-color:".$copyright_background_color."}";
-	 
+
 	// Element Colors
-	
+
 	$form_background_color = esc_attr(onetone_option('form_background_color',''));
 	$form_text_color       = esc_attr(onetone_option('form_text_color',''));
 	$form_border_color     = esc_attr(onetone_option('form_border_color',''));
-	
+
 	if( $form_background_color )
 		$onetone_custom_css  .= "footer input,footer textarea{background-color:".$form_background_color.";}";
-	
+
 	if( $form_text_color )
 		$onetone_custom_css  .= "footer input,footer textarea{color:".$form_text_color.";}";
-	
+
 	if( $form_border_color )
 		$onetone_custom_css  .= "footer input,footer textarea{border-color:".$form_border_color.";}";
 
 	//Layout Options
-	
+
 	$page_content_top_padding          = esc_attr(onetone_option('page_content_top_padding',''));
 	$page_content_bottom_padding       = esc_attr(onetone_option('page_content_bottom_padding',''));
 	$hundredp_padding                  = esc_attr(onetone_option('hundredp_padding',''));
 	$sidebar_padding                   = esc_attr(onetone_option('sidebar_padding',''));
 	$column_top_margin                 = esc_attr(onetone_option('column_top_margin',''));
 	$column_bottom_margin              = esc_attr(onetone_option('column_bottom_margin',''));
-	
+
 	if( $page_content_top_padding )
 		$onetone_custom_css  .= ".post-inner,.page-inner{padding-top:".$page_content_top_padding.";}";
-	
+
 	if( $page_content_bottom_padding )
 		$onetone_custom_css  .= ".post-inner,.page-inner{padding-bottom:".$page_content_bottom_padding.";}";
-	
+
 	if( isset($page_meta['padding_top']) && $page_meta['padding_top'] !='' )
 		$onetone_custom_css  .= ".post-inner,.page-inner{padding-top:".esc_attr($page_meta['padding_top']).";}";
-	
+
 	if( isset($page_meta['padding_bottom']) && $page_meta['padding_bottom'] !='' )
 		$onetone_custom_css  .= ".post-inner,.page-inner{padding-bottom:".esc_attr($page_meta['padding_bottom']).";}";
-		
+
 	if( $sidebar_padding )
 		$onetone_custom_css  .= ".col-aside-left,.col-aside-right{padding:".$sidebar_padding.";}";
-	
+
 	if( $column_top_margin )
 		$onetone_custom_css  .= ".col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9{margin-top:".$column_top_margin.";}";
-	
+
 	if( $column_bottom_margin )
 		$onetone_custom_css  .= ".col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9{margin-bottom:".$column_bottom_margin.";}";
-	
+
 	//fonts color
-	
+
 	$fixed_header_text_color           = esc_attr(onetone_option('fixed_header_text_color'));
 	$overlay_header_text_color         = esc_attr(onetone_option('overlay_header_text_color'));
 	$page_title_color                  = esc_attr(onetone_option('page_title_color',''));
@@ -337,13 +337,13 @@ function onetone_custom_scripts(){
 	$footer_headings_color             = esc_attr(onetone_option('footer_headings_color',''));
 	$footer_text_color                 = esc_attr(onetone_option('footer_text_color'));
 	$footer_link_color                 = esc_attr(onetone_option('footer_link_color'));
-	
+
 	if( $fixed_header_text_color )
 		$onetone_custom_css  .= ".fxd-header .site-tagline,.fxd-header .site-name{color:".$fixed_header_text_color.";}";
-	
+
 	if( $overlay_header_text_color )
 		$onetone_custom_css  .= "header.overlay .main-header .site-tagline,header.overlay .main-header .site-name{color:".$overlay_header_text_color.";}";
-	
+
 	if( $page_title_color )
 		$onetone_custom_css  .= ".page-title h1{color:".$page_title_color.";}";
 	if( $h1_color )
@@ -358,29 +358,29 @@ function onetone_custom_scripts(){
 		$onetone_custom_css  .= "h5{color:".$h5_color.";}";
 	if( $h6_color )
 		$onetone_custom_css  .= "h6{color:".$h6_color.";}";
-	
+
 	if( $body_text_color )
 		$onetone_custom_css  .= ".entry-content,.entry-content p{color:".$body_text_color.";}";
-	
+
 	if( $link_color )
 		$onetone_custom_css  .= ".entry-summary a, .entry-content a{color:".$link_color.";}";
-	
+
 	if( $breadcrumbs_text_color )
 		$onetone_custom_css  .= ".breadcrumb-nav span,.breadcrumb-nav a{color:".$breadcrumbs_text_color.";}";
-	
+
 	if( $sidebar_widget_headings_color )
 		$onetone_custom_css  .= ".col-aside-left .widget-title,.col-aside-right .widget-title{color:".$sidebar_widget_headings_color.";}";
-	
+
 	if( $footer_headings_color )
 		$onetone_custom_css  .= ".footer-widget-area .widget-title{color:".$footer_headings_color.";}";
-	
+
 	if( $footer_text_color )
 		$onetone_custom_css  .= "footer,footer p,footer span,footer div{color:".$footer_text_color.";}";
-	
+
 	if( $footer_link_color )
 		$onetone_custom_css  .= "footer a{color:".$footer_link_color.";}";
-	
-	//Main Menu Colors 
+
+	//Main Menu Colors
 	$menu_toggle_color              = esc_attr(onetone_option('menu_toggle_color'));
 	$main_menu_background_color_1   = esc_attr(onetone_option('main_menu_background_color_1',''));
 	$main_menu_font_color_1         = esc_attr(onetone_option('main_menu_font_color_1',''));
@@ -392,34 +392,34 @@ function onetone_custom_scripts(){
 	$main_menu_separator_color_2    = esc_attr(onetone_option('main_menu_separator_color_2',''));
 	$woo_cart_menu_background_color = esc_attr(onetone_option('woo_cart_menu_background_color',''));
 	$side_menu_color                = esc_attr(onetone_option('side_menu_color'));
-	
-	
+
+
 	if( $menu_toggle_color )
 		$onetone_custom_css  .= ".main-header .site-nav-toggle i{ color:".$menu_toggle_color.";}";
-	
+
 	if( $main_menu_background_color_1 )
 		$onetone_custom_css  .= ".main-header .site-nav{ background-color:".$main_menu_background_color_1.";}";
-	
+
 	if( $main_menu_font_color_1 )
 		$onetone_custom_css  .= "#menu-main > li > a {color:".$main_menu_font_color_1.";}";
-	
+
 	if( $main_menu_overlay_font_color_1 )
 		$onetone_custom_css  .= "header.overlay .main-header #menu-main > li > a {color:".$main_menu_overlay_font_color_1.";}";
-	
+
 	if( $main_menu_font_hover_color_1 )
-		$onetone_custom_css  .= "#menu-main > li > a:hover,#menu-main > li.current > a{color:".$main_menu_font_hover_color_1.";}";
-	
+		$onetone_custom_css  .= "#menu-main > li > a:hover,#menu-main > li.current > a, #menu-main > li.current-menu-item > a{color:".$main_menu_font_hover_color_1.";}";
+
 	if( $main_menu_background_color_2 )
 		$onetone_custom_css  .= ".main-header .sub-menu{background-color:".$main_menu_background_color_2.";}";
 		$onetone_custom_css  .= ".fxd-header .sub-menu{background-color:".$main_menu_background_color_2.";}";
-	
+
 	if( $main_menu_font_color_2 )
 		$onetone_custom_css  .= "#menu-main  li li a{color:".$main_menu_font_color_2.";}";
 	if( $main_menu_font_hover_color_2 )
 		$onetone_custom_css  .= "#menu-main  li li a:hover{color:".$main_menu_font_hover_color_2.";}";
 	if( $main_menu_separator_color_2 )
 		$onetone_custom_css  .= ".site-nav  ul li li a{border-color:".$main_menu_separator_color_2." !important;}";
-	
+
 	if( $side_menu_color )
 		$onetone_custom_css  .= "
 		@media screen and (min-width: 920px) {
@@ -432,78 +432,78 @@ function onetone_custom_scripts(){
 		  background-color: ".$side_menu_color.";
 		}
 		}";
-		
+
 	$onetone_custom_css  .= "@media screen and (max-width: 920px) {\r\n
 		.site-nav ul{ background-color:".$main_menu_background_color_2.";}\r\n
 		#menu-main  li a,header.overlay .main-header #menu-main > li > a {color:".$main_menu_font_color_2.";}\r\n
 		.site-nav  ul li a{border-color:".$main_menu_separator_color_2." !important;}\r\n
 		}";
-	
+
 
 
 	// home page sections
 	$section_title_css   = '';
 	$section_content_css = '';
 	$video_background_section  = onetone_option( 'video_background_section' );
-	
+
 	for($i=0;$i<15;$i++):
 
 	$section_css         = '';
-	
+
 	$section_background  = onetone_option( 'section_background_'.$i );
 	$background_size     = onetone_option( 'background_size_'.$i );
 	$section_padding     = onetone_option( 'section_padding_'.$i ,$i == 0?'':'50px 0');
     $text_align          = onetone_option( 'text_align_'.$i);
 	$parallax_scrolling  = onetone_option( 'parallax_scrolling_'.$i );
-	
+
 	$section_title_typography    = onetone_option( 'section_title_typography_'.$i);
     $title_typography            = onetone_get_typography( $section_title_typography );
-    
+
 	$section_subtitle_typography = onetone_option( 'section_subtitle_typography_'.$i);
     $subtitle_typography         = onetone_get_typography( $section_subtitle_typography );
-	
+
 	$section_content_typography  = onetone_option( 'section_content_typography_'.$i);
 	$content_typography          = onetone_get_typography( $section_content_typography );
 	$content_nosize_typography   = onetone_get_typography($section_content_typography,array('face','style','color'));
 	$content_color_typography    = onetone_get_typography($section_content_typography,array('color'));
-	
+
 	$section_title_color         = isset( $section_title_typography['color'] )? $section_title_typography['color']:'';
 	$section_title_font          = isset( $section_title_typography['face'] ) ? $section_title_typography['face']:'';
 	$section_content_color       = isset( $section_content_typography['color'] )? $section_content_typography['color']:'';
-	
-	
+
+
 	if( $parallax_scrolling == "yes" || $parallax_scrolling == "1" || $parallax_scrolling == "on" ){
 		$section_css .= "background-attachment:fixed;background-position:50% 0;background-repeat:repeat;\r\n";
 	 }
-	 
+
 	if( $background_size == "yes" ){
 		$section_css .= "-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;\r\n";
 	}
-	
+
 	if( $section_padding ){
-	    $section_css .= "padding:".$section_padding.";\r\n";; 
+	    $section_css .= "padding:".$section_padding.";\r\n";;
 	}
-	
+
     //if( $video_background_section != ($i+1) || $detect->isMobile() || $detect->isTablet() )
 	$section_css       .= onetone_get_background( $section_background );
-	
+
 	$section_title_css .= "section.home-section-".($i+1)." .section-title{text-align:center ;}\r\n";
-	
+
 	if( $title_typography )
 		$section_title_css .= "section.home-section-".($i+1)." .section-title{".$title_typography."}\r\n";
-	
+
 	if( $section_title_color && $i==0 )
 		$section_title_css .= "section.home-section-1 .section-title {border-color:".$section_title_color.";}\r\n";
-	
+
 	if( $section_title_font =='' && $i==0 )
-		$section_title_css .= "section.home-section-1 .section-title-container {font-family:'Lustria,serif';}\r\n";  
-	  
+		$section_title_css .= "section.home-section-1 .section-title-container {font-family:'Lustria,serif';}\r\n";
+
 	if( $subtitle_typography )
 		$section_title_css .= "section.home-section-".($i+1)." .section-subtitle{".$subtitle_typography."}\r\n";
-	  
+
 	if( $content_typography )
 		$section_content_css .= "section.home-section-".($i+1)." .home-section-content{".$content_typography."}\r\n";
-	
+
 	if( $content_nosize_typography)
 		$section_title_css .= "
 		section.home-section-".($i+1)." .home-section-content p,
@@ -512,9 +512,9 @@ function onetone_custom_scripts(){
 		section.home-section-".($i+1)." .home-section-content h3,
 		section.home-section-".($i+1)." .home-section-content h4,
 		section.home-section-".($i+1)." .home-section-content h5,
-		section.home-section-".($i+1)." .home-section-content h6{".$content_nosize_typography."}\r\n"; 
-	
-	
+		section.home-section-".($i+1)." .home-section-content h6{".$content_nosize_typography."}\r\n";
+
+
 	if( $section_content_color && $i==0 )
 		$section_content_css .= "section.home-section-1 .magee-btn-normal.btn-line.btn-light {
 								  color: ".$section_content_color." !important;
@@ -527,50 +527,50 @@ function onetone_custom_scripts(){
     if($section_content_color && $i==2  )
 		$section_content_css .= "section.home-section-3 .home-section-content a {
 								  color: ".$section_content_color." ;
-							  }\r\n"; 
-							  
+							  }\r\n";
+
 	if($section_content_color && $i==4  )
 		$section_content_css .= "section.home-section-5 .home-section-content a {
 								  color: ".$section_content_color." ;
-							  }\r\n"; 	
-							  					  
+							  }\r\n";
+
 	if($section_content_color && $i==5  )
 		$section_content_css .= "section.home-section-6 .home-section-content a {
 								  color: ".$section_content_color." ;
-							  }\r\n"; 
-							  	
+							  }\r\n";
+
     if($section_content_color && $i==8  )
 		$section_content_css .= "section.home-section-9 .home-section-content .form-control,
 section.home-section-9 .home-section-content .magee-contact-form .magee-btn-normal,section.home-section-9 .contact-form input,
 section.home-section-9 .contact-form textarea{
 								  color: ".$section_content_color." ;
 								  border-color: ".$section_content_color." ;
-							  }\r\n"; 	
+							  }\r\n";
 
 	if( $i==0)
 		$section_title_css .= "section.home-section-".($i+1)." .magee-heading{".$title_typography."}\r\n";
-							  		  
+
 
 	if( $text_align )
 		$section_content_css .= "section.home-section-".($i+1)." .home-section-content{text-align:".$text_align."}\r\n";
-	
-	$section_content_css .=  "section.home-section-".($i+1)." {".$section_css."}\r\n";	
+
+	$section_content_css .=  "section.home-section-".($i+1)." {".$section_css."}\r\n";
 	endfor;
 
 	// footer
-	
-	$footer_background_image          = onetone_option('footer_background_image',''); 
-	$footer_bg_full                   = onetone_option('footer_bg_full','yes'); 
-	$footer_background_repeat         = onetone_option('footer_background_repeat',''); 
-	$footer_background_position       = onetone_option('footer_background_position',''); 
-	$footer_top_padding               = onetone_option('footer_top_padding',''); 
-	$footer_bottom_padding            = onetone_option('footer_bottom_padding',''); 
-	
-	$copyright_top_padding            = onetone_option('copyright_top_padding'); 
-	$copyright_bottom_padding         = onetone_option('copyright_bottom_padding'); 
-	
+
+	$footer_background_image          = onetone_option('footer_background_image','');
+	$footer_bg_full                   = onetone_option('footer_bg_full','yes');
+	$footer_background_repeat         = onetone_option('footer_background_repeat','');
+	$footer_background_position       = onetone_option('footer_background_position','');
+	$footer_top_padding               = onetone_option('footer_top_padding','');
+	$footer_bottom_padding            = onetone_option('footer_bottom_padding','');
+
+	$copyright_top_padding            = onetone_option('copyright_top_padding');
+	$copyright_bottom_padding         = onetone_option('copyright_bottom_padding');
+
 	$footer_background = "";
-	
+
 	if( $footer_background_image ){
 		$footer_background  .= ".footer-widget-area{\r\n";
 	    $footer_background  .= "background-image: url(".esc_url($footer_background_image).");\r\n";
@@ -579,16 +579,16 @@ section.home-section-9 .contact-form textarea{
 								-moz-background-size: cover;
 								-o-background-size: cover;
 								background-size: cover;\r\n";
-		
+
 	   $footer_background  .=  "background-repeat:".esc_attr($footer_background_repeat).";";
 	   $footer_background  .=  "background-position:".esc_attr($footer_background_position).";";
 
-		  
-        $footer_background  .= "}\r\n";	
+
+        $footer_background  .= "}\r\n";
 	}
-	
+
 	$onetone_custom_css      .= $footer_background ;
-	
+
 	$onetone_custom_css      .= ".footer-widget-area{\r\n
 	                           padding-top:".$footer_top_padding.";\r\n
 							   padding-bottom:".$footer_bottom_padding.";\r\n
@@ -596,11 +596,11 @@ section.home-section-9 .contact-form textarea{
 	$onetone_custom_css      .= ".footer-info-area{\r\n
 	                           padding-top:".$copyright_top_padding.";\r\n
 							   padding-bottom:".$copyright_bottom_padding.";\r\n
-							   }" ;	
-	
+							   }" ;
+
 	$onetone_custom_css  .=  $section_title_css;
 	$onetone_custom_css  .=  $section_content_css;
-	
+
 	$onetone_custom_css  .=  $custom_css;
 	if ($primary_color!=''){
 		$rgb = onetone_hex2rgb($primary_color);
@@ -608,26 +608,26 @@ section.home-section-9 .contact-form textarea{
 		.text-primary {
 			color: ".$primary_color.";
 		}
-		
+
 		.text-muted {
 			color: #777;
 		}
-		
+
 		.text-light {
 			color: #fff;
 		}
-		
+
 		a {
 			color: ".$primary_color.";
 		}
-		
+
 		a:active,
 		a:hover,
 		.onetone a:active,
 		.onetone a:hover {
 			color: ".$primary_color.";
 		}
-		
+
 		h1 strong,
 		h2 strong,
 		h3 strong,
@@ -636,64 +636,64 @@ section.home-section-9 .contact-form textarea{
 		h6 strong {
 			color: ".$primary_color.";
 		}
-		
+
 		mark,
 		ins {
 			background: ".$primary_color.";
 		}
-		
+
 		::selection {
 			background: ".$primary_color.";
 		}
-		
+
 		::-moz-selection {
 			background: ".$primary_color.";
 		}
-		
+
 		.site-nav > ul > li.current > a {
 			color: ".$primary_color.";
 		}
-		
+
 		@media screen and (min-width: 920px) {
 			.site-nav > ul > li:hover > a {
 				color: ".$primary_color.";
 			}
-		
+
 			.overlay .main-header .site-nav > ul > li:hover > a {
 				border-color: #fff;
 			}
-		
+
 			.side-header .site-nav > ul > li:hover > a {
 				border-right-color: ".$primary_color.";
 			}
-			
+
 			.side-header-right .site-nav > ul > li:hover > a {
 				border-left-color: ".$primary_color.";
 			}
 		}
-		
+
 		.blog-list-wrap .entry-header:after {
 			background-color: ".$primary_color.";
 		}
-		
+
 		.entry-meta a:hover,
 		.entry-footer a:hover {
 			color: ".$primary_color.";
 		}
-		
+
 		.entry-footer li a:hover {
 			border-color: ".$primary_color.";
 		}
-		
+
 		.post-attributes h3:after {
 			background-color: ".$primary_color.";
 		}
-		
+
 		.post-pagination li a:hover {
 			border-color: ".$primary_color.";
 			color: ".$primary_color.";
 		}
-		
+
 		.form-control:focus,
 		select:focus,
 		input:focus,
@@ -716,68 +716,68 @@ section.home-section-9 .contact-form textarea{
 		.uneditable-input:focus {
 			border-color: inherit;
 		}
-		
+
 		a .entry-title:hover {
 			color: ".$primary_color.";
 		}
-		
+
 		.widget-title:after {
 			background-color: ".$primary_color.";
 		}
-		
+
 		.widget_nav_menu li.current-menu-item a {
 			border-right-color: ".$primary_color.";
 		}
-		
+
 		.breadcrumb-nav a:hover {
 			color: ".$primary_color.";
 		}
-		
+
 		.entry-meta a:hover {
 			color: ".$primary_color.";
 		}
-		
+
 		.widget-box a:hover {
 			color: ".$primary_color.";
 		}
-		
+
 		.post-attributes a:hover {
 			color: ".$primary_color.";
 		}
-		
+
 		.post-pagination a:hover,
 		.post-list-pagination a:hover {
 			color: ".$primary_color.";
 		}
-		
+
 		/*Onetone Shortcode*/
 		.portfolio-box:hover .portfolio-box-title {
 			background-color: ".$primary_color.";
 		}
-		
+
 		/*Shortcode*/
-		
+
 		.onetone .text-primary {
 			color: ".$primary_color.";
 		}
-		
+
 		.onetone .magee-dropcap {
 			color: ".$primary_color.";
 		}
-		
+
 		.onetone .dropcap-boxed {
 			background-color: ".$primary_color.";
 			color: #fff;
 		}
-		
+
 		.onetone .magee-highlight {
 			background-color: ".$primary_color.";
 		}
-		
+
 		.onetone .comment-reply-link {
 			color: ".$primary_color.";
 		}
-		
+
 		.onetone .btn-normal,
 		.onetone a.btn-normal,
 		.onetone .magee-btn-normal,
@@ -786,7 +786,7 @@ section.home-section-9 .contact-form textarea{
 			background-color: ".$primary_color.";
 			color: #fff;
 		}
-		
+
 		.onetone .btn-normal:hover,
 		.onetone .magee-btn-normal:hover,
 		.onetone .btn-normal:active,
@@ -801,110 +801,110 @@ section.home-section-9 .contact-form textarea{
 			background-color: rgba(".$rgb[0].",".$rgb[1].",".$rgb[2].",.6) !important;
 			color: #fff !important;
 		}
-		
+
 		.onetone .magee-btn-normal.btn-line {
 			background-color: transparent;
 			color: ".$primary_color.";
 			border-color: ".$primary_color.";
 		}
-		
+
 		.onetone .magee-btn-normal.btn-line:hover,
 		.onetone .magee-btn-normal.btn-line:active,
 		.onetone .magee-btn-normal.btn-line:focus {
 			background-color: rgba(255,255,255,.1);
 		}
-		
+
 		.onetone .magee-btn-normal.btn-3d {
 			box-shadow: 0 3px 0 0 rgba(".$rgb[0].",".$rgb[1].",".$rgb[2].",.8);
 		}
-		
+
 		.onetone .icon-box.primary {
 			color: ".$primary_color.";
 		}
-		
+
 		.onetone .portfolio-list-filter li a:hover,
 		.onetone .portfolio-list-filter li.active a,
 		.onetone .portfolio-list-filter li span.active a {
 			background-color: ".$primary_color.";
 			color: #fff;
 		}
-		
+
 		.onetone .magee-tab-box.tab-line ul > li.active > a {
 			border-bottom-color: ".$primary_color.";
 		}
-		
+
 		.onetone .panel-primary {
 			border-color: ".$primary_color.";
 		}
-		
+
 		.onetone .panel-primary .panel-heading {
 			background-color: ".$primary_color.";
 			border-color: ".$primary_color.";
 		}
-		
+
 		.onetone .mpl-pricing-table.style1 .mpl-pricing-box.mpl-featured .mpl-pricing-title,
 		.onetone .mpl-pricing-table.style1 .mpl-pricing-box.mpl-featured .mpl-pricing-box.mpl-featured .mpl-pricing-tag {
 			color: ".$primary_color.";
 		}
-		
+
 		.onetone .pricing-top-icon,
 		.onetone .mpl-pricing-table.style2 .mpl-pricing-top-icon {
 			color: ".$primary_color.";
 		}
-		
+
 		.onetone .magee-pricing-box.featured .panel-heading,
 		.onetone .mpl-pricing-table.style2 .mpl-pricing-box.mpl-featured .mpl-pricing-title {
 			background-color: ".$primary_color.";
 		}
-		
+
 		.onetone .pricing-tag .currency,
 		.onetone .mpl-pricing-table.style2 .mpl-pricing-tag .currency {
 			color: ".$primary_color.";
 		}
-		
+
 		.onetone .pricing-tag .price,
 		.onetone .mpl-pricing-table.style2 .mpl-pricing-tag .price {
 			color: ".$primary_color.";
 		}
-		
+
 		.onetone .pricing-box-flat.featured {
 			background-color: ".$primary_color.";
 			color: #fff;
 		}
-		
+
 		.onetone .person-vcard .person-title:after {
 			background-color: ".$primary_color.";
 		}
-		
+
 		.onetone .person-social li a:hover {
 			color: ".$primary_color.";
 		}
-		
+
 		.onetone .person-social.boxed li a:hover {
 			color: #fff;
 			background-color: ".$primary_color.";
 		}
-		
+
 		.onetone .magee-progress-box .progress-bar {
 			background-color: ".$primary_color.";
 		}
-		
+
 		.onetone .counter-top-icon {
 			color: ".$primary_color.";
 		}
-		
+
 		.onetone .counter:after {
 			background-color: ".$primary_color.";
 		}
-		
+
 		.onetone .timeline-year {
 			background-color: ".$primary_color.";
 		}
-		
+
 		.onetone .timeline-year:after {
 			border-top-color: ".$primary_color.";
 		}
-		
+
 		@media (min-width: 992px) {
 			.onetone .magee-timeline:before {
 				background-color: ".$primary_color.";
@@ -913,51 +913,51 @@ section.home-section-9 .contact-form textarea{
 				background-color: ".$primary_color.";
 			}
 			.onetone .magee-timeline > ul > li:last-child:before {
-				background-image: -moz-linear-gradient(left, ".$primary_color." 0%, ".$primary_color." 70%, #fff 100%); 
-				background-image: -webkit-gradient(linear, left top, right top, from(".$primary_color."), color-stop(0.7, ".$primary_color."), to(#fff)); 
-				background-image: -webkit-linear-gradient(left, ".$primary_color." 0%, ".$primary_color." 70%, #fff 100%); 
+				background-image: -moz-linear-gradient(left, ".$primary_color." 0%, ".$primary_color." 70%, #fff 100%);
+				background-image: -webkit-gradient(linear, left top, right top, from(".$primary_color."), color-stop(0.7, ".$primary_color."), to(#fff));
+				background-image: -webkit-linear-gradient(left, ".$primary_color." 0%, ".$primary_color." 70%, #fff 100%);
 				background-image: -o-linear-gradient(left, ".$primary_color." 0%, ".$primary_color." 70%, #fff 100%);
 			}
 		}
-		
+
 		.onetone .icon-list-primary li i{
 			color: ".$primary_color.";
 		}
-		
+
 		.onetone .icon-list-primary.icon-list-circle li i {
 			background-color: ".$primary_color.";
 			color: #fff;
 		}
-		
+
 		.onetone .divider-border .divider-inner.primary {
 			border-color: ".$primary_color.";
 		}
-		
+
 		.onetone .img-box .img-overlay.primary {
 			background-color: rgba(".$rgb[0].",".$rgb[1].",".$rgb[2].",.7);
 		}
-		
+
 		.img-box .img-overlay-icons i,
 		.onetone .img-box .img-overlay-icons i {
 			background-color: ".$primary_color.";
 		}
-		
+
 		.onetone .portfolio-img-box {
 			background-color: ".$primary_color.";
 		}
-		
+
 		.onetone .tooltip-text {
 			color: ".$primary_color.";
 		}
-		
+
 		.onetone .star-rating span:before {
 			color: ".$primary_color.";
 		}
-		
+
 		.onetone .woocommerce p.stars a:before {
 			color: ".$primary_color.";
 		}
-		
+
 		@media screen and (min-width: 920px) {
 			.site-nav.style1 > ul > li.current > a > span,
 			.site-nav.style1 > ul > li > a:hover > span {
@@ -973,30 +973,30 @@ section.home-section-9 .contact-form textarea{
 			}
 		}
 		/*Woocommerce*/
-		
+
 		.star-rating span:before {
 			color: ".$primary_color.";
 		}
-		
+
 		.woocommerce p.stars a:before {
 			color: ".$primary_color.";
 		}
-		
+
 		.woocommerce span.onsale {
 			background-color: ".$primary_color.";
 		}
-		
+
 		.woocommerce span.onsale:before {
 			border-top-color: ".$primary_color.";
 			border-bottom-color: ".$primary_color.";
 		}
-		
+
 		.woocommerce div.product p.price,
 		.woocommerce div.product span.price,
 		.woocommerce ul.products li.product .price {
 			color: ".$primary_color.";
 		}
-		
+
 		.woocommerce #respond input#submit,
 		.woocommerce a.button,
 		.woocommerce button.button,
@@ -1007,7 +1007,7 @@ section.home-section-9 .contact-form textarea{
 		.woocommerce input.button.alt {
 			background-color: ".$primary_color.";
 		}
-		
+
 		.woocommerce #respond input#submit:hover,
 		.woocommerce a.button:hover,
 		.woocommerce button.button:hover,
@@ -1018,7 +1018,7 @@ section.home-section-9 .contact-form textarea{
 		.woocommerce input.button.alt:hover {
 			background-color:  rgba(".$rgb[0].",".$rgb[1].",".$rgb[2].",.7);
 		}
-		
+
 		p.woocommerce.product ins,
 		.woocommerce p.product ins,
 		p.woocommerce.product .amount,
@@ -1035,22 +1035,22 @@ section.home-section-9 .contact-form textarea{
 		.woocommerce .widget_price_filter .ui-slider .ui-slider-range {
 			background-color: ".$primary_color.";
 		}
-		
+
 		.woocommerce .widget_price_filter .ui-slider .ui-slider-handle {
 			background-color: ".$primary_color.";
 		}
-		
+
 		.woocommerce.style2 .widget_price_filter .ui-slider .ui-slider-range {
 			background-color: #222;
 		}
-		
+
 		.woocommerce.style2 .widget_price_filter .ui-slider .ui-slider-handle {
 			background-color: #222;
 		}
 		.woocommerce p.stars a:before {
 			color: ".$primary_color.";
 		}
-		
+
 		.onetone .mpl-portfolio-list-filter li.active a,
 		.onetone .mpl-portfolio-list-filter li a:hover {
 			color: ".$primary_color.";
@@ -1058,9 +1058,9 @@ section.home-section-9 .contact-form textarea{
 		";
 
 	}
-	
+
 	wp_add_inline_style( 'onetone-main', $onetone_custom_css );
-		
+
 	wp_enqueue_style( 'jquery-mb-YTPlayer', get_template_directory_uri().'/plugins/YTPlayer/css/jquery.mb.YTPlayer.min.css','', '', true );
 	wp_enqueue_script( 'jquery-mb-YTPlayer', get_template_directory_uri().'/plugins/YTPlayer/jquery.mb.YTPlayer.js', array( 'jquery' ), '', true );
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri().'/plugins/bootstrap/js/bootstrap.min.js', array( 'jquery' ), '3.3.4', false );
@@ -1076,25 +1076,25 @@ section.home-section-9 .contact-form textarea{
 
 
 	wp_enqueue_script( 'onetone-default', get_template_directory_uri().'/js/onetone.js', array( 'jquery' ),$theme_info->get( 'Version' ), true );
-	
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ){wp_enqueue_script( 'comment-reply' );}
-	
+
 	$slide_autoplay    = onetone_option("slide_autoplay",1);
 	$slide_time        = onetone_option("slide_time");
 	$slider_control    = onetone_option("slider_control",1);
 	$slider_pagination = onetone_option("slider_pagination",1);
 	$slide_fullheight  = onetone_option("slide_fullheight");
-	
+
 	$slide_time = is_numeric($slide_time)?$slide_time:"5000";
-	
+
 	$isMobile = 0;
 	if( $detect->isMobile() && !$detect->isTablet() ){
 		$isMobile = 1;
 	}
-	
+
 	$sticky_header         = esc_attr(onetone_option('enable_sticky_header','yes'));
 	$enable_image_lightbox = absint(onetone_option('enable_image_lightbox'),1);
-	
+
 	wp_localize_script( 'onetone-default', 'onetone_params', array(
 			'ajaxurl'        => admin_url('admin-ajax.php'),
 			'themeurl' => get_template_directory_uri(),
@@ -1108,95 +1108,95 @@ section.home-section-9 .contact-form textarea{
 			'primary_color' => $primary_color,
 			'is_rtl' => $is_rtl,
 			'enable_image_lightbox' => $enable_image_lightbox,
-			
-		)  );	
+
+		)  );
 	}
-	
+
 	function onetone_admin_scripts(){
-		
+
 		global $pagenow , $onetone_options_saved, $onetone_options, $onetone_default_options, $onetone_option_name;
-		
+
 		$theme_info = wp_get_theme();
-		
+
 		wp_enqueue_style( 'onetone-admin', get_template_directory_uri().'/css/admin.css', false, $theme_info->get( 'Version' ), false);
-		
-		
+
+
 		if( $pagenow == "post.php" || $pagenow == "post-new.php" || (isset($_GET['page']) && $_GET['page'] == "onetone-options") ):
 			wp_enqueue_style('font-awesome',  get_template_directory_uri() .'/plugins/font-awesome/css/font-awesome.min.css', false, '4.4.0', false);
 			wp_enqueue_style('onetone-options',  get_template_directory_uri() .'/css/options.css', false, $theme_info->get( 'Version' ), false);
 		endif;
 
 		wp_enqueue_script( 'onetone-admin', get_template_directory_uri().'/js/admin.js', array( 'jquery' ), $theme_info->get( 'Version' ), false );
-		
+
 	    wp_localize_script( 'onetone-admin', 'onetone_params', array(
 			'ajaxurl'        => admin_url('admin-ajax.php'),
 			'themeurl'       => get_template_directory_uri(),
 			'options_saved'  => $onetone_options_saved,
 			'option_name' => $onetone_option_name,
 		)  );
-		
+
 		}
-		
+
   add_action( 'wp_enqueue_scripts', 'onetone_custom_scripts' );
   add_action( 'admin_enqueue_scripts', 'onetone_admin_scripts' );
-  
- 
-  
+
+
+
   function onetone_of_get_options($default = false) {
-	  
+
 	global $onetone_options_saved,$onetone_default_options;
-	  	 
+
 	$option_name  = optionsframework_option_name();
 	if ( get_option($option_name) ) {
 		$options = get_option($option_name);
 	}else{
 		$options = $onetone_default_options;
 	}
-	 
+
 	if ( isset($options) ) {
 		return $options;
 	} else {
 		return $default;
 	}
-  
+
 }
 
 function onetone_option($name,$default=''){
-	  
+
 	global $onetone_default_options, $onetone_options;
-	  
+
 	if(is_customize_preview())
 		$onetone_options = onetone_of_get_options();
-	  
+
 	if( isset($onetone_options[$name]) )
-		return $onetone_options[$name];		
+		return $onetone_options[$name];
 	elseif( isset($onetone_default_options[$name]) )
 		return $onetone_default_options[$name];
 	else
 		return $default;
   }
-  
 
 
-/* 
+
+/*
 * load theme options
 */
 
 add_filter('options_framework_location','onetone_options_framework_location_override');
-  
+
 function onetone_options_framework_location_override() {
 	return array('includes/admin-options.php');
 }
-  
+
 function onetone_optionscheck_options_menu_params( $menu ) {
-	  
+
 	$menu['page_title'] = __( 'Onetone Options', 'onetone');
 	$menu['menu_title'] = __( 'Onetone Options', 'onetone');
 	$menu['menu_slug'] = 'onetone-options';
 	return $menu;
 }
 add_filter( 'optionsframework_menu', 'onetone_optionscheck_options_menu_params' );
-  
+
 function onetone_title( $title ) {
 	if ( $title == '' ) {
 		return __( 'Untitled', 'onetone');
