@@ -105,13 +105,13 @@ get_header();
              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 container-medicos" hid="2" style="height: 400px;">
 
                <div class="imagen-dr">
-                <a href="http://localhost/synectia-web/2017/08/01/dra-violeta-d-levy/"><img width="1500" height="1000" src="http://localhost/synectia-web/wp-content/uploads/2017/08/Nosotros_Datos_VIOLETA.jpg" class="attachment-full size-full wp-post-image" alt="" srcset="http://localhost/synectia-web/wp-content/uploads/2017/08/Nosotros_Datos_VIOLETA.jpg 1500w, http://localhost/synectia-web/wp-content/uploads/2017/08/Nosotros_Datos_VIOLETA-300x200.jpg 300w, http://localhost/synectia-web/wp-content/uploads/2017/08/Nosotros_Datos_VIOLETA-768x512.jpg 768w, http://localhost/synectia-web/wp-content/uploads/2017/08/Nosotros_Datos_VIOLETA-1024x683.jpg 1024w" sizes="(max-width: 1500px) 100vw, 1500px">                  <div class="float-cover-white"></div></a>
+                <a href="<?php echo site_url(); ?>/2017/08/01/dra-violeta-d-levy/"><img width="1500" height="1000" src="<?php echo site_url(); ?>/wp-content/uploads/2017/08/Nosotros_Datos_VIOLETA.jpg" class="attachment-full size-full wp-post-image" alt="" srcset="<?php echo site_url(); ?>/wp-content/uploads/2017/08/Nosotros_Datos_VIOLETA.jpg 1500w, <?php echo site_url(); ?>/wp-content/uploads/2017/08/Nosotros_Datos_VIOLETA-300x200.jpg 300w, <?php echo site_url(); ?>/wp-content/uploads/2017/08/Nosotros_Datos_VIOLETA-768x512.jpg 768w, <?php echo site_url(); ?>/wp-content/uploads/2017/08/Nosotros_Datos_VIOLETA-1024x683.jpg 1024w" sizes="(max-width: 1500px) 100vw, 1500px">                  <div class="float-cover-white"></div></a>
                </div>
                <style media="screen">
 
                </style>
                  <div class="informacion-dr">
-                   <h2><a href="http://localhost/synectia-web/2017/08/01/dra-violeta-d-levy/"> Dra. Violeta D. Levy</a>
+                   <h2><a href="<?php echo site_url(); ?>/2017/08/01/dra-violeta-d-levy/"> Dra. Violeta D. Levy</a>
                      <a class="hidden-xs" href="google.com">
                    </a><div class="hidden-xs" style="float:right; margin-top:-10px;"><a class="hidden-xs" href="google.com">
                      <div class="social-link" style="display:inline">
@@ -120,7 +120,7 @@ get_header();
                      </a>
                      <a href="google.com">
                      <div class="social-link" style="display:inline;">
-                        <img src="http://localhost/synectia-web/wp-content/themes/onetone/img/red-medicos.svg" alt="">
+                        <img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/red-medicos.svg" alt="">
 
                      </div>
                    </a></div><a href="google.com">
@@ -139,7 +139,7 @@ get_header();
                    </a>
                    <a href="google.com">
                    <div class="social-link" style="display:inline">
-                      <img src="http://localhost/synectia-web/wp-content/themes/onetone/img/red-medicos.svg" alt="">
+                      <img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/red-medicos.svg" alt="">
 
                    </div>
                  </a></div><a href="google.com">
@@ -152,7 +152,7 @@ get_header();
 
              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 container-medicos" hid="2" style="height: 400px;">
                  <div class="informacion-dr">
-                   <h2><a href="http://localhost/synectia-web/2017/08/01/dr-marcelo-a-mazzola/"> Dr. Marcelo A. Mazzola</a>
+                   <h2><a href="<?php echo site_url(); ?>/2017/08/01/dr-marcelo-a-mazzola/"> Dr. Marcelo A. Mazzola</a>
                      <a class="hidden-xs" href="google.com">
                    </a><div class="hidden-xs" style="float:right;  margin-top:-10px;"><a class="hidden-xs" href="google.com">
                      <div class="social-link" style="display:inline">
@@ -161,7 +161,7 @@ get_header();
                      </a>
                      <a href="google.com">
                      <div class="social-link" style="display:inline">
-                        <img src="http://localhost/synectia-web/wp-content/themes/onetone/img/red-medicos.svg" alt="">
+                        <img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/red-medicos.svg" alt="">
 
                      </div>
                    </a></div><a href="google.com">
@@ -183,7 +183,7 @@ get_header();
                          </a>
                          <a href="google.com">
                          <div class="social-link" style="display:inline">
-                            <img src="http://localhost/synectia-web/wp-content/themes/onetone/img/red-medicos.svg" alt="">
+                            <img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/red-medicos.svg" alt="">
 
                          </div>
                        </a></div><a href="google.com">
@@ -192,7 +192,7 @@ get_header();
                  </div>
 
                  <div class="imagen-dr">
-                   <a href="http://localhost/synectia-web/2017/08/01/dr-marcelo-a-mazzola/"> <img width="1500" height="1000" src="http://localhost/synectia-web/wp-content/uploads/2017/07/Nosotros_Datos_MARCELO.jpg" class="attachment-full size-full wp-post-image" alt="" srcset="http://localhost/synectia-web/wp-content/uploads/2017/07/Nosotros_Datos_MARCELO.jpg 1500w, http://localhost/synectia-web/wp-content/uploads/2017/07/Nosotros_Datos_MARCELO-300x200.jpg 300w, http://localhost/synectia-web/wp-content/uploads/2017/07/Nosotros_Datos_MARCELO-768x512.jpg 768w, http://localhost/synectia-web/wp-content/uploads/2017/07/Nosotros_Datos_MARCELO-1024x683.jpg 1024w" sizes="(max-width: 1500px) 100vw, 1500px">                <div class="float-cover-white"></div></a>
+                   <a href="<?php echo site_url(); ?>/2017/08/01/dr-marcelo-a-mazzola/"> <img width="1500" height="1000" src="<?php echo site_url(); ?>/wp-content/uploads/2017/07/Nosotros_Datos_MARCELO.jpg" class="attachment-full size-full wp-post-image" alt="" srcset="<?php echo site_url(); ?>/wp-content/uploads/2017/07/Nosotros_Datos_MARCELO.jpg 1500w, <?php echo site_url(); ?>/wp-content/uploads/2017/07/Nosotros_Datos_MARCELO-300x200.jpg 300w, <?php echo site_url(); ?>/wp-content/uploads/2017/07/Nosotros_Datos_MARCELO-768x512.jpg 768w, <?php echo site_url(); ?>/wp-content/uploads/2017/07/Nosotros_Datos_MARCELO-1024x683.jpg 1024w" sizes="(max-width: 1500px) 100vw, 1500px">                <div class="float-cover-white"></div></a>
 
                  </div>
              </div>
@@ -202,7 +202,7 @@ get_header();
 
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 container-medicos" hid="2" style="height: 400px;">
               <div class="informacion-dr">
-                <h2><a href="http://localhost/synectia-web/2017/08/01/dr-martin-s-gonzalez/"> Dr. Martín S. González</a>
+                <h2><a href="<?php echo site_url(); ?>/2017/08/01/dr-martin-s-gonzalez/"> Dr. Martín S. González</a>
                   <a class="hidden-xs" href="google.com">
                 </a><div class="hidden-xs" style="float:right;  margin-top:-10px;"><a class="hidden-xs" href="google.com">
                   <div class="social-link" style="display:inline">
@@ -211,7 +211,7 @@ get_header();
                   </a>
                   <a href="google.com">
                   <div class="social-link" style="display:inline">
-                     <img src="http://localhost/synectia-web/wp-content/themes/onetone/img/red-medicos.svg" alt="">
+                     <img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/red-medicos.svg" alt="">
 
                   </div>
                 </a></div><a href="google.com">
@@ -233,7 +233,7 @@ get_header();
                       </a>
                       <a href="google.com">
                       <div class="social-link" style="display:inline">
-                         <img src="http://localhost/synectia-web/wp-content/themes/onetone/img/red-medicos.svg" alt="">
+                         <img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/red-medicos.svg" alt="">
 
                       </div>
                     </a></div><a href="google.com">
@@ -242,7 +242,7 @@ get_header();
               </div>
 
               <div class="imagen-dr">
-                <a href="http://localhost/synectia-web/2017/08/01/dr-martin-s-gonzalez/"> <img width="1500" height="1202" src="http://localhost/synectia-web/wp-content/uploads/2017/08/Nosotros_Datos_MARTIN.jpg" class="attachment-full size-full wp-post-image" alt="" srcset="http://localhost/synectia-web/wp-content/uploads/2017/08/Nosotros_Datos_MARTIN.jpg 1500w, http://localhost/synectia-web/wp-content/uploads/2017/08/Nosotros_Datos_MARTIN-300x240.jpg 300w, http://localhost/synectia-web/wp-content/uploads/2017/08/Nosotros_Datos_MARTIN-768x615.jpg 768w, http://localhost/synectia-web/wp-content/uploads/2017/08/Nosotros_Datos_MARTIN-1024x821.jpg 1024w" sizes="(max-width: 1500px) 100vw, 1500px">                <div class="float-cover-white"></div></a>
+                <a href="<?php echo site_url(); ?>/2017/08/01/dr-martin-s-gonzalez/"> <img width="1500" height="1202" src="<?php echo site_url(); ?>/wp-content/uploads/2017/08/Nosotros_Datos_MARTIN.jpg" class="attachment-full size-full wp-post-image" alt="" srcset="<?php echo site_url(); ?>/wp-content/uploads/2017/08/Nosotros_Datos_MARTIN.jpg 1500w, <?php echo site_url(); ?>/wp-content/uploads/2017/08/Nosotros_Datos_MARTIN-300x240.jpg 300w, <?php echo site_url(); ?>/wp-content/uploads/2017/08/Nosotros_Datos_MARTIN-768x615.jpg 768w, <?php echo site_url(); ?>/wp-content/uploads/2017/08/Nosotros_Datos_MARTIN-1024x821.jpg 1024w" sizes="(max-width: 1500px) 100vw, 1500px">                <div class="float-cover-white"></div></a>
 
               </div>
           </div>

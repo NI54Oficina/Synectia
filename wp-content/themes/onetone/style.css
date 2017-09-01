@@ -3823,7 +3823,8 @@ margin-bottom: 0;
   }
 
   .text-banner-footer-home p{
-    margin-bottom: 0;
+    margin-bottom: 0;font-size: 24px!important;
+    line-height: 32px !important;
   }
 
   .nuestra-especialidad-home{
@@ -4010,6 +4011,8 @@ margin-bottom: 0;
       margin: auto;
       bottom: 0;
       left: 0;
+      padding: 0;
+      padding-left: 35px;
     }
 
     .float-green-inner-post {
@@ -4017,7 +4020,9 @@ margin-bottom: 0;
     }
 
     .box-slogan{
-      background-position: 70% !important;
+      background-position: center top  !important;
+      background-size: 100%  !important;
+      height: 300px  !important;
     }
 
     .owl-nav{
@@ -4110,6 +4115,11 @@ margin-bottom: 0;
 
 .seccion-mano-padding{
   padding-top: 0;
+}
+
+.component-small {
+	/*width: 650px;*/
+	height: 200px !important;
 }
 
  }

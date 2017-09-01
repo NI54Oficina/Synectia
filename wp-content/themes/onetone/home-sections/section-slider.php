@@ -1,8 +1,42 @@
 <?php
 
 
-echo onetone_get_default_slider();
+//echo onetone_get_default_slider();
  ?>
+ <div class="custom-select" style="display:none">
+   <select id="fxselect" name="fxselect">
+     <option value="-1" >Choose an effect...</option>
+     <option value="fxSoftScale">Soft scale</option>
+     <option value="fxPressAway">Press away</option>
+     <option value="fxSideSwing">Side Swing</option>
+     <option value="fxFortuneWheel" selected>Fortune wheel</option>
+     <option value="fxSwipe">Swipe</option>
+     <option value="fxPushReveal">Push reveal</option>
+     <option value="fxSnapIn">Snap in</option>
+     <option value="fxLetMeIn">Let me in</option>
+     <option value="fxStickIt">Stick it</option>
+     <option value="fxArchiveMe">Archive me</option>
+     <option value="fxVGrowth">Vertical growth</option>
+     <option value="fxSlideBehind">Slide Behind</option>
+     <option value="fxSoftPulse">Soft Pulse</option>
+     <option value="fxEarthquake">Earthquake</option>
+     <option value="fxCliffDiving">Cliff diving</option>
+   </select>
+ </div>
+
+ <div id="component" class="component component-small">
+   <ul class="itemwrap">
+     <!-- <li class="current"><img src="img/1.jpg" alt="img01"/></li> -->
+     <li class="current"><img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/Home_Banner_1.jpg" alt="img02"/></li>
+     <li><img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/Home_Banner_2.jpg" alt="img03"/></li>
+     <li><img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/Home_Banner_3.jpg" alt="img04"/></li>
+     <!-- <li><img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/Home_Banner_4.jpg" alt="img05"/></li> -->
+   </ul>
+   <nav>
+     <a class="prev" href="#"></a>
+     <a class="next" href="#"></a>
+   </nav>
+ </div>
 
  <style>
  .title-slider{
@@ -24,6 +58,9 @@ echo onetone_get_default_slider();
    font-family: 'Roboto-bold';
  }
  </style>
+
+ <script src="<?php echo site_url(); ?>/classie.js"></script>
+ <script src="<?php echo site_url(); ?>/main.js"></script>
 
 <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 header-after-slider">
     <div class="header-float">
