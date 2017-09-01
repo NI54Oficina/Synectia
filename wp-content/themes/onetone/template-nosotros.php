@@ -11,12 +11,51 @@
 get_header();
 ?>
 
+<style media="screen">
+  .box-slogan{
+    background-image: url(<?php echo site_url(); ?>/wp-content/themes/onetone/img/Home_TeamCierre.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*border-top: 15px solid #004851;*/
+    height: 500px;
+    background-position: center top;
+    margin-bottom: 30px;
+  }
 
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 header-nosotros" >
+  .box-slogan > div{
+
+  }
+</style>
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box-slogan" class="">
+  <div class="" style="height:20px; background-color:#004851; position:absolute; top:0; width:100%; left:0;"> </div>
+  <div class="" style="height:20px; background-color:#00A4A4; position:absolute; top:0; width:30%; left:0;  border-top-right-radius:10px;  border-bottom-right-radius:10px;"></div>
+
+
+
+    <div class="cover-white-transparent">
+      <style>
+        .cover-white-transparent{
+          position: absolute;
+          top:0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /*background: linear-gradient(to top, rgba(255,255,255,1) 15%,rgba(255,255,255,0) 100%)*/
+        }
+      </style>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-banner-footer-home" style="">
+        <p style="font-size:2.2em; font-family:'Roboto-Light'; color:#00A4A4; line-height:40px">Trabajamos <br> en equipo para<br>mejorar tu<br> calidad de vida  </p>
+    </div>
+</div>
+
+<!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 header-nosotros" >
     <p style="font-size:20px; letter-spacing:3px;margin-top: 10%">NOSOTROS</p>
     <p  >Analizamos en forma conjunta cada caso. Sumamos <br class="hidden-xs">aptitud y experiencia junto a tecnología y procedimientos <br class="hidden-xs">de vanguardia para conseguir el mejor tratamiento.</p>
 
-</div>
+</div> -->
     <style media="screen">
 
       .container-medicos{

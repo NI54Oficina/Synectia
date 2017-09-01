@@ -127,6 +127,7 @@ get_header();
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container-post-investigacion">
   <?php
+    $names=["", "FELLOWSHIP", "PASANTÍA", "ROTACIÓN"];
         $category_id = get_cat_ID('Docencia e Investigacion');
         // $category_id= $categories[0]->cat_ID;
 
@@ -134,7 +135,7 @@ get_header();
         $id=1;
         foreach($posts as $post){  ?>
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-lg hidden-sm hidden-md categorias-mobile" style="margin-bottom:20px;">
-              <p><?php echo $id; ?></p>   <p> ROTACIÓN </p>
+              <p><?php echo $id; ?></p>   <p> <?php echo $names[$id]; ?></p>
           </div>
 
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" hid="2">
