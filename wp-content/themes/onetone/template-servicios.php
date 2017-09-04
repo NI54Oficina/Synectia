@@ -67,6 +67,7 @@ get_header();
       max-width: 400px;
       float:right;
       position: relative;
+      right: 70px;
     }
 
     .contenedor-mano-descripcion p.title-mano{
@@ -163,7 +164,7 @@ get_header();
       </div>
     </div>
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 secciones-mano seccion-mano-padding" style="position:relative;top:-10px;left:-30px;">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 secciones-mano seccion-mano-padding" style="position:relative;top:100px;left:-30px;">
       <div class="contenedor-mano-descripcion">
         <div class="circle-mano-r hidden-xs" ></div> <div class="circle-mano hidden-lg hidden-md hidden-sm" ></div>   <p class="title-mano">MUÑECA</p>
           <p><span>Procedimientos</span><br>Artroscopía, osteotomías, osteosíntesis,
