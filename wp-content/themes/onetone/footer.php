@@ -81,7 +81,7 @@
           <p><span>Horarios: </span> Miércoles y Viernes 16hs</p>
           <p><span>Cobertura: </span> Particular, OSDE y otros</p>
           <p >prepagos por integro</p>
-          <p class="boton-turnos"><a href="#">Turnos online</a></p>
+          <p class="boton-turnos"><a href="http://www.docturno.com/medico/violeta-levy" target="_blank">Turnos online</a></p>
         </div>
 
         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 logo-color-sin">
