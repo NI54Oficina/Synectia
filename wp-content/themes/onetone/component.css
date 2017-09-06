@@ -189,7 +189,16 @@ a.next::before {
 
 	.component-small nav a{
 		/*width: 10px;*/
-		top: 50px;
+		top: 45%;
+	}
+
+	.component nav a::before{
+		width: 25px;
+		height: 25px;
+	}
+
+	.component-small nav a.next, .component-transparent nav a.next{
+		right: 0;
 	}
 	/*.component-small nav a.prev {
 		left: 50%;

@@ -157,3 +157,9 @@
             </header>
             <div class="slider-wrap"></div>
         </div>
+
+<script type="text/javascript">
+
+	urlBase= "<?php echo site_url(); ?>/";
+
+</script>

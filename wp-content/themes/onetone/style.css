@@ -4122,4 +4122,16 @@ margin-bottom: 0;
 	height: 200px !important;
 }
 
+.box-post-especialidades p{
+  padding: 0 !important;
+}
+
+header .container{
+  position: inherit;
+}
+
+.contenedor-mano-descripcion{
+  right: 0 !important;
+}
+
  }

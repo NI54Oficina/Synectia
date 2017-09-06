@@ -3,30 +3,22 @@ $(window).load( function(){
 });
 
 $(document).ready( function(){
+
   console.log("Script cargado");
   SameHeight();
-  //
+
   _square();
-  //
-  //
-  // copy_size();
-  // get_post();close_modal();
-  get_post();
-  
+
+  green();
 });
 
 
 $(window).on('load', function(){
 	ResetHeight();
 	SameHeight();
-	// slider('.jugadores-container-ranking','.contenido-1' );
-  // slider('.menu-2','.jugadores-muchosjugadores' );
-  // slider('.menu-anios','.cuerpo-tabla' );
-  // // slider_get_post();
-  //
-  // // slider('.img-sector-padre', "nada");
+
   _square();
-  
+
   var auxC=0;
   while($("#mini-slider-"+auxC).length==1){
 	  console.log("entra");
@@ -37,8 +29,8 @@ $(window).on('load', function(){
 							items:1,
 							dots:true
 					});
-					
-					
+
+
 					auxC++;
   }
   $(".mini-slider-mobile").mouseover(function(){
@@ -46,7 +38,7 @@ $(window).on('load', function(){
 		  return;
 	  }
 	  $(this).attr("hover","1");
-						
+
 					 $(this).owlCarousel().trigger('next.owl.carousel');
 	});
 	$(".mini-slider-mobile").click(function(){
@@ -54,7 +46,7 @@ $(window).on('load', function(){
 		  return;
 	  }
 	  $(this).attr("hover","1");
-						
+
 					 $(this).owlCarousel().trigger('next.owl.carousel');
 	});
 	$(".mini-slider-mobile").mouseout(function(){
@@ -62,7 +54,7 @@ $(window).on('load', function(){
 	  setTimeout(function(){
 	  $(auxThis).attr("hover","0");
 	  },1000);
-						
+
 	});
 	$(".mini-slider-pc").mouseover(function(){
 		$(this).find("img").first().css("opacity","0");
@@ -616,117 +608,13 @@ function _square(){
 }
 
 
-function menu(){
 
 
-  $("#open-menu").on("click", function(){
-    // $(".menu-despegable").fadeIn();
-    $(".menu-despegable").addClass( "menu-despegable-active" );
-  })
 
-  $("#close-menu").on("click", function(){
-    // $(".menu-despegable").fadeOut();
-    $(".menu-despegable").removeClass( "menu-despegable-active" );
-  })
+function green(){
+  if(window.location.href ==urlBase){
+    $("#menu-main > li:first-child > a").css("color","#018a8a");
+  }else{
+    $("#menu-main > li:first-child > a").css("color","#004851");
+  }
 }
-
-function copy_size(){
-
-  $(".img-g-j").each(function() {
-
-  var w=   $( this ).width();
-  var h=   $( this ).height();
-
-    $( this ).siblings(".cover-green-gallery").css("width", w+'px').css("height", h+'px');
-});
-
-  // console.log(w+"  "+h);
-  //
-  // $(".cover-green-gallery").css("width", w+'px');
-  // $(".cover-green-gallery").css("height", h+'px');
-
-}
-
-function get_post(){
-
-
-
-  $("body").on("click", ".get-post", function(){
-
-    // $('.img-sector-padre img').eq(0).fadeIn();
-    // // var currentIndex = 0,
-    // index_post_slider=0;
-
-
-    $(".get-post").fadeOut("400", function(){});
-
-    postCategory=$(this).attr('cat');
-  // $(".load-post").fadeIn();
-
-     $.post(urlBase+"/ajax/",{offset:postOffset,category:postCategory},function(data){
-
-       console.log(data);
-
-   		$(".get-post").fadeIn();
-
-
-   	data=data.replace(/\r?\n|\r/g,"").replace(/\t/g,'');
-
-   	data= $(data.trim());
-   	console.log(data);
-
-
-
-     $(".container-post-novedades").append( data );
-     SameHeight();
-       $(".container-post-novedades").masonry( 'appended', data );
-   // 	setTimeout(function(){$(".container-post-novedades").masonry();},500);
-   // 	setTimeout(function(){$(".container-post-novedades").masonry();},1000);
-   // 	setTimeout(function(){$(".container-post-novedades").masonry();},2000);
-   // 	setTimeout(function(){$(".container-post-novedades").masonry();},5000);
-   // 	setTimeout(function(){$(".container-post-novedades").masonry();},10000);
-
-   		if(data.length==0){
-   			$(".get-post").fadeOut();
-   		}
-   	});
-
-
-
-   	postOffset+=6;
-
-});
-
-
-}
-
-
-var postOffset=6;
-var postCategory=0;
-
-
-function NotaCarousel(){
-	if($(".trio-cuna-cajon").length>0){
-	try{
-					console.log("entra?");
-					$("trio-cuna-cajon#gallery-2 br").remove(); $("#gallery-2").owlCarousel({
-						margin:50,
-						loop:true,
-						autoWidth:true,
-						items:3
-					});
-	}catch(error)		{
-		setTimeout(function(){NotaCarousel();},300);
-	}
-	}
-}
-
-function close_modal(){
-  $("body").on("click", "#close-modal",function(){
-    $('.modal-gallery').empty();
-    $('.modal-gallery').fadeOut();
-
-  })
-};
-
-
