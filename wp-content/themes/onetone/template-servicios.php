@@ -140,8 +140,8 @@ get_header();
   </div>
 
 
-  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 secciones-mano">
+  <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"> -->
+    <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 secciones-mano">
       <div class="contenedor-mano-descripcion">
         <div class="circle-mano"></div> <p <p class="title-mano">HOMBRO</p>
           <p><span>Procedimientos</span><br>Artroscopía, reconstrucciones ligamentarias,
@@ -184,9 +184,9 @@ get_header();
     </div>
 
 
-  </div>
+  </div> -->
 
-  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="float:right">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 informacion-manos">
       <h2>Excelencia y calidad <br><span>para el diagnóstico y tratamiento</span></h2>
 
@@ -218,13 +218,13 @@ get_header();
 
     </div>
 
-    <div class="hidden-xs col-lg-6 col-md-6 col-sm-6 col-xs-12 secciones-mano secciones-mano-float" style="padding-top:20%;">
+    <!-- <div class="hidden-xs col-lg-6 col-md-6 col-sm-6 col-xs-12 secciones-mano secciones-mano-float" style="padding-top:20%;">
       <div class="contenedor-mano-descripcion" style="float:left" >
         <div class="circle-mano" ></div> <p <p class="title-mano">MANO</p>
           <p><span>Procedimientos</span><br>Tenorrafias, neurorrafias, artroplastias, artrodesis.</p>
           <p><span>Patologías frecuentes</span><br>Síndrome del tunel del carpo, enfermedad de dupuytren, artrosis, tenosinovitis digital (dedo en  gatillo o resorte), rizartrosis, tumores.   </p>
       </div>
-    </div>
+    </div> -->
 
     <div class="hidden-xs col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background:transparent; height:200px;">
 

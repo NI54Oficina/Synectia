@@ -3552,12 +3552,12 @@ margin-bottom: 0;
 
 .body-servicios{
   /*background-color: black;*/
-  background-image: url(img/Servicios_Main.jpg);
+  background-image: url(img/fondo-brazo-synectia.jpg);
   background-position: top;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   padding-top: 10%;
-  padding-bottom: 10%;
+  padding-bottom: 50%;
   margin-bottom: 0;
 }
 
