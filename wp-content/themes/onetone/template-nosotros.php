@@ -112,13 +112,12 @@ get_header();
                </style>
                  <div class="informacion-dr">
                    <h2><a href="<?php echo site_url(); ?>/2017/08/01/dra-violeta-d-levy/"> Dra. Violeta D. Levy</a>
-                     <a class="hidden-xs" href="google.com">
-                   </a><div class="hidden-xs" style="float:right; margin-top:-10px;"><a class="hidden-xs" href="google.com">
+                     <div class="hidden-xs" style="float:right; margin-top:-10px;"><a class="hidden-xs" href="https://ar.linkedin.com/in/violeta-levy-114702141" target="_blank">
                      <div class="social-link" style="display:inline">
                        <i class="fa fa-linkedin" aria-hidden="true"></i>
                      </div>
                      </a>
-                     <a href="google.com">
+                     <a href="http://www.doctoraliar.com/medico/levy+violeta-14047004">
                      <div class="social-link" style="display:inline;">
                         <img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/red-medicos.svg" alt="">
 
@@ -131,19 +130,17 @@ get_header();
 <p><span style="color: #008e8e;">&gt;</span> Vicepresidente de la Asociación Argentina de Cirugía de la Mano y Miembro Superior (AACM).</p>
 <p><strong><span style="color: #008e8e;">vdlevy@gmail.com</span></strong></p>
 
-                   <a class="hidden-lg hidden-md hidden-sm" href="google.com">
-                 </a><div class="hidden-lg hidden-md hidden-sm" style=""><a class="hidden-lg hidden-md hidden-sm" href="google.com">
+                   <div class="hidden-lg hidden-md hidden-sm" style=""><a class="hidden-lg hidden-md hidden-sm" href="https://ar.linkedin.com/in/violeta-levy-114702141" target="_blank">
                    <div class="social-link" style="display:inline">
                      <i class="fa fa-linkedin" aria-hidden="true"></i>
                    </div>
                    </a>
-                   <a href="google.com">
+                   <a href="http://www.doctoraliar.com/medico/levy+violeta-14047004" target="_blank">
                    <div class="social-link" style="display:inline">
                       <img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/red-medicos.svg" alt="">
 
                    </div>
-                 </a></div><a href="google.com">
-                 </a>
+                 </a></div>
 
                  </div>
 
@@ -153,8 +150,8 @@ get_header();
              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 container-medicos" hid="2" style="height: 400px;">
                  <div class="informacion-dr">
                    <h2><a href="<?php echo site_url(); ?>/2017/08/01/dr-marcelo-a-mazzola/"> Dr. Marcelo A. Mazzola</a>
-                     <a class="hidden-xs" href="google.com">
-                   </a><div class="hidden-xs" style="float:right;  margin-top:-10px;"><a class="hidden-xs" href="google.com">
+                     <a class="hidden-xs" href="google.com" target="_blank">
+                   </a><div class="hidden-xs" style="float:right;  margin-top:-10px;"><a class="hidden-xs" href="google.com" target="_blank">
                      <div class="social-link" style="display:inline">
                        <i class="fa fa-linkedin" aria-hidden="true"></i>
                      </div>
@@ -175,13 +172,14 @@ get_header();
    <p><strong><span style="color: #008e8e;">marcemazzola@gmail.com</span></strong></p>
 
 
-                   <a class="hidden-lg hidden-md hidden-sm" href="google.com">
-                       </a><div class="hidden-lg hidden-md hidden-sm" style=""><a class="hidden-lg hidden-md hidden-sm" href="google.com">
+                   <!-- <a class="hidden-lg hidden-md hidden-sm" href="google.com">
+                       </a> -->
+                       <div class="hidden-lg hidden-md hidden-sm" style=""><a class="hidden-lg hidden-md hidden-sm" href="https://ar.linkedin.com/in/marcelo-mazzola-39b90490">
                          <div class="social-link" style="display:inline">
                            <i class="fa fa-linkedin" aria-hidden="true"></i>
                          </div>
                          </a>
-                         <a href="google.com">
+                         <a href="">
                          <div class="social-link" style="display:inline">
                             <img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/red-medicos.svg" alt="">
 
@@ -209,7 +207,6 @@ get_header();
                     <i class="fa fa-linkedin" aria-hidden="true"></i>
                   </div>
                   </a>
-                  <a href="google.com">
                   <div class="social-link" style="display:inline">
                      <img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/red-medicos.svg" alt="">
 
@@ -225,13 +222,13 @@ get_header();
 <p><strong><span style="color: #008e8e;">gonzalezmartin1977@gmail.com</span></strong></p>
 
 
-                <a class="hidden-lg hidden-md hidden-sm" href="google.com">
-                    </a><div class="hidden-lg hidden-md hidden-sm" style=""><a class="hidden-lg hidden-md hidden-sm" href="google.com">
+                <a class="hidden-lg hidden-md hidden-sm" href="google.com" >
+                    </a><div class="hidden-lg hidden-md hidden-sm" style=""><a class="hidden-lg hidden-md hidden-sm" href="https://www.linkedin.com/in/martin-gonzalez-982218100/?ppe=1">
                       <div class="social-link" style="display:inline">
                         <i class="fa fa-linkedin" aria-hidden="true"></i>
                       </div>
                       </a>
-                      <a href="google.com">
+                      <a href="">
                       <div class="social-link" style="display:inline">
                          <img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/red-medicos.svg" alt="">
 
@@ -275,13 +272,13 @@ get_header();
                </style>
                  <div class="informacion-dr">
                    <h2><a href="<?php echo get_permalink($post->ID); ?>"> <?php the_title(); ?></a>
-                     <a class="hidden-xs" href="<?php echo get_field('linkedin', $post->ID)?>">
+                     <a class="hidden-xs" href="<?php echo get_field('linkedin', $post->ID)?>" target="_blank">
                    <div class="hidden-xs" style="float:right; margin-top:-10px;">
                      <div class="social-link" style="display:inline">
                        <i class="fa fa-linkedin" aria-hidden="true"></i>
                      </div>
                      </a>
-                     <a href="<?php echo get_field('link-medicos', $post->ID)?>">
+                     <a href="<?php echo get_field('link-medicos', $post->ID)?>" target="_blank">
                      <div class="social-link" style="display:inline;">
                         <img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/red-medicos.svg" alt="">
 

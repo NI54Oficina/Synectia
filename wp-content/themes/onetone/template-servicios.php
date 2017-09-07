@@ -140,8 +140,8 @@ get_header();
   </div>
 
 
-  <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"> -->
-    <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 secciones-mano">
+  <div class="hidden-lg hidden-md hidden-sm col-lg-6 col-md-6 col-sm-6 col-xs-12">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 secciones-mano">
       <div class="contenedor-mano-descripcion">
         <div class="circle-mano"></div> <p <p class="title-mano">HOMBRO</p>
           <p><span>Procedimientos</span><br>Artroscopía, reconstrucciones ligamentarias,
@@ -184,7 +184,7 @@ get_header();
     </div>
 
 
-  </div> -->
+  </div>
 
   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="float:right">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 informacion-manos">
