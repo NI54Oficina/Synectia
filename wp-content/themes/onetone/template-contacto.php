@@ -86,6 +86,7 @@ get_header();
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container-buttons sacar-turno">
   <h3>Turnos</h3>
   <p> (+5411) 4772 4391 / 0857 </p>
+  <p class="boton-turnos"><a href="http://www.docturno.com/medico/violeta-levy" target="_blank">Turnos online</a></p>
   <!-- <a href="#">CONSEGUIR TURNO</a> -->
 
 </div>

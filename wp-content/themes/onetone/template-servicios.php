@@ -135,7 +135,7 @@ get_header();
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 body-servicios">
 
   <div class="float-servicios header-bloque-verde" style=" z-index:3">
-    <p class="titulo-pagina">SERVICIOS</p>
+    <p class="titulo-pagina" style="display:none;">SERVICIOS</p>
     <p class="intro-pagina">Las afecciones del miembro superior son muy frecuentes y pueden alterar <br>tus capacidades. Nosotros lo sabemos y te podemos ayudar a resolverlo. <br>Lo hacemos en forma integral y lo hacemos juntos.</p>
   </div>
 

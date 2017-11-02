@@ -16,7 +16,7 @@ get_header();
 
 
   .slogan-investigacion{
-    height: 200px;
+    height: 140px;
     background-color: #008E8E;
     text-align: center;
     color:white;
@@ -107,7 +107,7 @@ get_header();
 </div>
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 slogan-investigacion header-bloque-verde">
-  <p class="titulo-pagina">DOCENCIA E INVESTIGACION</p>
+  <p class="titulo-pagina" style="display:none;">DOCENCIA E INVESTIGACION</p>
   <p class="intro-pagina">Aquellos que compartan nuestra pasión, <br> pueden acceder a tres tipos de programas educativos</p>
 </div>
 

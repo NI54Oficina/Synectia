@@ -36,7 +36,7 @@ $aside          = 'both-aside';
 <style media="screen">
 
   .float-green-inner-post{
-    height: 30%;
+    height: 20%;
     position: absolute;
     top:0;
     left:0;
@@ -62,7 +62,8 @@ $aside          = 'both-aside';
               </div>
                 <div class="post-inner row <?php echo $aside; ?>">
                     <div class="col-main" style="background-color:transparent">
-                        <section class="post-main" role="main" id="content">
+						<div class="col-lg-2 col-md-1 hidden-sm hidden-xs"></div>
+                        <section class="post-main col-lg-8 col-md-10 col-sm-12 col-xs-12" role="main" id="content">
                          <?php if ( have_posts() ) : ?>
                         <?php while ( have_posts() ) : the_post(); ?>
                             <article class="post type-post">

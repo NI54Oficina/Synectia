@@ -14,9 +14,16 @@
 		current = 0,
 		itemsCount = items.length,
 		nav = component.querySelector( 'nav' ),
-		navNext = nav.querySelector( '.next' ),
-		navPrev = nav.querySelector( '.prev' ),
+		navNext = nav.querySelector( '.prev' ),
+		navPrev = nav.querySelector( '.next' ),
 		isAnimating = false;
+		var waitTime=0;
+		setInterval(function(){
+			waitTime++;
+			if(waitTime==5){
+				navigate("prev");
+			}
+		},1000);
 
 	function init() {
 		// hideNav();
@@ -49,6 +56,7 @@
 	}
 
 	function navigate( dir ) {
+		waitTime=0;
 		if( isAnimating || !effectSel.selectedIndex ) return false;
 		isAnimating = true;
 		var cntAnims = 0;

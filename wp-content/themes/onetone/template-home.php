@@ -132,9 +132,9 @@ get_header('home');
 .title-box-especialidades{
   background-color:#E2E2E2;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 80px;
   padding-bottom: 50px;
-  margin-top:30px;
+  /*margin-top:30px;*/
   margin-bottom: 0;
 }
 

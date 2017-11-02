@@ -52,6 +52,7 @@
 
         .boton-turnos a{
            text-transform: uppercase;border: 1px solid #FF5B35;     width: auto;     border-radius: 3px;     color: #FF5B35 !important;     padding: 5px 5px;     text-align: center;
+		   background-color:transparent;
         }
 
         .boton-turnos a:hover{
@@ -80,7 +81,7 @@
           <h4 class="" >TURNOS</h4>
           <p><span>Horarios: </span> Miércoles y Viernes 16hs</p>
           <p><span>Cobertura: </span> Particular, OSDE y otros</p>
-          <p >prepagos por integro</p>
+          <p >prepagos por reintegro</p>
           <p class="boton-turnos"><a href="http://www.docturno.com/medico/violeta-levy" target="_blank">Turnos online</a></p>
         </div>
 

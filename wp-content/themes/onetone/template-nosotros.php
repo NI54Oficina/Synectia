@@ -94,7 +94,8 @@ get_header();
 
 
     </style>
-
+	
+	<?php if(false){ ?>
     <div class="hidden-lg hidden-md hidden-sm col-lg-12 col-md-12 col-sm-12 col-xs-12 container-cajas-medicos" style="">
 
 
@@ -248,7 +249,62 @@ get_header();
 
 
       </div>
+	<?php } ?>
+	  
+	<div class="hidden-lg hidden-md hidden-sm col-lg-12 col-md-12 col-sm-12 col-xs-12 container-cajas-medicos" style="">
+		<?php
+        $category_id = get_cat_ID('Nosotros');
 
+
+         $posts=get_posts( array('numberposts' => -1, "post_type"=>"post", 'category'=>$category_id, 'order' => 'DESC', 'orderby'=>"title") );
+          $int=0;
+         foreach($posts as $post){ ?>
+			  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 container-medicos" hid="2" style="height: 400px;">
+
+               <div class="imagen-dr">
+                <a href="<?php echo get_permalink($post->ID) ?>"><?php the_post_thumbnail('full'); ?><div class="float-cover-white"></div></a>
+               </div>
+               <style media="screen">
+
+               </style>
+                 <div class="informacion-dr">
+                   <h2><a href="<?php echo get_permalink($post->ID) ?>"> <?php the_title(); ?></a>
+                     <div class="hidden-xs" style="float:right; margin-top:-10px;"><a class="hidden-xs" href="https://ar.linkedin.com/in/violeta-levy-114702141" target="_blank">
+                     <div class="social-link" style="display:inline">
+                       <i class="fa fa-linkedin" aria-hidden="true"></i>
+                     </div>
+                     </a>
+                     <a href="http://www.doctoraliar.com/medico/levy+violeta-14047004">
+                     <div class="social-link" style="display:inline;">
+                        <img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/red-medicos.svg" alt="">
+
+                     </div>
+                   </a></div><a href="google.com">
+                   </a>
+
+                   </h2>
+                   <?php echo get_field('informacion_doctor', $post->ID)?>
+
+                   <div class="hidden-lg hidden-md hidden-sm" style=""><a class="hidden-lg hidden-md hidden-sm" href="<?php echo get_field('linkedin', $post->ID)?>" target="_blank">
+                   <div class="social-link" style="display:inline">
+                     <i class="fa fa-linkedin" aria-hidden="true"></i>
+                   </div>
+                   </a>
+                   <a href="<?php echo get_field('link-medicos', $post->ID)?>" target="_blank">
+                   <div class="social-link" style="display:inline">
+                      <img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/red-medicos.svg" alt="">
+
+                   </div>
+                 </a></div>
+
+                 </div>
+
+
+             </div>
+			 
+		 <?php }?>
+	</div>
+	  
     <div class="hidden-xs col-lg-12 col-md-12 col-sm-12 col-xs-12 container-cajas-medicos" style="">
        <?php
         $category_id = get_cat_ID('Nosotros');
@@ -412,9 +468,7 @@ get_header();
 
     <img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/Nosotros_QUE HACEMOS.jpg" alt="">
 
-    <p>En síntesis, realizamos el tratamiento clínico y quirúrgico de toda patología
-que afecte a cualquier área o segmento del miembro superior, ya sea en
-etapa aguda, crónica o secuelas.</p>
+    <?php echo do_shortcode('[text-blocks id="que-hacemos"]'); ?>
   </div>
 
   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nosotros-right">
@@ -425,9 +479,7 @@ etapa aguda, crónica o secuelas.</p>
 
     <img src="<?php echo site_url(); ?>/wp-content/themes/onetone/img/Nosotros_IMPORTANCIA EQUIPO.jpg" alt="">
 
-    <p>Trabajar en equipo nos hace más efectivos, más precisos y reduce la
-posibilidad de errores. Nos complementamos científicamente y sumamos
-nuestras habilidades. El resultado: un servicio diferente, adaptado a cada caso.</p>
+    <?php echo do_shortcode('[text-blocks id="la-importancia-del-equipo"]'); ?>
   </div>
 </div>
 
